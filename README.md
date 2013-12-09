@@ -1,8 +1,5 @@
-# [Golden](https://github.com/joemercer/golden)
-&nbsp; &nbsp; &nbsp; &nbsp; by [Joe Mercer](https://github.com/joemercer)
-______
-[LESS](http://lesscss.org/) framework with [divine](http://en.wikipedia.org/wiki/Sacred_geometry) proportions. Optionally, use as an extension to make [Bootstrap 3](http://getbootstrap.com/getting-started/) more [golden](http://en.wikipedia.org/wiki/Golden_ratio).
-______
+# Golden
+[LESS](http://lesscss.org/) framework with [divine](http://en.wikipedia.org/wiki/Sacred_geometry) proportions. Optionally, use as an extension to make [Bootstrap 3](http://getbootstrap.com/getting-started/) more... [golden](http://en.wikipedia.org/wiki/Golden_ratio).
 
 ## Getting started
 
