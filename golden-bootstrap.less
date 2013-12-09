@@ -12,7 +12,7 @@
 // http://www.smashingmagazine.com/2010/02/09/applying-mathematics-to-web-design/
 
 // TODO::
-// - rename the column stuff to be .columns-2
+// - I need to spend more time thinking about margins for columns and containers
 // - golden typography header line height is not a golden ratio
 // - - investigate and perhaps do a golden ratio / 10 to size it nicely
 // - .golden-content-1,2,3 with divs sized for multiples of ideal line width
@@ -68,6 +68,8 @@
     padding-right: (@grid-gutter-width / 2);
     // Add a float left to every column
     float: left;
+    // Default should be 100% so that columns stack on smaller devices
+    width: 100%;
 
     &.pull-center {
       .pull-center();
@@ -575,12 +577,12 @@
     .pull-center();
   }
 
-  &.two-columns {
+  &.columns-2 {
     width: 100%;
     .columns(2; @golden-width; @golden-line-height-computed);
   }
 
-  &.three-columns {
+  &.columns-3 {
     width: 100%;
     .columns(3; @golden-width; @golden-line-height-computed);
   }
