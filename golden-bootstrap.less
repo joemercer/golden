@@ -12,6 +12,7 @@
 // http://www.smashingmagazine.com/2010/02/09/applying-mathematics-to-web-design/
 
 // TODO::
+// - restructure grid system to have variables at top or something maybe
 // - I need to spend more time thinking about margins for columns and containers
 // - golden typography header line height is not a golden ratio
 // - - investigate and perhaps do a golden ratio / 10 to size it nicely
@@ -41,6 +42,13 @@
 
 
 //
+// Variables for golden grid
+// --------------------------------------------------
+
+// examples based on an @font-size-base of 14px
+@golden-grid-gutter-width: @golden-line-height-computed; // ~22px
+
+//
 // Create the golden grid
 // --------------------------------------------------
 
@@ -64,8 +72,8 @@
     // Prevent columns from collapsing when empty
     min-height: 1px;
     // Inner gutter via padding
-    padding-left:  (@grid-gutter-width / 2);
-    padding-right: (@grid-gutter-width / 2);
+    padding-left:  (@golden-grid-gutter-width / 2);
+    padding-right: (@golden-grid-gutter-width / 2);
     // Add a float left to every column
     float: left;
     // Default should be 100% so that columns stack on smaller devices
@@ -177,9 +185,7 @@
     &:before,
     &.row:after {
       content: " ";
-      /* 1 */
       display: table;
-      /* 2 */
     }
     &:after {
       clear: both;
@@ -253,15 +259,18 @@
   .golden-container-margin-half-large,
   .golden-container-margin-half-small {
 
-    margin-right: auto;
+    // Horizontal centering via margin
     margin-left: auto;
+    margin-right: auto;
+    // Inner gutter via padding
+    padding-left:  (@golden-grid-gutter-width / 2);
+    padding-right: (@golden-grid-gutter-width / 2);
+
 
     &:before,
     &:after {
       content: " ";
-      /* 1 */
       display: table;
-      /* 2 */
     }
 
     &:after {
