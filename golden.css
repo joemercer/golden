@@ -170,24 +170,24 @@
 .row-center-golden-small {
   margin-top: 30.901699437494738%;
 }
-.container-golden,
-.container-margin-golden-large,
-.container-margin-golden-small,
-.container-margin-half-golden-large,
-.container-margin-half-golden-small {
+.golden-container,
+.golden-container-margin-large,
+.golden-container-margin-small,
+.golden-container-margin-half-large,
+.golden-container-margin-half-small {
   margin-right: auto;
   margin-left: auto;
 }
-.container-golden:before,
-.container-margin-golden-large:before,
-.container-margin-golden-small:before,
-.container-margin-half-golden-large:before,
-.container-margin-half-golden-small:before,
-.container-golden:after,
-.container-margin-golden-large:after,
-.container-margin-golden-small:after,
-.container-margin-half-golden-large:after,
-.container-margin-half-golden-small:after {
+.golden-container:before,
+.golden-container-margin-large:before,
+.golden-container-margin-small:before,
+.golden-container-margin-half-large:before,
+.golden-container-margin-half-small:before,
+.golden-container:after,
+.golden-container-margin-large:after,
+.golden-container-margin-small:after,
+.golden-container-margin-half-large:after,
+.golden-container-margin-half-small:after {
   content: " ";
   /* 1 */
 
@@ -195,41 +195,41 @@
   /* 2 */
 
 }
-.container-golden:after,
-.container-margin-golden-large:after,
-.container-margin-golden-small:after,
-.container-margin-half-golden-large:after,
-.container-margin-half-golden-small:after {
+.golden-container:after,
+.golden-container-margin-large:after,
+.golden-container-margin-small:after,
+.golden-container-margin-half-large:after,
+.golden-container-margin-half-small:after {
   clear: both;
 }
-.container-golden {
+.golden-container {
   width: 100%;
 }
 @media (min-width: 768px) {
-  .container-golden {
+  .golden-container {
     width: 61.803398874989476%;
   }
 }
 @media (min-width: 992px) {
-  .container-golden {
+  .golden-container {
     width: 38.196601125010524%;
   }
 }
 @media (min-width: 1200px) {
-  .container-golden {
+  .golden-container {
     width: 44.721359549995796%;
   }
 }
-.container-margin-golden-large {
+.golden-container-margin-large {
   width: 23.60679774997897%;
 }
-.container-margin-golden-small {
+.golden-container-margin-small {
   width: 44.721359549995796%;
 }
-.container-margin-half-golden-large {
+.golden-container-margin-half-large {
   width: 38.196601125010524%;
 }
-.container-margin-half-golden-small {
+.golden-container-margin-half-small {
   width: 61.803398874989476%;
 }
 .golden-typography {

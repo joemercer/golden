@@ -244,11 +244,11 @@
 
 .make-golden-containers() {
 
-  .container-golden,
-  .container-margin-golden-large,
-  .container-margin-golden-small,
-  .container-margin-half-golden-large,
-  .container-margin-half-golden-small {
+  .golden-container,
+  .golden-container-margin-large,
+  .golden-container-margin-small,
+  .golden-container-margin-half-large,
+  .golden-container-margin-half-small {
 
     margin-right: auto;
     margin-left: auto;
@@ -269,62 +269,62 @@
   // general golden container with breakpoints for different sized devices
 
   // for xs screens, overridden by media queries
-  .container-golden {
+  .golden-container {
     width: 100%;
   }
 
   @media (min-width: @screen-sm-min) {
-    .container-golden {
-      .make-container-margin-half-golden-small();
+    .golden-container {
+      .make-golden-container-margin-half-small();
     }
   }
 
   @media (min-width: @screen-md-min) {
-    .container-golden {
-      .make-container-margin-half-golden-large();
+    .golden-container {
+      .make-golden-container-margin-half-large();
     }
   }
 
   @media (min-width: @screen-lg-min) {
-    .container-golden {
-      .make-container-margin-golden-small();
+    .golden-container {
+      .make-golden-container-margin-small();
     }
   }
 
   // golden containers with specific margins
   // TODO:: add xs,sm,md,lg classes so that these can be easily personalized with responsive behavior
 
-  .container-margin-golden-large {
-    .make-container-margin-golden-large();
+  .golden-container-margin-large {
+    .make-golden-container-margin-large();
   }
 
-  .container-margin-golden-small {
-    .make-container-margin-golden-small();
+  .golden-container-margin-small {
+    .make-golden-container-margin-small();
   }
 
-  .container-margin-half-golden-large {
-    .make-container-margin-half-golden-large();
+  .golden-container-margin-half-large {
+    .make-golden-container-margin-half-large();
   }
 
-  .container-margin-half-golden-small {
-    .make-container-margin-half-golden-small();
+  .golden-container-margin-half-small {
+    .make-golden-container-margin-half-small();
   }
 
 }
 
-.make-container-margin-golden-large() {
+.make-golden-container-margin-large() {
   width: percentage(1 / (1 + (2 * @golden-ratio)));
 }
 
-.make-container-margin-golden-small() {
+.make-golden-container-margin-small() {
   width: percentage(1 / (1 + (2 / @golden-ratio)));
 }
 
-.make-container-margin-half-golden-large() {
+.make-golden-container-margin-half-large() {
   width: percentage(@golden-small);
 }
 
-.make-container-margin-half-golden-small() {
+.make-golden-container-margin-half-small() {
   width: percentage(@golden-large);
 }
 
@@ -566,7 +566,8 @@
 
 .make-golden-content(@font-size, @line-height) {
 
-  @golden-width: (pow((@font-size * @golden-ratio), 2)) * (1 + (2 * @golden-ratio * ((@line-height / @font-size) - @golden-ratio)));
+  // not using pow because some LESS compilers don't support the use of pow with awkward units
+  @golden-width: ((@font-size * @golden-ratio) * (@font-size * @golden-ratio)) * (1 + (2 * @golden-ratio * ((@line-height / @font-size) - @golden-ratio)));
   width: @golden-width;
 
   &.pull-center {
