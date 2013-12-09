@@ -1,0 +1,761 @@
+// Golden Bootstrap 3
+
+// created by Joe Mercer
+// https://github.com/joemercer
+
+// has a dependency on bootstrap/less/variables.less
+
+// Inspired by:
+// https://github.com/phildionne/golden-bootstrap
+// http://www.pearsonified.com/2011/12/golden-ratio-typography.php
+// http://www.hongkiat.com/blog/golden-ratio-in-moden-designs/
+// http://www.smashingmagazine.com/2010/02/09/applying-mathematics-to-web-design/
+
+// TODO::
+// - golden typography header line height is not a golden ratio
+// - - investigate and perhaps do a golden ratio / 10 to size it nicely
+// - .golden-content-1,2,3 with divs sized for multiples of ideal line width
+// - integrate CPL into ideal content width
+// - - see http://www.pearsonified.com/2012/01/characters-per-line.php
+
+
+
+// --------------------------------------------------
+// Golden Bootstrap Variables
+// --------------------------------------------------
+
+
+
+@golden-ratio:           1.6180339887498948482;
+@golden-large:           1/@golden-ratio;
+@golden-small:           1-@golden-large;
+
+
+
+// --------------------------------------------------
+// Golden Grid Columns
+// - Bootstrap 3 style columns with golden proportions
+// --------------------------------------------------
+
+
+
+//
+// Create the golden grid
+// --------------------------------------------------
+
+.make-golden-grid-columns();
+
+// 
+// Mixins for the golden grid columns
+// --------------------------------------------------
+
+.make-golden-grid-columns() {
+  .col-xs-golden-large,
+  .col-sm-golden-large,
+  .col-md-golden-large,
+  .col-lg-golden-large,
+  .col-xs-golden-small,
+  .col-sm-golden-small,
+  .col-md-golden-small,
+  .col-lg-golden-small
+  {
+    position: relative;
+    // Prevent columns from collapsing when empty
+    min-height: 1px;
+    // Inner gutter via padding
+    padding-left:  (@grid-gutter-width / 2);
+    padding-right: (@grid-gutter-width / 2);
+    // Add a float left to every column
+    float: left;
+
+    &.pull-center {
+      .pull-center();
+    }
+
+  }
+
+  // Extra small grid
+  //
+  // Grid classes for extra small devices like smartphones. No offset, push, or
+  // pull classes are present here due to the size of the target.
+
+  .make-golden-col(xs, width);
+  .make-golden-col(xs, pull);
+  .make-golden-col(xs, push);
+  .make-golden-col(xs, offset);
+
+
+  // Small grid
+  //
+  // Columns, offsets, pushes, and pulls for the small device range, from phones
+  // to tablets.
+
+  @media (min-width: @screen-sm-min) {
+    .make-golden-col(sm, width);
+    .make-golden-col(sm, pull);
+    .make-golden-col(sm, push);
+    .make-golden-col(sm, offset);
+  }
+
+
+  // Medium grid
+  //
+  // Columns, offsets, pushes, and pulls for the desktop device range.
+
+  @media (min-width: @screen-md-min) {
+    .make-golden-col(md, width);
+    .make-golden-col(md, pull);
+    .make-golden-col(md, push);
+    .make-golden-col(md, offset);
+  }
+
+
+  // Large grid
+  //
+  // Columns, offsets, pushes, and pulls for the large desktop device range.
+
+  @media (min-width: @screen-lg-min) {
+    .make-golden-col(lg, width);
+    .make-golden-col(lg, pull);
+    .make-golden-col(lg, push);
+    .make-golden-col(lg, offset);
+  }
+}
+
+.make-golden-col(@class, @type) {
+  .calc-golden-col(golden-large, @class, @type);
+  .calc-golden-col(golden-small, @class, @type);
+}
+
+.calc-golden-col(@gold, @class, @type) when (@type = width) {
+  .col-@{class}-@{gold} {
+    width: percentage(@@gold);
+  }
+}
+.calc-golden-col(@gold, @class, @type) when (@type = push) {
+  .col-@{class}-push-@{gold} {
+    left: percentage(@@gold);
+  }
+}
+.calc-golden-col(@gold, @class, @type) when (@type = pull) {
+  .col-@{class}-pull-@{gold} {
+    right: percentage(@@gold);
+  }
+}
+.calc-golden-col(@gold, @class, @type) when (@type = offset) {
+  .col-@{class}-offset-@{gold} {
+    margin-left: percentage(@@gold);
+  }
+}
+
+
+
+// --------------------------------------------------
+// Golden Grid Rows
+// - Bootstrap 3 inspired rows with golden proportions
+// --------------------------------------------------
+
+
+
+//
+// Create the golden grid rows
+// --------------------------------------------------
+
+.make-golden-grid-rows();
+
+// 
+// Mixins for the golden grid columns
+// --------------------------------------------------
+
+.make-golden-grid-rows() {
+  .row-golden-large,
+  .row-golden-small
+  {
+    &:before,
+    &.row:after {
+      content: " ";
+      /* 1 */
+      display: table;
+      /* 2 */
+    }
+    &:after {
+      clear: both;
+    }
+  }
+
+  .make-golden-row(height);
+  .make-golden-row(pull);
+  .make-golden-row(push);
+  .make-golden-row(offset);
+  .make-golden-row(center);
+}
+
+.make-golden-row(@type) {
+  .calc-golden-row(golden-large, @type);
+  .calc-golden-row(golden-small, @type);
+}
+
+
+.calc-golden-row(@gold, @type) when (@type = height) {
+  .row-@{gold} {
+    height: percentage(@@gold);
+  }
+}
+.calc-golden-row(@gold, @type) when (@type = push) {
+  .row-push-@{gold} {
+    top: percentage(@@gold);
+  }
+}
+.calc-golden-row(@gold, @type) when (@type = pull) {
+  .row-pull-@{gold} {
+    bottom: percentage(@@gold);
+  }
+}
+.calc-golden-row(@gold, @type) when (@type = offset) {
+  .row-offset-@{gold} {
+    margin-top: percentage(@@gold);
+  }
+}
+.calc-golden-row(@gold, @type) when (@type = center) {
+  .row-center-@{gold} {
+    // ??? should this be margin-top or top?
+    margin-top: percentage((1 - @@gold) / 2);
+  }
+}
+
+
+
+// --------------------------------------------------
+// Golden Container
+// - Boostrap style container centered with golden proportion margins
+// --------------------------------------------------
+
+
+
+//
+// Create the golden containers
+// --------------------------------------------------
+
+.make-golden-containers();
+
+// 
+// Mixins for the golden containers
+// --------------------------------------------------
+
+.make-golden-containers() {
+
+  .container-golden,
+  .container-margin-golden-large,
+  .container-margin-golden-small,
+  .container-margin-half-golden-large,
+  .container-margin-half-golden-small {
+
+    margin-right: auto;
+    margin-left: auto;
+
+    &:before,
+    &:after {
+      content: " ";
+      /* 1 */
+      display: table;
+      /* 2 */
+    }
+
+    &:after {
+      clear: both;
+    }
+  }
+
+  // general golden container with breakpoints for different sized devices
+
+  // for xs screens, overridden by media queries
+  .container-golden {
+    width: 100%;
+  }
+
+  @media (min-width: @screen-sm-min) {
+    .container-golden {
+      .make-container-margin-half-golden-small();
+    }
+  }
+
+  @media (min-width: @screen-md-min) {
+    .container-golden {
+      .make-container-margin-half-golden-large();
+    }
+  }
+
+  @media (min-width: @screen-lg-min) {
+    .container-golden {
+      .make-container-margin-golden-small();
+    }
+  }
+
+  // golden containers with specific margins
+  // TODO:: add xs,sm,md,lg classes so that these can be easily personalized with responsive behavior
+
+  .container-margin-golden-large {
+    .make-container-margin-golden-large();
+  }
+
+  .container-margin-golden-small {
+    .make-container-margin-golden-small();
+  }
+
+  .container-margin-half-golden-large {
+    .make-container-margin-half-golden-large();
+  }
+
+  .container-margin-half-golden-small {
+    .make-container-margin-half-golden-small();
+  }
+
+}
+
+.make-container-margin-golden-large() {
+  width: percentage(1 / (1 + (2 * @golden-ratio)));
+}
+
+.make-container-margin-golden-small() {
+  width: percentage(1 / (1 + (2 / @golden-ratio)));
+}
+
+.make-container-margin-half-golden-large() {
+  width: percentage(@golden-small);
+}
+
+.make-container-margin-half-golden-small() {
+  width: percentage(@golden-large);
+}
+
+
+
+// --------------------------------------------------
+// Golden Typography
+// - Bootstrap inspired typography with golden proportions
+// --------------------------------------------------
+
+
+
+//
+// Variables for golden typography
+// --------------------------------------------------
+
+// examples based on an @font-size-base of 14px
+@golden-font-size-base: @font-size-base; // 14px
+@golden-font-size-large: ceil(2 * @golden-font-size-base * @golden-large); // ~18px
+@golden-font-size-small: floor(2 * @golden-font-size-base * @golden-small); // ~10px
+
+@golden-font-size-h1: ceil(@golden-font-size-base * (@golden-ratio * 3)); // ~60px
+@golden-font-size-h2: floor(@golden-font-size-base * (@golden-ratio * 2)); // ~36px
+@golden-font-size-h3: ceil(@golden-font-size-base * @golden-ratio); // ~23px
+@golden-font-size-h4: @golden-font-size-large; // ~18px
+@golden-font-size-h5: @golden-font-size-base; // 14px
+@golden-font-size-h6: @golden-font-size-small; // ~10px
+
+@golden-line-height-base: @golden-ratio; // ~1.61
+@golden-line-height-computed: floor(@golden-font-size-base * @golden-line-height-base); // ~22px
+
+@golden-headings-line-height: 1 + (@golden-ratio / 10); // ~1.161
+
+//
+// Create golden typography
+// --------------------------------------------------
+
+.golden-typography {
+  // anything under a root element with the .golden-typographyclass will have golden typography
+  .make-golden-typography();
+}
+
+// 
+// Mixin for golden typography
+// --------------------------------------------------
+
+.make-golden-typography() {
+
+  // from scaffolding.less
+
+  // Body reset
+  // -------------------------
+
+  // reset the root element
+  font-size: @golden-font-size-base;
+  line-height: @golden-line-height-base;
+
+  // Horizontal rules
+  // -------------------------
+
+  hr {
+    margin-top:    @golden-line-height-computed;
+    margin-bottom: @golden-line-height-computed;
+  }
+
+  // from type.less
+
+  // Body text
+  // -------------------------
+  p {
+    margin: 0 0 (@golden-line-height-computed / 2);
+  }
+  .lead {
+    margin-bottom: @golden-line-height-computed;
+    // font-size: floor(@font-size-base * 1.15);
+    font-size: floor(@golden-font-size-large);
+    // line-height: 1.4;
+    line-height: @golden-ratio;
+
+    @media (min-width: @screen-sm-min) {
+      // font-size: (@font-size-base * 1.5);
+      font-size: (@golden-font-size-base * @golden-ratio);
+    }
+  }
+
+  // Emphasis & misc
+  // -------------------------
+
+  // Ex: 14px base font * 85% = about 12px
+  // Ex: 14px base font * @golden-large = about 9px
+  small,
+  .small  {
+    // font-size: 85%;
+    font-size: percentage(@golden-large);
+  }
+
+  // Headings
+  // -------------------------
+
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    line-height: @golden-headings-line-height;
+
+    small,
+    .small {
+      line-height: 1;
+    }
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin-top: @golden-line-height-computed;
+    margin-bottom: (@golden-line-height-computed / 2);
+
+    small,
+    .small {
+      // font-size: 65%;
+      font-size: percentage(@golden-large);
+    }
+  }
+  h4,
+  h5,
+  h6 {
+    margin-top: (@golden-line-height-computed / 2);
+    margin-bottom: (@golden-line-height-computed / 2);
+
+    small,
+    .small {
+      // font-size: 75%;
+      font-size: percentage(@golden-large);
+    }
+  }
+
+  h1, .h1 { font-size: @golden-font-size-h1; }
+  h2, .h2 { font-size: @golden-font-size-h2; }
+  h3, .h3 { font-size: @golden-font-size-h3; }
+  h4, .h4 { font-size: @golden-font-size-h4; }
+  h5, .h5 { font-size: @golden-font-size-h5; }
+  h6, .h6 { font-size: @golden-font-size-h6; }
+
+  // Page header
+  // -------------------------
+
+  .page-header {
+    padding-bottom: ((@golden-line-height-computed / 2) - 1);
+    margin: (@golden-line-height-computed * 2) 0 @golden-line-height-computed;
+  }
+
+  // Lists
+  // --------------------------------------------------
+
+  // Unordered and Ordered lists
+  ul,
+  ol {
+    margin-top: 0;
+    margin-bottom: (@golden-line-height-computed / 2);
+    ul,
+    ol {
+      margin-bottom: 0;
+    }
+  }
+
+  // Description Lists
+  dl {
+    margin-bottom: @golden-line-height-computed;
+  }
+  dt,
+  dd {
+    line-height: @golden-line-height-base;
+  }
+
+  // Blockquotes
+  blockquote {
+    padding: (@golden-line-height-computed / 2) @golden-line-height-computed;
+    margin: 0 0 @golden-line-height-computed;
+    p {
+      // font-size: (@font-size-base * 1.25);
+      font-size: (@golden-font-size-large);
+      // line-height: 1.25;
+      line-height: @golden-ratio;
+    }
+    small {
+      line-height: @golden-line-height-base;
+    }
+  }
+
+  // Addresses
+  address {
+    margin-bottom: @golden-line-height-computed;
+    line-height: @golden-line-height-base;
+  }
+
+}
+
+
+
+// --------------------------------------------------
+// Golden Content
+// - Container with ideal width based on font-size and line height
+// - http://www.pearsonified.com/2011/12/golden-ratio-typography.php
+// --------------------------------------------------
+
+
+
+//
+// Create golden content
+// --------------------------------------------------
+
+.golden-content {
+  .make-golden-content(@golden-font-size-base; @golden-line-height-computed);
+}
+
+// 
+// Mixin for golden content
+// --------------------------------------------------
+
+.pull-center() {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.columns(@num) {
+  -moz-column-count: @num;
+  -webkit-column-count: @num;
+  column-count: @num;
+}
+.columns(@num; @width; @gap) {
+  -moz-column-count: @num;
+  -webkit-column-count: @num;
+  column-count: @num;
+  -moz-column-width: @width;
+  -webkit-column-width: @width;
+  column-width: @width;
+  -moz-column-gap: @gap;
+  -webkit-column-gap: @gap;
+  column-gap: @gap;
+}
+
+.make-golden-content(@font-size, @line-height) {
+
+  @golden-width: (pow((@font-size * @golden-ratio), 2)) * (1 + (2 * @golden-ratio * ((@line-height / @font-size) - @golden-ratio)));
+  width: @golden-width;
+
+  &.pull-center {
+    .pull-center();
+  }
+
+  &.two-columns {
+    width: 100%;
+    .columns(2; @golden-width; @golden-line-height-computed);
+  }
+
+  &.three-columns {
+    width: 100%;
+    .columns(3; @golden-width; @golden-line-height-computed);
+  }
+
+}
+
+
+
+// --------------------------------------------------
+// Golden Mixins
+// - Some helpful mixins for utilizing the golden ratio
+// --------------------------------------------------
+
+
+
+// Golden Rectangle
+// --------------------------------------------------
+
+// Example usage:
+
+// // golden rectangle based on a width of 25px
+// .golden-rectangle-ex1 {
+//   .make-golden-rectangle(25px);
+// }
+
+// // golden rectangle based on a height of 25px
+// .golden-rectangle-ex2 {
+//   .make-golden-rectangle(height; 25px);
+// }
+
+// // golden rectangle based on a width of 25vh with a fallback of 200px
+// .golden-rectangle-ex3 {
+//   .make-golden-rectangle(width; 25vh; 200px);
+// }
+
+// --------------------------------------------------
+
+// 
+// Mixins for the golden rectangle
+// --------------------------------------------------
+
+.make-golden-rectangle(width; @width; @widthBackup) {
+  width: @widthBackup; width: @width;
+  height: @widthBackup * @golden-large; height: @width * @golden-large;
+}
+.make-golden-rectangle(height; @height; @heightBackup) {
+  width: @heightBackup * @golden-large; width: @height * @golden-large;
+  height: @heightBackup; height: @height;
+}
+
+.make-golden-rectangle(width; @width) {
+  width: @width;
+  height: @width * @golden-large;
+}
+.make-golden-rectangle(height; @height) {
+  width: @height * @golden-large;
+  height: @height;
+}
+.make-golden-rectangle(@width) {
+  .make-golden-rectangle(width; @width);
+}
+
+
+
+// Golden Image
+// - wrap your img in a div.golden-image to give it a golden crop
+// --------------------------------------------------
+
+// Example usage:
+
+// // golden image based on a width of 200px and the image centered with a left alignment of -68px and top alignment of -11px
+// .golden-image-ex1 {
+//     .make-golden-image(width; 200px; -68px; -11px);
+// }
+
+// // golden image based on a height of 200px and the image centered with a left alignment of -68px and top alignment of -11px
+// .golden-image-ex2 {
+//     .make-golden-image(height; 200px; -68px; -11px);
+// }
+
+// // golden image based on a width of 200px and the image centered with a left alignment of -68px and top alignment of -11px
+// .golden-image-ex3 {
+//     .make-golden-image(200px; -68px; -11px);
+// }
+
+// --------------------------------------------------
+
+// 
+// Mixins for the golden image
+// --------------------------------------------------
+
+.make-golden-image(width; @width; @left; @top) {
+  
+  .make-golden-rectangle(width; @width);
+  overflow: hidden;
+  display: inline-block;
+
+  img {
+    position: relative;
+    top: @top;
+    left: @left;
+  }
+}
+.make-golden-image(height; @height; @left; @top) {
+  
+  .make-golden-rectangle(height; @height);
+  overflow: hidden;
+  display: inline-block;
+
+  img {
+    position: relative;
+    top: @top;
+    left: @left;
+  }
+}
+.make-golden-image(@width; @left; @top) {
+  
+  .make-golden-rectangle(width; @height);
+  overflow: hidden;
+  display: inline-block;
+
+  img {
+    position: relative;
+    top: @top;
+    left: @left;
+  }
+}
+
+
+
+
+// Golden Colors
+// --------------------------------------------------
+
+// Example usage:
+
+// a lighter shade of purple that is has golden proportions with the original
+// @color: .golden-lighten-large(purple);
+
+// two new shades of purple with golden proportions
+// @color1: .golden-lighten-small(purple);
+// @color2: .golden-darken-large(purple);
+
+// --------------------------------------------------
+
+// 
+// Mixins for golden colors
+// --------------------------------------------------
+
+// lighten
+.golden-lighten-large(@color) {
+  .lighten(@color; percentage(@golden-large));
+}
+.golden-lighten-small(@color) {
+  .lighten(@color; percentage(@golden-small));
+}
+
+// darken
+.golden-darken-large(@color) {
+  .darken(@color; percentage(@golden-large));
+}
+.golden-darken-small(@color) {
+  .darken(@color; percentage(@golden-small));
+}
+
+// fadeout
+.golden-fadeout-large(@color) {
+  .fadeout(@color; percentage(@golden-large));
+}
+.golden-fadeout-small(@color) {
+  .fadeout(@color; percentage(@golden-small));
+}
+
+// fadein
+.golden-fadein-large(@color) {
+  .fadein(@color; percentage(@golden-large));
+}
+.golden-fadein-small(@color) {
+  .fadein(@color; percentage(@golden-small));
+}
