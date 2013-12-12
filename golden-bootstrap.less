@@ -12,6 +12,10 @@
 // http://www.smashingmagazine.com/2010/02/09/applying-mathematics-to-web-design/
 
 // TODO::
+// - resize typography baselines for different sized devices
+// - centering using bonnie's trick? - for golden rectangle
+// - .pull-center class for rows
+// - rename stuff to all start with golden
 // - restructure grid system to have variables at top or something maybe
 // - I need to spend more time thinking about margins for columns and containers
 // - golden typography header line height is not a golden ratio
@@ -728,12 +732,11 @@
 
 // Example usage:
 
-// // a lighter shade of purple that has golden proportions to the original
-// @color: .golden-lighten-large(purple);
-
-// // two new shades of purple with golden proportions
-// @color1: .golden-lighten-small(purple);
-// @color2: .golden-darken-large(purple);
+// // class producing a light background color and dark colored text that are pleasing shades of purple
+// .goldenPurple {
+//   .golden-color(color; darken; purple);
+//   .golden-color(background-color; lighten; purple);
+// }
 
 // --------------------------------------------------
 
@@ -741,34 +744,52 @@
 // Mixins for golden colors
 // --------------------------------------------------
 
-// lighten
-.golden-lighten-large(@color) {
-  .lighten(@color; percentage(@golden-large));
+// pulls @color towards white to produce a new color related by the golden ratio
+
+// color
+.golden-color(color; lighten; @color) {
+  .golden-color(color; lighten; @color; @golden-large);
 }
-.golden-lighten-small(@color) {
-  .lighten(@color; percentage(@golden-small));
+.golden-color(color; lighten; @color; @gold) {
+  @lightness: lightness(@color);
+  @percent: ((100 - @lightness) * @gold);
+  @new: lighten(@color, @percent);
+
+  color: @new;
+}
+// background-color
+.golden-color(background-color; lighten; @color) {
+  .golden-color(background-color; lighten; @color; @golden-large);
+}
+.golden-color(background-color; lighten; @color; @gold) {
+  @lightness: lightness(@color);
+  @percent: ((100 - @lightness) * @gold);
+  @new: lighten(@color, @percent);
+
+  background-color: @new;
 }
 
-// darken
-.golden-darken-large(@color) {
-  .darken(@color; percentage(@golden-large));
-}
-.golden-darken-small(@color) {
-  .darken(@color; percentage(@golden-small));
-}
+// pulls @color towards black to produce a new color related by the golden ratio
 
-// fadeout
-.golden-fadeout-large(@color) {
-  .fadeout(@color; percentage(@golden-large));
+// color
+.golden-color(color; darken; @color) {
+  .golden-color(color; darken; @color; @golden-large);
 }
-.golden-fadeout-small(@color) {
-  .fadeout(@color; percentage(@golden-small));
-}
+.golden-color(color; darken; @color; @gold) {
+  @lightness: lightness(@color);
+  @percent: (@lightness * @gold);
+  @new: darken(@color, @percent);
 
-// fadein
-.golden-fadein-large(@color) {
-  .fadein(@color; percentage(@golden-large));
+  color: @new;
 }
-.golden-fadein-small(@color) {
-  .fadein(@color; percentage(@golden-small));
+// background-color
+.golden-color(background-color; darken; @color) {
+  .golden-color(background-color; darken; @color; @golden-large);
+}
+.golden-color(background-color; darken; @color; @gold) {
+  @lightness: lightness(@color);
+  @percent: (@lightness * @gold);
+  @new: darken(@color, @percent);
+
+  background-color: @new;
 }
