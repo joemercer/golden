@@ -14,8 +14,7 @@
 // TODO::
 // - resize typography baselines for different sized devices
 // - centering using bonnie's trick? - for golden rectangle
-// - .pull-center class for rows
-// - rename stuff to all start with golden
+// - .pull-center class for rows (?)
 // - restructure grid system to have variables at top or something maybe
 // - I need to spend more time thinking about margins for columns and containers
 // - golden typography header line height is not a golden ratio
@@ -63,14 +62,14 @@
 // --------------------------------------------------
 
 .make-golden-grid-columns() {
-  .col-xs-golden-large,
-  .col-sm-golden-large,
-  .col-md-golden-large,
-  .col-lg-golden-large,
-  .col-xs-golden-small,
-  .col-sm-golden-small,
-  .col-md-golden-small,
-  .col-lg-golden-small
+  .golden-large-col-xs,
+  .golden-large-col-sm,
+  .golden-large-col-md,
+  .golden-large-col-lg,
+  .golden-small-col-xs,
+  .golden-small-col-sm,
+  .golden-small-col-md,
+  .golden-small-col-lg
   {
     position: relative;
     // Prevent columns from collapsing when empty
@@ -143,22 +142,22 @@
 }
 
 .calc-golden-col(@gold, @class, @type) when (@type = width) {
-  .col-@{class}-@{gold} {
+  .@{gold}-col-@{class} {
     width: percentage(@@gold);
   }
 }
 .calc-golden-col(@gold, @class, @type) when (@type = push) {
-  .col-@{class}-push-@{gold} {
+  .@{gold}-col-@{class}-push {
     left: percentage(@@gold);
   }
 }
 .calc-golden-col(@gold, @class, @type) when (@type = pull) {
-  .col-@{class}-pull-@{gold} {
+  .@{gold}-col-@{class}-pull {
     right: percentage(@@gold);
   }
 }
 .calc-golden-col(@gold, @class, @type) when (@type = offset) {
-  .col-@{class}-offset-@{gold} {
+  .@{gold}-col-@{class}-offset {
     margin-left: percentage(@@gold);
   }
 }
@@ -183,11 +182,11 @@
 // --------------------------------------------------
 
 .make-golden-grid-rows() {
-  .row-golden-large,
-  .row-golden-small
+  .golden-large-row,
+  .golden-small-row
   {
     &:before,
-    &.row:after {
+    &:after {
       content: " ";
       display: table;
     }
@@ -210,27 +209,27 @@
 
 
 .calc-golden-row(@gold, @type) when (@type = height) {
-  .row-@{gold} {
+  .@{gold}-row {
     height: percentage(@@gold);
   }
 }
 .calc-golden-row(@gold, @type) when (@type = push) {
-  .row-push-@{gold} {
+  .@{gold}-row-push {
     top: percentage(@@gold);
   }
 }
 .calc-golden-row(@gold, @type) when (@type = pull) {
-  .row-pull-@{gold} {
+  .@{gold}-row-pull {
     bottom: percentage(@@gold);
   }
 }
 .calc-golden-row(@gold, @type) when (@type = offset) {
-  .row-offset-@{gold} {
+  .@{gold}-row-offset {
     margin-top: percentage(@@gold);
   }
 }
 .calc-golden-row(@gold, @type) when (@type = center) {
-  .row-center-@{gold} {
+  .@{gold}-row-center {
     // ??? should this be margin-top or top?
     margin-top: percentage((1 - @@gold) / 2);
   }
