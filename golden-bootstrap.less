@@ -15,13 +15,19 @@
 // - resize typography baselines for different sized devices
 // - centering using bonnie's trick? - for golden rectangle
 // - .pull-center class for rows (?)
-// - restructure grid system to have variables at top or something maybe
-// - I need to spend more time thinking about margins for columns and containers
 // - golden typography header line height is not a golden ratio
 // - - investigate and perhaps do a golden ratio / 10 to size it nicely
 // - .golden-content-1,2,3 with divs sized for multiples of ideal line width
 // - integrate CPL into ideal content width
 // - - see http://www.pearsonified.com/2012/01/characters-per-line.php
+// - perhaps do something with three column approach created by the math below
+// .make-golden-container-margin-large() {
+//   width: percentage(1 / (1 + (2 * @golden-ratio)));
+// }
+
+// .make-golden-container-margin-small() {
+//   width: percentage(1 / (1 + (2 / @golden-ratio)));
+// }
 
 
 
@@ -38,8 +44,8 @@
 
 
 // --------------------------------------------------
-// Golden Grid Columns
-// - Bootstrap 3 style columns with golden proportions
+// Golden Grid
+// - Bootstrap 3 style grid system complete with containers and columns that have golden proportions
 // --------------------------------------------------
 
 
@@ -55,13 +61,44 @@
 // Create the golden grid
 // --------------------------------------------------
 
-.make-golden-grid-columns();
+.make-golden-grid();
 
 // 
 // Mixins for the golden grid columns
 // --------------------------------------------------
 
-.make-golden-grid-columns() {
+.make-golden-grid() {
+
+  .golden-container,
+  .golden-large-container-xs,
+  .golden-large-container-sm,
+  .golden-large-container-md,
+  .golden-large-container-lg,
+  .golden-small-container-xs,
+  .golden-small-container-sm,
+  .golden-small-container-md,
+  .golden-small-container-lg {
+
+    // Inner gutter via padding
+    padding-left:  (@golden-grid-gutter-width / 2);
+    padding-right: (@golden-grid-gutter-width / 2);
+    // Horizontal centering via margin
+    margin-left: auto;
+    margin-right: auto;
+    // Default should be 100% so that columns stack on smaller devices
+    width: 100%;
+
+    &:before,
+    &:after {
+      content: " ";
+      display: table;
+    }
+
+    &:after {
+      clear: both;
+    }
+  }
+
   .golden-large-col-xs,
   .golden-large-col-sm,
   .golden-large-col-md,
@@ -93,6 +130,11 @@
   // Grid classes for extra small devices like smartphones. No offset, push, or
   // pull classes are present here due to the size of the target.
 
+  .golden-container {
+    width: 100%;
+  }
+  .make-golden-container(xs);
+
   .make-golden-col(xs, width);
   .make-golden-col(xs, pull);
   .make-golden-col(xs, push);
@@ -105,6 +147,11 @@
   // to tablets.
 
   @media (min-width: @screen-sm-min) {
+    .golden-container {
+      width: percentage(@golden-large);
+    }
+    .make-golden-container(sm);
+
     .make-golden-col(sm, width);
     .make-golden-col(sm, pull);
     .make-golden-col(sm, push);
@@ -117,6 +164,11 @@
   // Columns, offsets, pushes, and pulls for the desktop device range.
 
   @media (min-width: @screen-md-min) {
+    .golden-container {
+      width: percentage(@golden-large);
+    }
+    .make-golden-container(md);
+
     .make-golden-col(md, width);
     .make-golden-col(md, pull);
     .make-golden-col(md, push);
@@ -129,12 +181,32 @@
   // Columns, offsets, pushes, and pulls for the large desktop device range.
 
   @media (min-width: @screen-lg-min) {
+    .golden-container {
+      width: percentage(@golden-small);
+    }
+    .make-golden-container(lg);
+
     .make-golden-col(lg, width);
     .make-golden-col(lg, pull);
     .make-golden-col(lg, push);
     .make-golden-col(lg, offset);
   }
 }
+
+// Helper mixins for creating the container classes
+
+.make-golden-container(@class) {
+  .calc-golden-container(golden-large, @class);
+  .calc-golden-container(golden-small, @class);
+}
+
+.calc-golden-container(@gold, @class) {
+  .@{gold}-container-@{class} {
+    width: percentage(@@gold);
+  }
+}
+
+// Helper mixins for creating column classes
 
 .make-golden-col(@class, @type) {
   .calc-golden-col(golden-large, @class, @type);
@@ -233,114 +305,6 @@
     // ??? should this be margin-top or top?
     margin-top: percentage((1 - @@gold) / 2);
   }
-}
-
-
-
-// --------------------------------------------------
-// Golden Container
-// - Boostrap style container centered with golden proportion margins
-// --------------------------------------------------
-
-
-
-//
-// Create the golden containers
-// --------------------------------------------------
-
-.make-golden-containers();
-
-// 
-// Mixins for the golden containers
-// --------------------------------------------------
-
-.make-golden-containers() {
-
-  .golden-container,
-  .golden-container-margin-large,
-  .golden-container-margin-small,
-  .golden-container-margin-half-large,
-  .golden-container-margin-half-small {
-
-    // Horizontal centering via margin
-    margin-left: auto;
-    margin-right: auto;
-    // Inner gutter via padding
-    padding-left:  (@golden-grid-gutter-width / 2);
-    padding-right: (@golden-grid-gutter-width / 2);
-
-
-    &:before,
-    &:after {
-      content: " ";
-      display: table;
-    }
-
-    &:after {
-      clear: both;
-    }
-  }
-
-  // general golden container with breakpoints for different sized devices
-
-  // for xs screens, overridden by media queries
-  .golden-container {
-    width: 100%;
-  }
-
-  @media (min-width: @screen-sm-min) {
-    .golden-container {
-      .make-golden-container-margin-half-small();
-    }
-  }
-
-  @media (min-width: @screen-md-min) {
-    .golden-container {
-      .make-golden-container-margin-half-large();
-    }
-  }
-
-  @media (min-width: @screen-lg-min) {
-    .golden-container {
-      .make-golden-container-margin-small();
-    }
-  }
-
-  // golden containers with specific margins
-  // TODO:: add xs,sm,md,lg classes so that these can be easily personalized with responsive behavior
-
-  .golden-container-margin-large {
-    .make-golden-container-margin-large();
-  }
-
-  .golden-container-margin-small {
-    .make-golden-container-margin-small();
-  }
-
-  .golden-container-margin-half-large {
-    .make-golden-container-margin-half-large();
-  }
-
-  .golden-container-margin-half-small {
-    .make-golden-container-margin-half-small();
-  }
-
-}
-
-.make-golden-container-margin-large() {
-  width: percentage(1 / (1 + (2 * @golden-ratio)));
-}
-
-.make-golden-container-margin-small() {
-  width: percentage(1 / (1 + (2 / @golden-ratio)));
-}
-
-.make-golden-container-margin-half-large() {
-  width: percentage(@golden-small);
-}
-
-.make-golden-container-margin-half-small() {
-  width: percentage(@golden-large);
 }
 
 
