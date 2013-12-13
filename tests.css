@@ -1,0 +1,10 @@
+.test-grid {
+  width: 100%;
+  height: 50px;
+  background-color: white;
+}
+.test-grid-block {
+  height: 50px;
+  background-color: lightgrey;
+  border: 1px solid darkgrey;
+}
