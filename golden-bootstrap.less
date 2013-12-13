@@ -34,6 +34,17 @@
 
 
 // --------------------------------------------------
+// Resets
+// --------------------------------------------------
+
+// from scaffolding.less
+
+// copy over necessary mixins and variables
+// dump it all here
+
+
+
+// --------------------------------------------------
 // Golden Bootstrap Variables
 // --------------------------------------------------
 
@@ -757,4 +768,19 @@
   @new: darken(@color, @percent);
 
   background-color: @new;
+}
+
+
+
+
+
+// Other Helpful Mixins
+// - copied from Bootstrap's mixins
+// --------------------------------------------------
+
+// Box sizing
+.box-sizing(@boxmodel) {
+  -webkit-box-sizing: @boxmodel;
+     -moz-box-sizing: @boxmodel;
+          box-sizing: @boxmodel;
 }
