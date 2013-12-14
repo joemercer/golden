@@ -14,7 +14,6 @@
 // TODO::
 // - TESTING
 // - make <small> text lighter
-// - integrate clearfix mixin and block-center mixin in appropriate places
 // - resize typography baselines for different sized devices
 // - centering using bonnie's trick? - for golden rectangle see smashingmagazine
 // - expand colors
@@ -98,8 +97,8 @@
     // Default should be 100% so that columns stack on smaller devices
     width: 100%;
 
-    &.pull-center {
-      .pull-center();
+    &.center-block {
+      .center-block();
     }
 
   }
@@ -472,11 +471,6 @@
 // Mixin for golden content
 // --------------------------------------------------
 
-.pull-center() {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .columns(@num) {
   -moz-column-count: @num;
   -webkit-column-count: @num;
@@ -500,8 +494,8 @@
   @golden-width: ((@font-size * @golden-ratio) * (@font-size * @golden-ratio)) * (1 + (2 * @golden-ratio * ((@line-height / @font-size) - @golden-ratio)));
   width: @golden-width;
 
-  &.pull-center {
-    .pull-center();
+  &.center-block {
+    .center-block();
   }
 
   &.columns-2 {
