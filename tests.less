@@ -1,12 +1,16 @@
+@import "./bootstrap-variables.less";
+@import "./golden-variables.less";
+@import "./golden-mixins.less";
+
 @test-grid-height: 50px;
 
-.test-grid {
+.example-grid {
 	width: 100%;
 	height: @test-grid-height;
 	background-color: white;
 }
 
-.test-grid-block {
+.example-grid-block {
 	height: @test-grid-height;
 	background-color: lightgrey;
 	border: 1px solid darkgrey;
@@ -17,9 +21,42 @@
 	border: 1px solid darkgrey;
 	padding-left: 11px;
 }
+
 .example-content {
 	background-color: whitesmoke;
 	border: 1px solid darkgrey;
 	padding: 11px;
 	margin-bottom: 11px;
+}
+
+.example1-golden-rectangle {
+	.make-golden-rectangle(200px);
+	background-color: lightgreen;
+	display: inline-block;
+}
+.example2-golden-rectangle {
+	.make-golden-rectangle(height; 200px);
+	background-color: lightpink;
+	display: inline-block;
+}
+.example3-golden-rectangle {
+	.make-golden-rectangle(width; 300px);
+	background-color: lightblue;
+	display: inline-block;
+}
+.example4-golden-rectangle {
+	.make-golden-rectangle(height; 75%);
+	background-color: lightyellow;
+	display: inline-block;
+	margin: 24px;
+}
+
+.example1-golden-image {
+    .make-golden-image(width; 200px; -50px; -87px);
+}
+.example2-golden-image {
+    .make-golden-image(width; 100px; -82px; -119px);
+}
+.example3-golden-image {
+    .make-golden-image(width; 50px; -82px; -134px);
 }
