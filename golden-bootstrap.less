@@ -33,6 +33,9 @@
 //   width: percentage(1 / (1 + (2 / @golden-ratio)));
 // }
 
+@import "./golden-variables.less";
+@import "./golden-mixins.less";
+
 
 
 // --------------------------------------------------
@@ -139,30 +142,9 @@ hr {
 
 
 // --------------------------------------------------
-// Golden Bootstrap Variables
-// --------------------------------------------------
-
-
-
-@golden-ratio:           1.6180339887498948482;
-@golden-large:           1/@golden-ratio;
-@golden-small:           1-@golden-large;
-
-
-
-// --------------------------------------------------
 // Golden Grid
 // - Bootstrap 3 style grid system complete with containers and columns that have golden proportions
 // --------------------------------------------------
-
-
-
-//
-// Variables for golden grid
-// --------------------------------------------------
-
-// examples based on an @font-size-base of 14px
-@golden-grid-gutter-width: @golden-line-height-computed; // ~22px
 
 //
 // Create the golden grid
@@ -424,27 +406,6 @@ hr {
 
 
 //
-// Variables for golden typography
-// --------------------------------------------------
-
-// examples based on an @font-size-base of 14px
-@golden-font-size-base: @font-size-base; // 14px
-@golden-font-size-large: ceil(2 * @golden-font-size-base * @golden-large); // ~18px
-@golden-font-size-small: floor(2 * @golden-font-size-base * @golden-small); // ~10px
-
-@golden-font-size-h1: ceil(@golden-font-size-base * (@golden-ratio * 3)); // ~60px
-@golden-font-size-h2: floor(@golden-font-size-base * (@golden-ratio * 2)); // ~36px
-@golden-font-size-h3: ceil(@golden-font-size-base * @golden-ratio); // ~23px
-@golden-font-size-h4: @golden-font-size-large; // ~18px
-@golden-font-size-h5: @golden-font-size-base; // 14px
-@golden-font-size-h6: @golden-font-size-small; // ~10px
-
-@golden-line-height-base: @golden-ratio; // ~1.61
-@golden-line-height-computed: floor(@golden-font-size-base * @golden-line-height-base); // ~22px
-
-@golden-headings-line-height: 1 + (@golden-ratio / 10); // ~1.161
-
-//
 // Create golden typography
 // --------------------------------------------------
 
@@ -670,198 +631,6 @@ hr {
     .columns(3; @golden-width; @golden-line-height-computed);
   }
 
-}
-
-
-
-// --------------------------------------------------
-// Golden Mixins
-// - Some helpful mixins for utilizing the golden ratio
-// --------------------------------------------------
-
-
-
-// Golden Rectangle
-// --------------------------------------------------
-
-// Example usage:
-
-// // golden rectangle based on a width of 25px
-// .golden-rectangle-ex1 {
-//   .make-golden-rectangle(25px);
-// }
-
-// // golden rectangle based on a height of 25px
-// .golden-rectangle-ex2 {
-//   .make-golden-rectangle(height; 25px);
-// }
-
-// // golden rectangle based on a width of 25vh with a fallback of 200px
-// .golden-rectangle-ex3 {
-//   .make-golden-rectangle(width; 25vh; 200px);
-// }
-
-// --------------------------------------------------
-
-// 
-// Mixins for the golden rectangle
-// --------------------------------------------------
-
-.make-golden-rectangle(width; @width; @widthBackup) {
-  width: @widthBackup; width: @width;
-  height: @widthBackup * @golden-large; height: @width * @golden-large;
-}
-.make-golden-rectangle(height; @height; @heightBackup) {
-  width: @heightBackup * @golden-large; width: @height * @golden-large;
-  height: @heightBackup; height: @height;
-}
-
-.make-golden-rectangle(width; @width) {
-  width: @width;
-  height: @width * @golden-large;
-}
-.make-golden-rectangle(height; @height) {
-  width: @height * @golden-large;
-  height: @height;
-}
-.make-golden-rectangle(@width) {
-  .make-golden-rectangle(width; @width);
-}
-
-
-
-// Golden Image
-// - wrap your img in a div.golden-image to give it a golden crop
-// --------------------------------------------------
-
-// Example usage:
-
-// // golden image based on a width of 200px and the image centered with a left alignment of -68px and top alignment of -11px
-// .golden-image-ex1 {
-//     .make-golden-image(width; 200px; -68px; -11px);
-// }
-
-// // golden image based on a height of 200px and the image centered with a left alignment of -68px and top alignment of -11px
-// .golden-image-ex2 {
-//     .make-golden-image(height; 200px; -68px; -11px);
-// }
-
-// // golden image based on a width of 200px and the image centered with a left alignment of -68px and top alignment of -11px
-// .golden-image-ex3 {
-//     .make-golden-image(200px; -68px; -11px);
-// }
-
-// --------------------------------------------------
-
-// 
-// Mixins for the golden image
-// --------------------------------------------------
-
-.make-golden-image(width; @width; @left; @top) {
-  
-  .make-golden-rectangle(width; @width);
-  overflow: hidden;
-  display: inline-block;
-
-  img {
-    position: relative;
-    top: @top;
-    left: @left;
-  }
-}
-.make-golden-image(height; @height; @left; @top) {
-  
-  .make-golden-rectangle(height; @height);
-  overflow: hidden;
-  display: inline-block;
-
-  img {
-    position: relative;
-    top: @top;
-    left: @left;
-  }
-}
-.make-golden-image(@width; @left; @top) {
-  
-  .make-golden-rectangle(width; @height);
-  overflow: hidden;
-  display: inline-block;
-
-  img {
-    position: relative;
-    top: @top;
-    left: @left;
-  }
-}
-
-
-
-
-// Golden Colors
-// --------------------------------------------------
-
-// Example usage:
-
-// // class producing a light background color and dark colored text that are pleasing shades of purple
-// .goldenPurple {
-//   .golden-color(color; darken; purple);
-//   .golden-color(background-color; lighten; purple);
-// }
-
-// --------------------------------------------------
-
-// 
-// Mixins for golden colors
-// --------------------------------------------------
-
-// pulls @color towards white to produce a new color related by the golden ratio
-
-// color
-.golden-color(color; lighten; @color) {
-  .golden-color(color; lighten; @color; @golden-large);
-}
-.golden-color(color; lighten; @color; @gold) {
-  @lightness: lightness(@color);
-  @percent: ((100 - @lightness) * @gold);
-  @new: lighten(@color, @percent);
-
-  color: @new;
-}
-// background-color
-.golden-color(background-color; lighten; @color) {
-  .golden-color(background-color; lighten; @color; @golden-large);
-}
-.golden-color(background-color; lighten; @color; @gold) {
-  @lightness: lightness(@color);
-  @percent: ((100 - @lightness) * @gold);
-  @new: lighten(@color, @percent);
-
-  background-color: @new;
-}
-
-// pulls @color towards black to produce a new color related by the golden ratio
-
-// color
-.golden-color(color; darken; @color) {
-  .golden-color(color; darken; @color; @golden-large);
-}
-.golden-color(color; darken; @color; @gold) {
-  @lightness: lightness(@color);
-  @percent: (@lightness * @gold);
-  @new: darken(@color, @percent);
-
-  color: @new;
-}
-// background-color
-.golden-color(background-color; darken; @color) {
-  .golden-color(background-color; darken; @color; @golden-large);
-}
-.golden-color(background-color; darken; @color; @gold) {
-  @lightness: lightness(@color);
-  @percent: (@lightness * @gold);
-  @new: darken(@color, @percent);
-
-  background-color: @new;
 }
 
 
