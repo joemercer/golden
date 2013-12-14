@@ -1,0 +1,58 @@
+//
+// Golden Content
+// - Container with ideal width based on font-size and line height
+// - http://www.pearsonified.com/2011/12/golden-ratio-typography.php
+// --------------------------------------------------
+
+
+
+//
+// Create golden content
+// --------------------------------------------------
+
+.golden-content {
+  .make-golden-content(@golden-font-size-base; @golden-line-height-computed);
+}
+
+// 
+// Mixin for golden content
+// --------------------------------------------------
+
+.columns(@num) {
+  -moz-column-count: @num;
+  -webkit-column-count: @num;
+  column-count: @num;
+}
+.columns(@num; @width; @gap) {
+  -moz-column-count: @num;
+  -webkit-column-count: @num;
+  column-count: @num;
+  -moz-column-width: @width;
+  -webkit-column-width: @width;
+  column-width: @width;
+  -moz-column-gap: @gap;
+  -webkit-column-gap: @gap;
+  column-gap: @gap;
+}
+
+.make-golden-content(@font-size, @line-height) {
+
+  // not using pow because some LESS compilers don't support the use of pow with awkward units
+  @golden-width: ((@font-size * @golden-ratio) * (@font-size * @golden-ratio)) * (1 + (2 * @golden-ratio * ((@line-height / @font-size) - @golden-ratio)));
+  width: @golden-width;
+
+  &.center-block {
+    .center-block();
+  }
+
+  &.columns-2 {
+    width: 100%;
+    .columns(2; @golden-width; @golden-line-height-computed);
+  }
+
+  &.columns-3 {
+    width: 100%;
+    .columns(3; @golden-width; @golden-line-height-computed);
+  }
+
+}
