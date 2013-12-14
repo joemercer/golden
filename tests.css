@@ -8,3 +8,14 @@
   background-color: lightgrey;
   border: 1px solid darkgrey;
 }
+.example-heading {
+  background-color: lightgrey;
+  border: 1px solid darkgrey;
+  padding-left: 11px;
+}
+.example-content {
+  background-color: whitesmoke;
+  border: 1px solid darkgrey;
+  padding: 11px;
+  margin-bottom: 11px;
+}
