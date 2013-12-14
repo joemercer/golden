@@ -75,15 +75,7 @@
     // Default should be 100% so that columns stack on smaller devices
     width: 100%;
 
-    &:before,
-    &:after {
-      content: " ";
-      display: table;
-    }
-
-    &:after {
-      clear: both;
-    }
+    .clearfix();
   }
 
   .golden-large-col-xs,
@@ -244,14 +236,7 @@
   .golden-large-row,
   .golden-small-row
   {
-    &:before,
-    &:after {
-      content: " ";
-      display: table;
-    }
-    &:after {
-      clear: both;
-    }
+    .clearfix();
   }
 
   .make-golden-row(height);
