@@ -37,7 +37,7 @@
 
 .make-golden-content(@font-size, @line-height) {
 
-  // not using pow because some LESS compilers don't support the use of pow with awkward units
+  // not using pow because some LESS compilers don't support the use of pow with non-matching units
   @golden-width: ((@font-size * @golden-ratio) * (@font-size * @golden-ratio)) * (1 + (2 * @golden-ratio * ((@line-height / @font-size) - @golden-ratio)));
   width: @golden-width;
 
