@@ -1,55 +1,51 @@
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-html {
-  font-size: 62.5%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-body {
+.golden {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.618033988749895;
   color: #333333;
   background-color: #ffffff;
 }
-input,
-button,
-select,
-textarea {
+.golden *,
+.golden *:before,
+.golden *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.golden input,
+.golden button,
+.golden select,
+.golden textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
 }
-a {
+.golden a {
   color: #428bca;
   text-decoration: none;
 }
-a:hover,
-a:focus {
+.golden a:hover,
+.golden a:focus {
   color: #2a6496;
   text-decoration: underline;
 }
-a:focus {
+.golden a:focus {
   outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
-img {
+.golden img {
   vertical-align: middle;
 }
-.img-responsive {
+.golden .img-responsive {
   display: block;
   max-width: 100%;
   height: auto;
 }
-.img-rounded {
+.golden .img-rounded {
   border-radius: 6px;
 }
-.img-thumbnail {
+.golden .img-thumbnail {
   padding: 4px;
   line-height: 1.428571429;
   background-color: #ffffff;
@@ -61,16 +57,16 @@ img {
   max-width: 100%;
   height: auto;
 }
-.img-circle {
+.golden .img-circle {
   border-radius: 50%;
 }
-hr {
+.golden hr {
   margin-top: 22px;
   margin-bottom: 22px;
   border: 0;
   border-top: 1px solid #eeeeee;
 }
-.sr-only {
+.golden .sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -340,14 +336,6 @@ hr {
 }
 .golden-small-row-center {
   margin-top: 30.901699437494738%;
-}
-.golden-typography {
-  font-size: 14px;
-  line-height: 1.618033988749895;
-}
-.golden-typography hr {
-  margin-top: 22px;
-  margin-bottom: 22px;
 }
 .golden-typography p {
   margin: 0 0 11px;
