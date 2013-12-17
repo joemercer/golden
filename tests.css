@@ -19,6 +19,56 @@
   padding: 11px;
   margin-bottom: 11px;
 }
+.example-color .example-content {
+  background-color: white;
+}
+.example-color-swatch {
+  height: 50px;
+  width: 49%;
+  display: inline-block;
+}
+.golden-black {
+  background-color: #000;
+}
+.golden-gray-darker {
+  background-color: #171717;
+}
+.golden-gray-dark {
+  background-color: #3c3c3c;
+}
+.golden-gray {
+  background-color: #616161;
+}
+.golden-gray-light {
+  background-color: #c3c3c3;
+}
+.golden-gray-lighter {
+  background-color: #e8e8e8;
+}
+.golden-white {
+  background-color: #FFF;
+}
+.black {
+  background-color: #000;
+}
+.gray-darker {
+  background-color: #222222;
+}
+.gray-dark {
+  background-color: #333333;
+}
+.gray {
+  background-color: #555555;
+}
+.gray-light {
+  background-color: #999999;
+}
+.gray-lighter {
+  background-color: #eeeeee;
+}
+.white {
+  background-color: #FFF;
+}
 .example1-golden-rectangle {
   width: 200px;
   height: 123.60679774997895px;
