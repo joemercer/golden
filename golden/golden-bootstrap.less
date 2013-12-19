@@ -41,11 +41,25 @@
 @import "./variables.less";
 @import "./mixins.less";
 
+@import "./grid.less";
+
 .golden {
   @import "./scaffolding.less";
-}
 
-@import "./grid.less";
+  // core
+	@import "./code.less";
+	@import "./tables.less";
+	@import "./forms.less";
+	@import "./buttons.less";
+
+	// components
+	@import "./jumbotron.less";
+	@import "./thumbnails.less";
+	@import "./media.less";
+	@import "./list-group.less";
+	@import "./panels.less";
+	@import "./wells.less";
+}
 
 .golden-typography {
   @import "./typography.less";
