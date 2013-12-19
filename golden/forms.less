@@ -85,9 +85,9 @@ input[type="number"] {
 // Adjust output element
 output {
   display: block;
-  padding-top: (@padding-base-vertical + 1);
-  font-size: @font-size-base;
-  line-height: @line-height-base;
+  padding-top: (@golden-padding-base-vertical + 1);
+  font-size: @golden-font-size-base;
+  line-height: @golden-line-height-base;
   color: @input-color;
   vertical-align: middle;
 }
@@ -127,9 +127,9 @@ output {
   display: block;
   width: 100%;
   height: @input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
-  padding: @padding-base-vertical @padding-base-horizontal;
-  font-size: @font-size-base;
-  line-height: @line-height-base;
+  padding: @golden-padding-base-vertical @golden-padding-base-horizontal;
+  font-size: @golden-font-size-base;
+  line-height: @golden-line-height-base;
   color: @input-color;
   vertical-align: middle;
   background-color: @input-bg;
@@ -234,11 +234,11 @@ input[type="checkbox"],
 
 // Form control sizing
 .input-sm {
-  .input-size(@input-height-small; @padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @border-radius-small);
+  .input-size(@input-height-small; @golden-padding-small-vertical; @golden-padding-small-horizontal; @golden-font-size-small; @golden-line-height-small; @border-radius-small);
 }
 
 .input-lg {
-  .input-size(@input-height-large; @padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-large);
+  .input-size(@input-height-large; @golden-padding-large-vertical; @golden-padding-large-horizontal; @golden-font-size-large; @golden-line-height-large; @border-radius-large);
 }
 
 
@@ -345,7 +345,7 @@ input[type="checkbox"],
   .checkbox-inline {
     margin-top: 0;
     margin-bottom: 0;
-    padding-top: (@padding-base-vertical + 1); // Default padding plus a border
+    padding-top: (@golden-padding-base-vertical + 1); // Default padding plus a border
   }
 
   // Make form groups behave like rows
@@ -354,7 +354,7 @@ input[type="checkbox"],
   }
 
   .form-control-static {
-    padding-top: (@padding-base-vertical + 1);
+    padding-top: (@golden-padding-base-vertical + 1);
   }
 
   // Only right align form labels here when the columns stop stacking
