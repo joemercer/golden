@@ -8,6 +8,12 @@
   background-color: lightgrey;
   border: 1px solid darkgrey;
 }
+.example.panel .panel-heading {
+  background-color: #fff;
+}
+.example.panel .panel-body .panel-heading {
+  background-color: #f5f5f5;
+}
 .example-heading {
   background-color: lightgrey;
   border: 1px solid darkgrey;
