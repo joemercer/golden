@@ -14,333 +14,355 @@
     </div>
     <div class="golden-large-container-md center-block">
 
-      <h2>.golden</h2>
+      <div class="introduction">
 
-        <p>All of Golden is rooted under the .golden class. It applies a bunch of awesome styles, but some can be unpredictable. For example, it changes the box model. </p>
+        <h2>Getting Started .golden</h2>
 
-        <ul>
-          <li>normalize.less</li>
-          <li>print.less</li>
+          <p>All of Golden is rooted under the .golden class. It applies a bunch of awesome styles, but some can be unpredictable. For example, it changes the box model. </p>
 
-          <li>utilities.less</li>
+          <ul>
+            <li>normalize.less</li>
+            <li>print.less</li>
 
-          <li>scaffolding.less</li>
-        </ul>
+            <li>utilities.less</li>
 
-      <h2>Grid System</h2>
-
-        <h3>Containers</h3>
-
-          <h5>.golden-container</h5>
-          <div class="example-grid">
-            <div class="golden-container example-grid-block"></div>
-          </div>
-
-          <h5>.golden-large-container-sm</h5>
-          <div class="example-grid">
-            <div class="golden-large-container-sm example-grid-block"></div>
-          </div>
-
-          <h5>.golden-large-container-sm .golden-small-container-lg</h5>
-          <div class="example-grid">
-            <div class="golden-large-container-sm golden-small-container-lg example-grid-block"></div>
-          </div>
-
-        <h3>Columns</h3>
-
-          <div class="example-grid">
-            <div class="golden-large-col-sm example-grid-block">.golden-large-col-sm</div>
-            <div class="golden-small-col-sm example-grid-block">.golden-small-col-sm</div>
-          </div>
-
-          <div class="example-grid">
-            <div class="golden-small-col-md example-grid-block">.golden-small-col-md</div>
-            <div class="golden-large-col-md example-grid-block">.golden-large-col-md</div>
-          </div>
-
-          <div class="example-grid">
-            <div class="golden-large-col-sm golden-small-col-md example-grid-block">.golden-large-col-sm .golden-small-col-md</div>
-            <div class="golden-small-col-sm golden-large-col-md example-grid-block">.golden-small-col-sm .golden-large-col-md</div>
-          </div>
-
-      <h2>Typography</h2>
-
-        <h3>Headings</h3>
-
-        <p>All HTML headings, &lt;h1&gt; through &lt;h6&gt;, are available. .h1 through .h6 classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline.</p>
-
-        <div class="example panel panel-default">
-          <div class="panel-heading">
-            <h5>Example</h5>
-          </div>
-          <div class="panel-body">
-            <h1>Golden h1</h1>
-            <h2>Golden h2</h2>
-            <h3>Golden h3</h3>
-            <h4>Golden h4</h4>
-            <h5>Golden h5</h5>
-            <h6>Golden h6</h6>
-          </div>
-          <div class="panel-footer">
-<xmp><h1>Golden h1</h1>
-<h2>Golden h2</h2>
-<h3>Golden h3</h3>
-<h4>Golden h4</h4>
-<h5>Golden h5</h5>
-<h6>Golden h6</h6></xmp>
-          </div>
-        </div>
-
-        <p>Create lighter, secondary text in any heading with a generic &lt;small&gt; tag or the .small class.</p>
-
-        <div class="example panel panel-default">
-          <div class="panel-heading">
-            <h5>Example</h5>
-          </div>
-          <div class="panel-body">
-            <h1>Golden h1 <small>Subheading</small></h1>
-            <h2>Golden h2 <small>Subheading</small></h2>
-            <h3>Golden h3 <small>Subheading</small></h3>
-            <h4>Golden h4 <small>Subheading</small></h4>
-            <h5>Golden h5 <small>Subheading</small></h5>
-            <h6>Golden h6 <small>Subheading</small></h6>
-          </div>
-          <div class="panel-footer">
-            <pre>&lt;h1&gt;Golden h1 &lt;small&gt;Subheading&lt;/small&gt;&lt;/h1&gt;<br>&lt;h2&gt;Golden h2 &lt;small&gt;Subheading&lt;/small&gt;&lt;/h2&gt;<br>&lt;h3&gt;Golden h3 &lt;small&gt;Subheading&lt;/small&gt;&lt;/h3&gt;<br>&lt;h4&gt;Golden h4 &lt;small&gt;Subheading&lt;/small&gt;&lt;/h4&gt;<br>&lt;h5&gt;Golden h5 &lt;small&gt;Subheading&lt;/small&gt;&lt;/h5&gt;<br>&lt;h6&gt;Golden h6 &lt;small&gt;Subheading&lt;/small&gt;&lt;/h6&gt;</pre>
-          </div>
-        </div>
-
-        <h3>Body Copy</h3>
-
-        <p>Golden's global default font-size is <strong>14px</strong>, with a line-height of <strong>1.618</strong>. This is applied to the &lt;body&gt; and all paragraphs. In addition, &lt;p&gt; (paragraphs) receive a bottom margin of half their computed line-height (11px by default).</p>
-
-        <div class="example panel panel-default">
-          <div class="panel-heading">
-            <h5>Example</h5>
-          </div>
-          <div class="panel-body">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis auctor vestibulum. Maecenas suscipit vehicula magna nec rutrum. Proin eleifend tellus nec nunc interdum, nec varius ipsum eleifend. In tincidunt felis a felis porta eleifend id at enim. Aenean eu arcu adipiscing, aliquet turpis facilisis, scelerisque dui. Vestibulum sed nisl eu elit fringilla dictum in eget neque.</p>
-            <p>Etiam et vestibulum quam. Maecenas ullamcorper mollis neque eget eleifend. Donec pulvinar eros sed lorem dignissim, sit amet luctus sapien gravida. Sed commodo ullamcorper elit, id cursus velit feugiat eget. Praesent a purus at dolor porttitor pellentesque. Sed eros libero, vehicula eget magna vitae, fermentum vehicula nisi.</p>
-          </div>
-          <div class="panel-footer">
-<xmp><p>...</p></xmp>
-          </div>
-        </div>
-
-        <p>Make a paragraph stand out by adding .lead.</p>
-
-        <div class="example panel panel-default">
-          <div class="panel-heading">
-            <h5>Example</h5>
-          </div>
-          <div class="panel-body">
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis auctor vestibulum.</p>
-          </div>
-          <div class="panel-footer">
-<xmp><p class="lead">...</p></xmp>
-          </div>
-        </div>
-
-        <h3>Content</h3>
-
-        <p>Golden also provides a <strong>.golden-content</strong> class which sets an ideal line width based on the base font size and line height.</p>
-
-        <div class="example panel panel-default">
-          <div class="panel-heading">
-            <h5>Example</h5>
-          </div>
-          <div class="panel-body">
-            <p class="golden-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis auctor vestibulum. Maecenas suscipit vehicula magna nec rutrum. Proin eleifend tellus nec nunc interdum, nec varius ipsum eleifend. In tincidunt felis a felis porta eleifend id at enim. Aenean eu arcu adipiscing, aliquet turpis facilisis, scelerisque dui. Vestibulum sed nisl eu elit fringilla dictum in eget neque.</p>
-            <p class="golden-content">Etiam et vestibulum quam. Maecenas ullamcorper mollis neque eget eleifend. Donec pulvinar eros sed lorem dignissim, sit amet luctus sapien gravida. Sed commodo ullamcorper elit, id cursus velit feugiat eget. Praesent a purus at dolor porttitor pellentesque. Sed eros libero, vehicula eget magna vitae, fermentum vehicula nisi.</p>
-          </div>
-          <div class="panel-footer">
-<xmp><p class="golden-content">...</p></xmp>
-          </div>
-        </div>
-
-        <p>To add columns add a <strong>.columns-n</strong> where <strong>n</strong> is the number of columns you want. Columns collapse when the containing element isn't wide enough to support them.</p>
-
-        <div class="example panel panel-default">
-          <div class="panel-heading">
-            <h5>Example</h5>
-          </div>
-          <div class="panel-body">
-            <p class="golden-content columns-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis auctor vestibulum. Maecenas suscipit vehicula magna nec rutrum. Proin eleifend tellus nec nunc interdum, nec varius ipsum eleifend. In tincidunt felis a felis porta eleifend id at enim. Aenean eu arcu adipiscing, aliquet turpis facilisis, scelerisque dui. Vestibulum sed nisl eu elit fringilla dictum in eget neque. Etiam et vestibulum quam. Maecenas ullamcorper mollis neque eget eleifend. Donec pulvinar eros sed lorem dignissim, sit amet luctus sapien gravida. Sed commodo ullamcorper elit, id cursus velit feugiat eget. Praesent a purus at dolor porttitor pellentesque. Sed eros libero, vehicula eget magna vitae, fermentum vehicula nisi. Maecenas tristique nec dolor quis mollis. Integer dictum a elit non placerat. Duis dignissim nulla est, sed ullamcorper tortor feugiat id. Aliquam erat justo, sodales eget ipsum non, consectetur adipiscing risus. Maecenas facilisis porttitor nulla a pharetra. Suspendisse eu turpis odio. Cras pulvinar nisl est, ac suscipit felis congue vel. Donec eget imperdiet arcu, quis sollicitudin erat. Suspendisse a dui nec mauris ullamcorper viverra id ac massa. Integer aliquet aliquam lacus, non laoreet leo congue a. Fusce vitae metus risus. Nulla ullamcorper nisi at venenatis mollis. Aenean at odio vulputate, consequat velit at, dictum dui. Aenean ut tincidunt nunc.</p>
-          </div>
-          <div class="panel-footer">
-            <pre>&lt;p class="golden-content columns-2"&gt;...&lt;/p&gt;</pre>
-          </div>
-        </div>
-
-        <h3>Code</h3>
-
-        <p>Wrap inline snippets of code with <code>&lt;code&gt;</code>.</p>
-
-        <p>Use <code>&lt;pre&gt;</code> for multiple lines of code. Be sure to escape any angle brackets in the code for proper rendering. To do this en masse you can use the <code>&lt;xmp&gt;</code> tag.</p>
-
-        <h3>Lists</h3>
-
-        <h3>Tables</h3>
-
-        <h3>Forms</h3>
-
-        <h3>Buttons</h3>
-
-      <h2>Colors</h2>
-
-      <h3>Greys</h3>
-
-      <div class="example panel panel-default">
-        <div class="panel-heading">
-          <h5>Example</h5>
-        </div>
-        <div class="panel-body">
-          <div class="example-color-swatch golden-black"></div>
-          <div class="example-color-swatch black"></div>
-
-          <div class="example-color-swatch golden-gray-darker"></div>
-          <div class="example-color-swatch gray-darker"></div>
-
-          <div class="example-color-swatch golden-gray-dark"></div>
-          <div class="example-color-swatch gray-dark"></div>
-
-          <div class="example-color-swatch golden-gray"></div>
-          <div class="example-color-swatch gray"></div>
-
-          <div class="example-color-swatch golden-gray-light"></div>
-          <div class="example-color-swatch gray-light"></div>
-
-          <div class="example-color-swatch golden-gray-lighter"></div>
-          <div class="example-color-swatch gray-lighter"></div>
-
-          <div class="example-color-swatch golden-white"></div>
-          <div class="example-color-swatch white"></div>
-        </div>
-        <div class="panel-footer">
-<xmp>Colors yo</xmp>
-        </div>
+            <li>scaffolding.less</li>
+          </ul>
       </div>
 
-      <h2>Components</h2>
+      <div class="grid-system">
 
-      <h3>Images Thumbnails Media Items</h3>
+        <h2>Grid System</h2>
 
-      <h3>Jumbotron</h3>
+          <h3>Containers</h3>
 
-        <div class="example panel panel-default">
-          <div class="panel-heading">
-            <h5>Example</h5>
-          </div>
-          <div class="panel-body">
-            <div class="jumbotron">
-              <h1>Title yo</h1>
-              <p>Some text yo</p>
-              <p><a class="btn btn-primary btn-lg" role="button">A button yo</a></p>
+            <h5>.golden-container</h5>
+            <div class="example-grid">
+              <div class="golden-container example-grid-block"></div>
             </div>
-          </div>
-          <div class="panel-footer">
-<xmp><div class="jumbotron">
-  <h1>Title</h1>
-  <p>...</p>
-  <p><a class="btn btn-primary btn-lg" role="button">Button</a></p>
-</div></xmp>
-          </div>
-        </div>
 
-      <h3>Panels</h3>
+            <h5>.golden-large-container-sm</h5>
+            <div class="example-grid">
+              <div class="golden-large-container-sm example-grid-block"></div>
+            </div>
 
-        <div class="example panel panel-default">
-          <div class="panel-heading">
-            <h5>Example</h5>
-          </div>
-          <div class="panel-body">
-            <div class="panel panel-default">
+            <h5>.golden-large-container-sm .golden-small-container-lg</h5>
+            <div class="example-grid">
+              <div class="golden-large-container-sm golden-small-container-lg example-grid-block"></div>
+            </div>
+
+          <h3>Columns</h3>
+
+            <div class="example-grid">
+              <div class="golden-large-col-sm example-grid-block">.golden-large-col-sm</div>
+              <div class="golden-small-col-sm example-grid-block">.golden-small-col-sm</div>
+            </div>
+
+            <div class="example-grid">
+              <div class="golden-small-col-md example-grid-block">.golden-small-col-md</div>
+              <div class="golden-large-col-md example-grid-block">.golden-large-col-md</div>
+            </div>
+
+            <div class="example-grid">
+              <div class="golden-large-col-sm golden-small-col-md example-grid-block">.golden-large-col-sm .golden-small-col-md</div>
+              <div class="golden-small-col-sm golden-large-col-md example-grid-block">.golden-small-col-sm .golden-large-col-md</div>
+            </div>
+      </div>
+
+      <div class="typography">
+
+        <h2>Typography</h2>
+
+          <h3>Headings</h3>
+
+            <p>All HTML headings, &lt;h1&gt; through &lt;h6&gt;, are available. .h1 through .h6 classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline.</p>
+
+            <div class="example panel panel-default">
               <div class="panel-heading">
-                Panel Heading
+                <h5>Example</h5>
               </div>
               <div class="panel-body">
-                Panel Body
+                <h1>Golden h1</h1>
+                <h2>Golden h2</h2>
+                <h3>Golden h3</h3>
+                <h4>Golden h4</h4>
+                <h5>Golden h5</h5>
+                <h6>Golden h6</h6>
               </div>
               <div class="panel-footer">
-                Panel Footer
+                <pre>&lt;h1&gt;Golden h1&lt;/h1&gt;<br>&lt;h2&gt;Golden h2&lt;/h2&gt;<br>&lt;h3&gt;Golden h3&lt;/h3&gt;<br>&lt;h4&gt;Golden h4&lt;/h4&gt;<br>&lt;h5&gt;Golden h5&lt;/h5&gt;<br>&lt;h6&gt;Golden h6&lt;/h6&gt;</pre>
               </div>
             </div>
-          </div>
-          <div class="panel-footer">
-<xmp><div class="panel panel-default">
-  <div class="panel-heading">
-    Panel Heading
-  </div>
-  <div class="panel-body">
-    Panel Body
-  </div>
-  <div class="panel-footer">
-    Panel Footer
-  </div>
-</div></xmp>
-          </div>
-        </div>
 
-      <h3>Wells</h3>
+            <p>Create lighter, secondary text in any heading with a generic &lt;small&gt; tag or the .small class.</p>
 
-      <div class="example panel panel-default">
-        <div class="panel-heading">
-          <h5>Example</h5>
-        </div>
-        <div class="panel-body">
-          <div class="well">
-            Well
-          </div>
-        </div>
-        <div class="panel-footer">
-<xmp><div class="well">
-  Well
-</div></xmp>
-        </div>
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h5>Example</h5>
+              </div>
+              <div class="panel-body">
+                <h1>Golden h1 <small>Subheading</small></h1>
+                <h2>Golden h2 <small>Subheading</small></h2>
+                <h3>Golden h3 <small>Subheading</small></h3>
+                <h4>Golden h4 <small>Subheading</small></h4>
+                <h5>Golden h5 <small>Subheading</small></h5>
+                <h6>Golden h6 <small>Subheading</small></h6>
+              </div>
+              <div class="panel-footer">
+                <pre>&lt;h1&gt;Golden h1 &lt;small&gt;Subheading&lt;/small&gt;&lt;/h1&gt;<br>&lt;h2&gt;Golden h2 &lt;small&gt;Subheading&lt;/small&gt;&lt;/h2&gt;<br>&lt;h3&gt;Golden h3 &lt;small&gt;Subheading&lt;/small&gt;&lt;/h3&gt;<br>&lt;h4&gt;Golden h4 &lt;small&gt;Subheading&lt;/small&gt;&lt;/h4&gt;<br>&lt;h5&gt;Golden h5 &lt;small&gt;Subheading&lt;/small&gt;&lt;/h5&gt;<br>&lt;h6&gt;Golden h6 &lt;small&gt;Subheading&lt;/small&gt;&lt;/h6&gt;</pre>
+              </div>
+            </div>
+
+          <h3>Body Copy</h3>
+
+            <p>Golden's global default font-size is <strong>14px</strong>, with a line-height of <strong>1.618</strong>. This is applied to the &lt;body&gt; and all paragraphs. In addition, &lt;p&gt; (paragraphs) receive a bottom margin of half their computed line-height (11px by default).</p>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h5>Example</h5>
+              </div>
+              <div class="panel-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis auctor vestibulum. Maecenas suscipit vehicula magna nec rutrum. Proin eleifend tellus nec nunc interdum, nec varius ipsum eleifend. In tincidunt felis a felis porta eleifend id at enim. Aenean eu arcu adipiscing, aliquet turpis facilisis, scelerisque dui. Vestibulum sed nisl eu elit fringilla dictum in eget neque.</p>
+                <p>Etiam et vestibulum quam. Maecenas ullamcorper mollis neque eget eleifend. Donec pulvinar eros sed lorem dignissim, sit amet luctus sapien gravida. Sed commodo ullamcorper elit, id cursus velit feugiat eget. Praesent a purus at dolor porttitor pellentesque. Sed eros libero, vehicula eget magna vitae, fermentum vehicula nisi.</p>
+              </div>
+              <div class="panel-footer">
+                <pre>&lt;p&gt;...&lt;/p&gt;</pre>
+              </div>
+            </div>
+
+            <p>Make a paragraph stand out by adding .lead.</p>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h5>Example</h5>
+              </div>
+              <div class="panel-body">
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis auctor vestibulum.</p>
+              </div>
+              <div class="panel-footer">
+                <pre>&lt;p class="lead"&gt;...&lt;/p&gt;</pre>
+              </div>
+            </div>
+
+          <h3>Content</h3>
+
+            <p>Golden also provides a <strong>.golden-content</strong> class which sets an ideal line width based on the base font size and line height.</p>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h5>Example</h5>
+              </div>
+              <div class="panel-body">
+                <p class="golden-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis auctor vestibulum. Maecenas suscipit vehicula magna nec rutrum. Proin eleifend tellus nec nunc interdum, nec varius ipsum eleifend. In tincidunt felis a felis porta eleifend id at enim. Aenean eu arcu adipiscing, aliquet turpis facilisis, scelerisque dui. Vestibulum sed nisl eu elit fringilla dictum in eget neque.</p>
+                <p class="golden-content">Etiam et vestibulum quam. Maecenas ullamcorper mollis neque eget eleifend. Donec pulvinar eros sed lorem dignissim, sit amet luctus sapien gravida. Sed commodo ullamcorper elit, id cursus velit feugiat eget. Praesent a purus at dolor porttitor pellentesque. Sed eros libero, vehicula eget magna vitae, fermentum vehicula nisi.</p>
+              </div>
+              <div class="panel-footer">
+                <pre>&lt;p class="golden-content"&gt;...&lt;/p&gt;</pre>
+              </div>
+            </div>
+
+            <p>To add columns add a <strong>.columns-n</strong> where <strong>n</strong> is the number of columns you want. Columns collapse when the containing element isn't wide enough to support them.</p>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h5>Example</h5>
+              </div>
+              <div class="panel-body">
+                <p class="golden-content columns-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis auctor vestibulum. Maecenas suscipit vehicula magna nec rutrum. Proin eleifend tellus nec nunc interdum, nec varius ipsum eleifend. In tincidunt felis a felis porta eleifend id at enim. Aenean eu arcu adipiscing, aliquet turpis facilisis, scelerisque dui. Vestibulum sed nisl eu elit fringilla dictum in eget neque. Etiam et vestibulum quam. Maecenas ullamcorper mollis neque eget eleifend. Donec pulvinar eros sed lorem dignissim, sit amet luctus sapien gravida. Sed commodo ullamcorper elit, id cursus velit feugiat eget. Praesent a purus at dolor porttitor pellentesque. Sed eros libero, vehicula eget magna vitae, fermentum vehicula nisi. Maecenas tristique nec dolor quis mollis. Integer dictum a elit non placerat. Duis dignissim nulla est, sed ullamcorper tortor feugiat id. Aliquam erat justo, sodales eget ipsum non, consectetur adipiscing risus. Maecenas facilisis porttitor nulla a pharetra. Suspendisse eu turpis odio. Cras pulvinar nisl est, ac suscipit felis congue vel. Donec eget imperdiet arcu, quis sollicitudin erat. Suspendisse a dui nec mauris ullamcorper viverra id ac massa. Integer aliquet aliquam lacus, non laoreet leo congue a. Fusce vitae metus risus. Nulla ullamcorper nisi at venenatis mollis. Aenean at odio vulputate, consequat velit at, dictum dui. Aenean ut tincidunt nunc.</p>
+              </div>
+              <div class="panel-footer">
+                <pre>&lt;p class="golden-content columns-2"&gt;...&lt;/p&gt;</pre>
+              </div>
+            </div>
+
+          <h3>Code</h3>
+
+            <p>Wrap inline snippets of code with <code>&lt;code&gt;</code>.</p>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h4>Example</h4>
+              </div>
+              <div class="panel-body">
+                <p>Not code</p>
+                <p><code>Sample inline code</code></p>
+              </div>
+              <div class="panel-footer">
+                <pre>&lt;p&gt;Not code&lt;/p&gt;<br>&lt;p&gt;&lt;code&gt;Sample inline code&lt;/code&gt;&lt;/p&gt;</pre>
+              </div>
+            </div>
+
+            <p>Use <code>&lt;pre&gt;</code> for multiple lines of code. Be sure to escape any angle brackets in the code for proper rendering. To do this en masse you can use the <code>&lt;xmp&gt;</code> tag.</p>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h4>Example</h4>
+              </div>
+              <div class="panel-body">
+                <pre>Sample<br>multi-line<br>code</pre>
+              </div>
+              <div class="panel-footer">
+                <pre>&lt;pre&gt;Sample&lt;br&gt;multi-line&lt;br&gt;code&lt;/pre&gt;</pre>
+              </div>
+            </div>
+
+          <h3>Lists</h3>
+
+          <h3>Tables</h3>
+
+          <h3>Forms</h3>
+
+          <h3>Buttons</h3>
       </div>
 
-      <h2>Mixins</h2>
+      <div class="colors">
 
-      <p>Digging into the Golden source code is worth it. Golden comes packaged with some useful mixins for incorporating the divine ratio into your own designs.</p>
+        <h2>Colors</h2>
 
-      <h3>Golden Rectangle</h3>
+          <h3>Greys</h3>
 
-      <div class="example panel panel-default">
-        <div class="panel-heading">
-          <h5>Example</h5>
-        </div>
-        <div class="panel-body">
-          <div class="example1-golden-rectangle"></div>
-          <div class="example2-golden-rectangle"></div>
-          <div class="example3-golden-rectangle">
-            <div class="example4-golden-rectangle"></div>
-          </div>
-        </div>
-        <div class="panel-footer">
-<xmp>Code yo</xmp>
-        </div>
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h5>Example</h5>
+              </div>
+              <div class="panel-body">
+                <div class="example-color-swatch golden-black"></div>
+                <div class="example-color-swatch black"></div>
+
+                <div class="example-color-swatch golden-gray-darker"></div>
+                <div class="example-color-swatch gray-darker"></div>
+
+                <div class="example-color-swatch golden-gray-dark"></div>
+                <div class="example-color-swatch gray-dark"></div>
+
+                <div class="example-color-swatch golden-gray"></div>
+                <div class="example-color-swatch gray"></div>
+
+                <div class="example-color-swatch golden-gray-light"></div>
+                <div class="example-color-swatch gray-light"></div>
+
+                <div class="example-color-swatch golden-gray-lighter"></div>
+                <div class="example-color-swatch gray-lighter"></div>
+
+                <div class="example-color-swatch golden-white"></div>
+                <div class="example-color-swatch white"></div>
+              </div>
+              <div class="panel-footer">
+                <pre>Colors yo</pre>
+              </div>
+            </div>
       </div>
 
-      <h3>Golden Images</h3>
+      <div class="components">
 
-      <div class="example panel panel-default">
-        <div class="panel-heading">
-          <h5>Example</h5>
-        </div>
-        <div class="panel-body">
-          <div class="example1-golden-image">
-            <img src="http://placehold.it/300x300">
-          </div>
-          <div class="example2-golden-image">
-            <img src="http://placehold.it/300x300">
-          </div>
-          <div class="example3-golden-image">
-            <img src="http://placehold.it/300x300">
-          </div>
-        </div>
-        <div class="panel-footer">
-<xmp>Code yo</xmp>
-        </div>
+        <h2>Components</h2>
+
+          <h3>Images Thumbnails Media Items</h3>
+
+          <h3>Jumbotron</h3>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h5>Example</h5>
+              </div>
+              <div class="panel-body">
+                <div class="jumbotron">
+                  <h1>Title yo</h1>
+                  <p>Some text yo</p>
+                  <p><a class="btn btn-primary btn-lg" role="button">A button yo</a></p>
+                </div>
+              </div>
+              <div class="panel-footer">
+                <pre>&lt;div class="jumbotron"&gt;<br>  &lt;h1&gt;Title&lt;/h1&gt;<br>  &lt;p&gt;...&lt;/p&gt;<br>  &lt;p&gt;&lt;a class="btn btn-primary btn-lg" role="button"&gt;Button&lt;/a&gt;&lt;/p&gt;  <br>&lt;/div&gt;</pre>
+              </div>
+            </div>
+
+          <h3>Panels</h3>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h5>Example</h5>
+              </div>
+              <div class="panel-body">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    Panel Heading
+                  </div>
+                  <div class="panel-body">
+                    Panel Body
+                  </div>
+                  <div class="panel-footer">
+                    Panel Footer
+                  </div>
+                </div>
+              </div>
+              <div class="panel-footer">
+                <pre>&lt;div class="panel panel-default"&gt;<br>  &lt;div class="panel-heading"&gt;<br>    Panel Heading<br>  &lt;/div&gt;<br>  &lt;div class="panel-body"&gt;<br>    Panel Body<br>  &lt;/div&gt;<br>  &lt;div class="panel-footer"&gt;<br>    Panel Footer<br>  &lt;/div&gt;<br>&lt;/div&gt;</pre>
+              </div>
+            </div>
+
+          <h3>Wells</h3>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h5>Example</h5>
+              </div>
+              <div class="panel-body">
+                <div class="well">
+                  Well
+                </div>
+              </div>
+              <div class="panel-footer">
+                <pre>&lt;div class="well"&gt;<br>  Well<br>&lt;/div&gt;</pre>
+              </div>
+            </div>
+      </div>
+
+      <div class="mixins">
+
+        <h2>Mixins</h2>
+
+          <p>Digging into the Golden source code is worth it. Golden comes packaged with some useful mixins for incorporating the divine ratio into your own designs.</p>
+
+          <h3>Golden Rectangle</h3>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h5>Example</h5>
+              </div>
+              <div class="panel-body">
+                <div class="example1-golden-rectangle"></div>
+                <div class="example2-golden-rectangle"></div>
+                <div class="example3-golden-rectangle">
+                  <div class="example4-golden-rectangle"></div>
+                </div>
+              </div>
+              <div class="panel-footer">
+                <pre>Code yo</pre>
+              </div>
+            </div>
+
+          <h3>Golden Images</h3>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h5>Example</h5>
+              </div>
+              <div class="panel-body">
+                <div class="example1-golden-image">
+                  <img src="http://placehold.it/300x300">
+                </div>
+                <div class="example2-golden-image">
+                  <img src="http://placehold.it/300x300">
+                </div>
+                <div class="example3-golden-image">
+                  <img src="http://placehold.it/300x300">
+                </div>
+              </div>
+              <div class="panel-footer">
+                <pre>Code yo</pre>
+              </div>
+            </div>
       </div>
 
     </div>
