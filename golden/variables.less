@@ -168,8 +168,11 @@
 // @input-color-placeholder:        @gray-light;
 
 // @input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);
+@golden-input-height-base: @golden-line-height-computed + (2 * @golden-padding-base-vertical);
 // @input-height-large:             (floor(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2);
+@golden-input-height-large: @golden-line-height-large-computed + (2 * @golden-padding-large-vertical);
 // @input-height-small:             (floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2);
+@golden-input-height-small: @golden-line-height-small-computed + (2 * @golden-padding-small-vertical);
 
 // @legend-color:                   @gray-dark;
 // @legend-border-color:            #e5e5e5;

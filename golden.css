@@ -1038,7 +1038,7 @@ textarea.golden .form-control {
 .golden .radio,
 .golden .checkbox {
   display: block;
-  min-height: 20px;
+  min-height: 22px;
   margin-top: 10px;
   margin-bottom: 10px;
   padding-left: 20px;
@@ -1091,15 +1091,15 @@ fieldset[disabled] .golden .checkbox-inline {
   cursor: not-allowed;
 }
 .golden .input-sm {
-  height: 30px;
+  height: 24px;
   padding: 4px 8px;
   font-size: 10px;
   line-height: 1.618033988749895;
   border-radius: 3px;
 }
 select.golden .input-sm {
-  height: 30px;
-  line-height: 30px;
+  height: 24px;
+  line-height: 24px;
 }
 textarea.golden .input-sm {
   height: auto;
