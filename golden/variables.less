@@ -62,6 +62,8 @@
 
 @golden-line-height-base: @golden-ratio; // ~1.61
 @golden-line-height-computed: floor(@golden-font-size-base * @golden-line-height-base); // ~22px
+@golden-line-height-large-computed: floor(@golden-font-size-large * @golden-line-height-base); // ~29px
+@golden-line-height-small-computed: floor(@golden-font-size-small * @golden-line-height-base); // ~16px
 
 // @headings-font-family:    @font-family-base;
 @golden-headings-font-weight:    700;
@@ -83,19 +85,13 @@
 @golden-padding-base-vertical:          floor((floor(@golden-line-height-computed * @golden-ratio) - @golden-line-height-computed) / 2); // ~6px
 @golden-padding-base-horizontal:       	floor((floor(@golden-line-height-computed * @golden-ratio) - (@golden-line-height-computed / 2)) / 2); // ~12px
 
-// !!! pull this to top
-@golden-line-height-large-computed: floor(@golden-font-size-large * @golden-line-height-base);
-
 @golden-padding-large-vertical:         floor((floor(@golden-line-height-large-computed * @golden-ratio) - @golden-line-height-large-computed) / 2); // ~7px !!!~8px
 @golden-padding-large-horizontal:         floor((floor(@golden-line-height-large-computed * @golden-ratio) - (@golden-line-height-large-computed / 2)) / 2); // ~14px !!!~15px
-
-// !!! pull this to top
-@golden-line-height-small-computed: floor(@golden-font-size-small * @golden-line-height-base);
 
 @golden-padding-small-vertical:         floor((floor(@golden-line-height-small-computed * @golden-ratio) - @golden-line-height-small-computed) / 2); // ~4px
 @golden-padding-small-horizontal:         floor((floor(@golden-line-height-small-computed * @golden-ratio) - (@golden-line-height-small-computed / 2)) / 2); // ~8px
 
-// used different math then above. hmmm.
+// !!! used different math then above. hmmm.
 @golden-padding-xsmall-vertical: floor((((@golden-line-height-computed + (2 * @golden-padding-base-vertical)) / @golden-ratio) - (@golden-line-height-small-computed)) / 2); // ~2px
 @golden-padding-xsmall-horizontal: ceil(@golden-padding-xsmall-vertical * pow(@golden-ratio, 2)); // ~6px
 
