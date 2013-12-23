@@ -78,19 +78,29 @@
 
 // Components
 // -------------------------
-// Based on 14px font-size and 1.428 line-height (~20px to start)
+// Based on 14px font-size and 1.618 line-height (~22px to start)
 
-@golden-padding-base-vertical:          6px;
-@golden-padding-base-horizontal:        12px;
+@golden-padding-base-vertical:          floor((floor(@golden-line-height-computed * @golden-ratio) - @golden-line-height-computed) / 2); // ~6px
+@golden-padding-base-horizontal:       	floor((floor(@golden-line-height-computed * @golden-ratio) - (@golden-line-height-computed / 2)) / 2); // ~12px
 
-@golden-padding-large-vertical:         10px;
-@golden-padding-large-horizontal:       16px;
+// !!! pull this to top
+@golden-line-height-large-computed: floor(@golden-font-size-large * @golden-line-height-base);
 
-@golden-padding-small-vertical:         5px;
-@golden-padding-small-horizontal:       10px;
+@golden-padding-large-vertical:         floor((floor(@golden-line-height-large-computed * @golden-ratio) - @golden-line-height-large-computed) / 2); // ~7px !!!~8px
+@golden-padding-large-horizontal:         floor((floor(@golden-line-height-large-computed * @golden-ratio) - (@golden-line-height-large-computed / 2)) / 2); // ~14px !!!~15px
 
-@golden-line-height-large:              1.33;
-@golden-line-height-small:              1.5;
+// !!! pull this to top
+@golden-line-height-small-computed: floor(@golden-font-size-small * @golden-line-height-base);
+
+@golden-padding-small-vertical:         floor((floor(@golden-line-height-small-computed * @golden-ratio) - @golden-line-height-small-computed) / 2); // ~4px
+@golden-padding-small-horizontal:         floor((floor(@golden-line-height-small-computed * @golden-ratio) - (@golden-line-height-small-computed / 2)) / 2); // ~8px
+
+// used different math then above. hmmm.
+@golden-padding-xsmall-vertical: floor((((@golden-line-height-computed + (2 * @golden-padding-base-vertical)) / @golden-ratio) - (@golden-line-height-small-computed)) / 2); // ~2px
+@golden-padding-xsmall-horizontal: ceil(@golden-padding-xsmall-vertical * pow(@golden-ratio, 2)); // ~6px
+
+@golden-line-height-large:              @golden-ratio;
+@golden-line-height-small:              @golden-ratio;
 
 // @border-radius-base:             4px;
 // @border-radius-large:            6px;

@@ -1092,9 +1092,9 @@ fieldset[disabled] .golden .checkbox-inline {
 }
 .golden .input-sm {
   height: 30px;
-  padding: 5px 10px;
+  padding: 4px 8px;
   font-size: 10px;
-  line-height: 1.5;
+  line-height: 1.618033988749895;
   border-radius: 3px;
 }
 select.golden .input-sm {
@@ -1106,9 +1106,9 @@ textarea.golden .input-sm {
 }
 .golden .input-lg {
   height: 45px;
-  padding: 10px 16px;
+  padding: 8px 15px;
   font-size: 18px;
-  line-height: 1.33;
+  line-height: 1.618033988749895;
   border-radius: 6px;
 }
 select.golden .input-lg {
@@ -1566,20 +1566,20 @@ fieldset[disabled] .golden .btn-link:focus {
   text-decoration: none;
 }
 .golden .btn-lg {
-  padding: 10px 16px;
+  padding: 8px 15px;
   font-size: 18px;
-  line-height: 1.33;
+  line-height: 1.618033988749895;
   border-radius: 6px;
 }
 .golden .btn-sm,
 .golden .btn-xs {
-  padding: 5px 10px;
+  padding: 4px 8px;
   font-size: 10px;
-  line-height: 1.5;
+  line-height: 1.618033988749895;
   border-radius: 3px;
 }
 .golden .btn-xs {
-  padding: 1px 5px;
+  padding: 2px 6px;
 }
 .golden .btn-block {
   display: block;
