@@ -27,16 +27,14 @@
 	}
 }
 
+@red: red;
 
 .red {
-	color: black;
-	background-color: red;
 	height: 50px;
-}
-.blue {
-	background-color: black;
-	color: blue;
-	height: 50px;
+	@golden-red: blue;
+	@red: @golden-red;
+
+	background-color: @red;
 }
 
 

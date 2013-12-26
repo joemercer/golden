@@ -10,7 +10,17 @@
 // http://www.smashingmagazine.com/2010/02/09/applying-mathematics-to-web-design/
 
 // Bootstrap dependencies
-// !!! TODO:: probably should refactor this out to golden-bootstrap
+// !!! TODO:: anything not being changed or rooted from bootstrap should be added here
+
+// 1. create new variables that extend from golden variables
+// 2. root everything under golden and include these variables
+// 3. remove golden- from everything rooted under golden
+// 4. rename grid to golden-grid.less and note that it needs at least one golden variable
+// 5. add bootstrap grid system into compiled copy
+// 6. figure out what diagrams you want and tell nicole
+// 7. rewrite documentation. NOTE don't redo anything that bootstrap does, just link to bootstrap
+// focus on the differences, potentially event show them side by side
+
 
 @import "./bootstrap/variables.less";
 @import "./bootstrap/mixins.less";
