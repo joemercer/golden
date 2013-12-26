@@ -35,6 +35,15 @@
 	@red: @golden-red;
 
 	background-color: @red;
+
+	test1: lightness(#f5f5f5);
+	test2: lightness(@golden-gray-lighter);
+	test3: lightness(@golden-gray-lightest);
+}
+.lightestgray {
+	height: 50px;
+
+	background-color: @golden-gray-lightest;
 }
 
 

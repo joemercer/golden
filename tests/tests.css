@@ -17,6 +17,13 @@
 .red {
   height: 50px;
   background-color: #0000ff;
+  test1: 96%;
+  test2: 91%;
+  test3: 96%;
+}
+.lightestgray {
+  height: 50px;
+  background-color: #f5f5f5;
 }
 .example-color .example-content {
   background-color: white;
