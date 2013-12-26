@@ -2733,7 +2733,7 @@ textarea.golden .input-lg {
 }
 .golden .btn:hover,
 .golden .btn:focus {
-  color: #333333;
+  color: #3c3c3c;
   text-decoration: none;
 }
 .golden .btn:active,
@@ -2754,18 +2754,18 @@ fieldset[disabled] .golden .btn {
   box-shadow: none;
 }
 .golden .btn-default {
-  color: #333333;
+  color: #3c3c3c;
   background-color: #ffffff;
-  border-color: #cccccc;
+  border-color: #c3c3c3;
 }
 .golden .btn-default:hover,
 .golden .btn-default:focus,
 .golden .btn-default:active,
 .golden .btn-default.active,
 .open .dropdown-toggle.golden .btn-default {
-  color: #333333;
+  color: #3c3c3c;
   background-color: #ebebeb;
-  border-color: #adadad;
+  border-color: #a4a4a4;
 }
 .golden .btn-default:active,
 .golden .btn-default.active,
@@ -2788,7 +2788,7 @@ fieldset[disabled] .golden .btn-default:active,
 .golden .btn-default[disabled].active,
 fieldset[disabled] .golden .btn-default.active {
   background-color: #ffffff;
-  border-color: #cccccc;
+  border-color: #c3c3c3;
 }
 .golden .btn-primary {
   color: #ffffff;
