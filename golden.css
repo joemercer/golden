@@ -2104,7 +2104,7 @@ table {
   padding: 10px 15px;
   margin-bottom: -1px;
   background-color: #ffffff;
-  border: 1px solid #dddddd;
+  border: 1px solid #c3c3c3;
 }
 .golden .list-group-item:first-child {
   border-top-right-radius: 4px;
@@ -2122,10 +2122,10 @@ table {
   margin-right: 5px;
 }
 .golden a.list-group-item {
-  color: #555555;
+  color: #616161;
 }
 .golden a.list-group-item .list-group-item-heading {
-  color: #333333;
+  color: #3c3c3c;
 }
 .golden a.list-group-item:hover,
 .golden a.list-group-item:focus {
