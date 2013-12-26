@@ -724,7 +724,7 @@ table {
 }
 .golden .table {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 .golden .table > thead > tr > th,
 .golden .table > tbody > tr > th,
@@ -733,7 +733,7 @@ table {
 .golden .table > tbody > tr > td,
 .golden .table > tfoot > tr > td {
   padding: 8px;
-  line-height: 1.428571429;
+  line-height: 1.618033988749895;
   vertical-align: top;
   border-top: 1px solid #dddddd;
 }
@@ -878,7 +878,7 @@ table {
 @media (max-width: 767px) {
   .golden .table-responsive {
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 16.5px;
     overflow-y: hidden;
     overflow-x: scroll;
     -ms-overflow-style: -ms-autohiding-scrollbar;
