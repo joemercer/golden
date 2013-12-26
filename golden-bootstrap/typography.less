@@ -10,7 +10,7 @@ p {
   margin: 0 0 (@line-height-computed / 2);
 }
 .lead {
-  margin-bottom: @line-height-computed;
+  margin-bottom: @line-height-computed / 2;
   font-size: floor(@font-size-large);
   font-weight: 200;
   line-height: @golden-ratio;
@@ -19,6 +19,10 @@ p {
     font-size: (@font-size-base * @golden-ratio);
   }
 }
+.indented {
+  text-indent: @line-height-computed / 2;
+}
+
 
 
 // Emphasis & misc

@@ -1379,7 +1379,7 @@ table {
   margin: 0 0 11px;
 }
 .golden-typography .lead {
-  margin-bottom: 22px;
+  margin-bottom: 11px;
   font-size: 18px;
   font-weight: 200;
   line-height: 1.618033988749895;
@@ -1388,6 +1388,9 @@ table {
   .golden-typography .lead {
     font-size: 22.65247584249853px;
   }
+}
+.golden-typography .indented {
+  text-indent: 11px;
 }
 .golden-typography small,
 .golden-typography .small {
@@ -1758,7 +1761,7 @@ table {
   margin: 0 0 11px;
 }
 .golden .lead {
-  margin-bottom: 22px;
+  margin-bottom: 11px;
   font-size: 18px;
   font-weight: 200;
   line-height: 1.618033988749895;
@@ -1767,6 +1770,9 @@ table {
   .golden .lead {
     font-size: 22.65247584249853px;
   }
+}
+.golden .indented {
+  text-indent: 11px;
 }
 .golden small,
 .golden .small {
