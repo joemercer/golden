@@ -1297,6 +1297,84 @@ table {
   -webkit-column-gap: 22px;
   column-gap: 22px;
 }
+.golden-typography {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.618033988749895;
+  color: #333333;
+  background-color: #ffffff;
+}
+.golden-typography *,
+.golden-typography *:before,
+.golden-typography *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.golden-typography input,
+.golden-typography button,
+.golden-typography select,
+.golden-typography textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+.golden-typography a {
+  color: #428bca;
+  text-decoration: none;
+}
+.golden-typography a:hover,
+.golden-typography a:focus {
+  color: #2a6496;
+  text-decoration: underline;
+}
+.golden-typography a:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.golden-typography img {
+  vertical-align: middle;
+}
+.golden-typography .img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.golden-typography .img-rounded {
+  border-radius: 6px;
+}
+.golden-typography .img-thumbnail {
+  padding: 4px;
+  line-height: 1.428571429;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+.golden-typography .img-circle {
+  border-radius: 50%;
+}
+.golden-typography hr {
+  margin-top: 22px;
+  margin-bottom: 22px;
+  border: 0;
+  border-top: 1px solid #eeeeee;
+}
+.golden-typography .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
 .golden-typography p {
   margin: 0 0 11px;
 }
