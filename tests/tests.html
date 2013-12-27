@@ -73,7 +73,7 @@
 
           <p class="lead">4. Understand Golden</p>
 
-          <p class="indented">Golden was built based on <a>Twitter Bootstrap</a> and was made to follow a similar style. The architecture of Golden is inspired from Bootstrap and Golden strives to to maintain the same level of flexibility and modularity.</p>
+          <p class="indented">Golden was built to extend naturally from <a>Twitter Bootstrap</a> while still being able to stand alone as an independent framework. It has borrowed heavily from Bootstrap's philosophy and is made in a similar architectural style. It is designed to be both quick and extensible, modular and streamlined, customizable and simple.</p>
 
           <div class="example panel panel-default">
             <div class="panel-heading">
@@ -108,7 +108,7 @@
             </div>
           </div>
 
-          <p class="indented">At the outer layer is a pre-compiled copy of Golden, <code>golden.css</code>, a pre-compiled minified copy of Golden, <code>golden.min.css</code>, and the root file <code>golden.less</code>, from which the first two are compiled from.</p>
+          <p class="indented">At the outer layer is a pre-compiled copy of Golden, <code>golden.css</code>, a pre-compiled minified copy of Golden, <code>golden.min.css</code>, and the default Golden, <code>golden.less</code>, from which the first two are compiled from.</p>
 
           <div class="example panel panel-default">
             <div class="panel-heading">
@@ -119,30 +119,41 @@
                 // Bootstrap stuff
                 // Include helpful Bootstrap modules to make life easier later on.
 
+                // Include the Bootstrap variable defaults
+                // These can be edited at will, or replaced with a custom copy of Bootstrap variable overrides
                 @import "./bootstrap/variables.less";
+
+                // Include the groundwork Bootstrap mixins and classes for conveniance
                 @import "./bootstrap/mixins.less";
                 @import "./bootstrap/utilities.less";
 
+                // For cross-browser consistency see git.io/normalize
                 @import "./bootstrap/normalize.less";
+
+                // For printing
                 @import "./bootstrap/print.less";
 
+                // Include the basic Bootstrap 12 column grid for convensiance
                 @import "./bootstrap/grid.less";
 
                 // Golden stuff
                 // Let's make life Golden :)
 
+                // Override the Bootstrap variables with values based on the golden-ratio
                 @import "./golden/variables.less";
 
+                // Golden modules that require the Golden variables
+                // These do not affect any pre-existing Bootstrap CSS and are thus not rooted under the .golden class
                 @import "./golden/mixins.less";
                 @import "./golden/grid.less";
                 @import "./golden/content.less";
 
-                // Root the Golden styles under the .golden class
+                // Root the Golden styles that will affect pre-existing Bootstrap CSS under the .golden class
                 .golden {
                   @import "./golden-bootstrap/golden-bootstrap.less";
                 }
 
-                // Special class for only including the Golden typography styles
+                // Add a special class for only including the Golden typography styles
                 .golden-typography {
                   @import "./golden-typography/scaffolding.less";
                   @import "./golden-typography/typography.less";
@@ -151,13 +162,49 @@
             </div>
           </div>
 
-          <p><code>golden.less</code> starts by pulling in useful Bootstrap modules. <code>bootstrap/variables.less</code> and <code>bootstrap/mixins.less</code> don't create any CSS by themselves but add variables and mixins respectfully that are used later on. <code>bootstrap/utilities.less</code> won't affect any pre-existing styles, but does add useful classes like <code>.clearfix</code> and <code>.hide</code> for doing common tasks quickly. <code>bootstrap/normalize.less</code> is taken originally from <a href="git.io/normalize">Normalize</a> and is used to create a baseline for cross-browser consistency. <code>bootstrap/print.less</code> adds styles for when the document is printed. <code>bootstrap/grid.less</code> is the standard Bootstrap 12 column grid. To learn more about the grid, or any of the other Bootstrap modules check out the docs <a>here</a>.</p>
+          <p class="indented">The variable dependencies in Golden are designed to maximize ease of customization and expansion, however they can be confusing at first. Golden expects, and requires, that a base set of variables for the project be defined in traditional Bootstrap style. These can be customized by you, or just left as the Bootstrap defaults as found in <code>boostrap/variables.less</code> that are used in the pre-compiled Golden.</p>
 
-          <p>After pulling in the Bootstrap modules, <code>golden.less</code> begins the task of creating the custom Golden styles. <code>golden/variables.less</code> defines variables for the Golden modules, often extending or relying on <code>bootstrap/variables.less</code>. As a result of this dependency, <code>golden/variables.less</code> was made to follow the general structure of <code>bootstrap/variables.less</code>.</p>
+          <p class="indented">Golden then takes the Bootstrap variables and applies the golden ratio to create a new set of Golden variables in <code>golden/variables.less</code>. These variables are used by the Golden modules to create a grid system and more.</p>
 
-          <p><code>golden/mixins.less</code> adds mixins based on the Golden ratio, which are documented in the <a>Golden Mixins</a> section below. <code>golden/grid.less</code> adds a grid system based on the Golden ratio, which is documented in the <a>Golden Grid</a> section below. <code>golden/content.less</code> adds a content container based on the Golden ratio, which is documented in the <a>Golden Content</a> section below. </p>
+          <p class="indented">Finally, Golden takes the Golden variables and uses them to override the Bootstrap defaults in <code>golden-bootstrap/variables.less</code>. These variables are used by the Bootstrap inspired modules in <code>golden-bootstrap/golden-bootstrap.less</code> to create a custom version of Bootstrap based on the golden ratio.</p>
+
+          <div class="example panel panel-default">
+            <div class="panel-heading">
+              <h4>golden-bootstrap.less</h4>
+            </div>
+            <div class="panel-footer">
+              <pre>
+                // Override Bootstrap variables with Golden values
+                @import "./variables.less";
+
+                // Include scaffolding and typography
+                @import "./scaffolding.less";
+                @import "./typography.less";
+
+                // Include the extended typography types
+                @import "./code.less";
+                @import "./list-group.less";
+                @import "./tables.less";
+
+                // Include common components
+                @import "./forms.less";
+                @import "./buttons.less";
+                @import "./panels.less";
+                @import "./wells.less";
+
+                // Include images and media types
+                @import "./thumbnails.less";
+                @import "./media.less";
+              </pre>
+            </div>
+          </div>
+
+          <p class="indented">Since Golden is overriding the actual Bootstrap variables it's easy to add or remove Boostrap modules. Simply add them the <code>golden-bootstrap/</code> directory and import them in <code>golden-bootstrap/golden-bootstrap.less</code> similar to <code>bootstrap.less</code> in the original Bootstrap.</p>
+
+          <p class="indented">By default, Golden scopes all of this Bootstrap override code under the <code>.golden</code> class. This is to prevent Golden from conflicting with any pre-existing styles, and to give you complete control over the extent to which Golden is applied.</p>
 
           <p class="lead">5. Hack Golden</p>
+
           <p class="indented">Download golden <a>here</a> or check out the project on <a>Github</a>.</p>
 
 
