@@ -19,15 +19,145 @@
         <h2>Getting Started</h2>
 
           <p class="lead">1. Download Golden</p>
-          <p class="indented">Download golden <a>here</a> or check out the project on <a>Github</a>.</p>
+
+          <p class="indented">Download Golden <a>here</a> or check out Golden on <a>Github</a>.</p>
 
           <p class="lead">2. Include Golden</p>
-          <p class="indented">Download golden <a>here</a> or check out the project on <a>Github</a>.</p>
+
+          <p class="indented">Include Golden in your project. You can copy the basic template below to get started fast.</p>
+
+          <div class="example panel panel-default">
+            <div class="panel-heading">
+              <h5>Example</h5>
+            </div>
+            <div class="panel-body">
+              <h1>Hello, world!</h1>
+            </div>
+            <div class="panel-footer">
+              <pre>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>  &lt;head&gt;<br>    &lt;title&gt;Golden Starter Template&lt;/title&gt;<br>    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>    &lt;!-- Golden --&gt;<br>    &lt;link href="css/golden.min.css" rel="stylesheet"&gt;<br>  &lt;/head&gt;<br>  &lt;body class="golden"&gt;<br>    &lt;h1&gt;Hello, world!&lt;/h1&gt;<br>  &lt;/body&gt;<br>&lt;/html&gt;<br></pre>
+            </div>
+          </div>
+
+          <p class="indented">Everything in Golden is rooted under the <code>.golden</code> class. This makes it easy to apply Golden selectively to certain sections in your project, or globally like in the example above.</p>
+
+          <div class="example panel panel-default">
+            <div class="panel-heading">
+              <h5>Example</h5>
+            </div>
+            <div class="panel-body">
+              <div>Stuff inside here is normal</div>
+              <div class="golden">Stuff inside here is Golden!</div>
+            </div>
+            <div class="panel-footer">
+              <pre>&lt;div&gt;Stuff inside here is normal&lt;/div&gt;<br>&lt;div class="golden"&gt;Stuff inside here is Golden!&lt;/div&gt;</pre>
+            </div>
+          </div>
+
+          <p class="indented">Additionally Golden provides you with the <code>.golden-typography</code> class as a quick way to only include the Golden typography styles.</p>
+
+          <div class="example panel panel-default">
+            <div class="panel-heading">
+              <h5>Example</h5>
+            </div>
+            <div class="panel-body">
+              <div class="golden-typography">Stuff inside here will have Golden typography and that's it.</div>
+            </div>
+            <div class="panel-footer">
+              <pre>&lt;div class="golden-typography"&gt;...&lt;/div&gt;</pre>
+            </div>
+          </div>
 
           <p class="lead">3. Be Golden</p>
-          <p class="indented">Download golden <a>here</a> or check out the project on <a>Github</a>.</p>
 
-          <p class="lead">4. Hack Golden</p>
+          <p class="indented">Code! Check out the <a>docs</a> to see what's possible.</p>
+
+          <p class="lead">4. Understand Golden</p>
+
+          <p class="indented">Golden was built based on <a>Twitter Bootstrap</a> and was made to follow a similar style. The architecture of Golden is inspired from Bootstrap and Golden strives to to maintain the same level of flexibility and modularity.</p>
+
+          <div class="example panel panel-default">
+            <div class="panel-heading">
+              <h4>Golden File Structure</h4>
+            </div>
+            <div class="panel-footer">
+              <pre>
+                golden/
+                ├── golden.css
+                ├── golden.min.css
+                ├── golden.less
+                ├── bootstrap/
+                │   ├── variables.less
+                │   ├── mixins.less
+                │   ├── utilities.less
+                │   ├── normalize.less
+                │   ├── print.less
+                │   └── grid.less
+                ├── golden/
+                │   ├── variables.less
+                │   ├── mixins.less
+                │   ├── grid.less
+                │   ├── content.less
+                │   ├── scaffolding.less
+                │   └── typography.less
+                └── golden-bootstrap/
+                    ├── golden-bootstrap.less
+                    ├── variables.less
+                    ├── more revised bootstrap modules
+                    └── ...
+              </pre>
+            </div>
+          </div>
+
+          <p class="indented">At the outer layer is a pre-compiled copy of Golden, <code>golden.css</code>, a pre-compiled minified copy of Golden, <code>golden.min.css</code>, and the root file <code>golden.less</code>, from which the first two are compiled from.</p>
+
+          <div class="example panel panel-default">
+            <div class="panel-heading">
+              <h4>golden.less</h4>
+            </div>
+            <div class="panel-footer">
+              <pre>
+                // Bootstrap stuff
+                // Include helpful Bootstrap modules to make life easier later on.
+
+                @import "./bootstrap/variables.less";
+                @import "./bootstrap/mixins.less";
+                @import "./bootstrap/utilities.less";
+
+                @import "./bootstrap/normalize.less";
+                @import "./bootstrap/print.less";
+
+                @import "./bootstrap/grid.less";
+
+                // Golden stuff
+                // Let's make life Golden :)
+
+                @import "./golden/variables.less";
+
+                @import "./golden/mixins.less";
+                @import "./golden/grid.less";
+                @import "./golden/content.less";
+
+                // Root the Golden styles under the .golden class
+                .golden {
+                  @import "./golden-bootstrap/golden-bootstrap.less";
+                }
+
+                // Special class for only including the Golden typography styles
+                .golden-typography {
+                  @import "./golden-typography/scaffolding.less";
+                  @import "./golden-typography/typography.less";
+                }
+              </pre>
+            </div>
+          </div>
+
+          <p><code>golden.less</code> starts by pulling in useful Bootstrap modules. <code>bootstrap/variables.less</code> and <code>bootstrap/mixins.less</code> don't create any CSS by themselves but add variables and mixins respectfully that are used later on. <code>bootstrap/utilities.less</code> won't affect any pre-existing styles, but does add useful classes like <code>.clearfix</code> and <code>.hide</code> for doing common tasks quickly. <code>bootstrap/normalize.less</code> is taken originally from <a href="git.io/normalize">Normalize</a> and is used to create a baseline for cross-browser consistency. <code>bootstrap/print.less</code> adds styles for when the document is printed. <code>bootstrap/grid.less</code> is the standard Bootstrap 12 column grid. To learn more about the grid, or any of the other Bootstrap modules check out the docs <a>here</a>.</p>
+
+          <p>After pulling in the Bootstrap modules, <code>golden.less</code> begins the task of creating the custom Golden styles. <code>golden/variables.less</code> defines variables for the Golden modules, often extending or relying on <code>bootstrap/variables.less</code>. As a result of this dependency, <code>golden/variables.less</code> was made to follow the general structure of <code>bootstrap/variables.less</code>.</p>
+
+          <p><code>golden/mixins.less</code> adds mixins based on the Golden ratio, which are documented in the <a>Golden Mixins</a> section below. <code>golden/grid.less</code> adds a grid system based on the Golden ratio, which is documented in the <a>Golden Grid</a> section below. <code>golden/content.less</code> adds a content container based on the Golden ratio, which is documented in the <a>Golden Content</a> section below. </p>
+
+          <p class="lead">5. Hack Golden</p>
           <p class="indented">Download golden <a>here</a> or check out the project on <a>Github</a>.</p>
 
 
@@ -155,9 +285,13 @@
               </div>
               <div class="panel-body">
                 <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis auctor vestibulum.</p>
+                <p class="indented">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis auctor vestibulum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis auctor vestibulum.</p>
               </div>
               <div class="panel-footer">
                 <pre>&lt;p class="lead"&gt;...&lt;/p&gt;</pre>
+                <pre>&lt;p class="indented"&gt;...&lt;/p&gt;</pre>
+                <pre>&lt;p&gt;...&lt;/p&gt;</pre>
               </div>
             </div>
 

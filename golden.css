@@ -1,3 +1,49 @@
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+.clearfix:after {
+  clear: both;
+}
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.invisible {
+  visibility: hidden;
+}
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+.affix {
+  position: fixed;
+}
 /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
 article,
 aside,
@@ -907,52 +953,6 @@ table {
     margin-left: 8.333333333333332%;
   }
 }
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  /* 1 */
-
-  display: table;
-  /* 2 */
-
-}
-.clearfix:after {
-  clear: both;
-}
-.center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-.pull-right {
-  float: right !important;
-}
-.pull-left {
-  float: left !important;
-}
-.hide {
-  display: none !important;
-}
-.show {
-  display: block !important;
-}
-.invisible {
-  visibility: hidden;
-}
-.text-hide {
-  font: 0/0 a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0;
-}
-.hidden {
-  display: none !important;
-  visibility: hidden !important;
-}
-.affix {
-  position: fixed;
-}
 .golden-container,
 .golden-large-container-xs,
 .golden-large-container-sm,
@@ -1296,388 +1296,6 @@ table {
   -moz-column-gap: 22px;
   -webkit-column-gap: 22px;
   column-gap: 22px;
-}
-.golden-typography {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.618033988749895;
-  color: #333333;
-  background-color: #ffffff;
-}
-.golden-typography *,
-.golden-typography *:before,
-.golden-typography *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.golden-typography input,
-.golden-typography button,
-.golden-typography select,
-.golden-typography textarea {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-.golden-typography a {
-  color: #428bca;
-  text-decoration: none;
-}
-.golden-typography a:hover,
-.golden-typography a:focus {
-  color: #2a6496;
-  text-decoration: underline;
-}
-.golden-typography a:focus {
-  outline: thin dotted #333;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-.golden-typography img {
-  vertical-align: middle;
-}
-.golden-typography .img-responsive {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-.golden-typography .img-rounded {
-  border-radius: 6px;
-}
-.golden-typography .img-thumbnail {
-  padding: 4px;
-  line-height: 1.428571429;
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
-  border-radius: 4px;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  display: inline-block;
-  max-width: 100%;
-  height: auto;
-}
-.golden-typography .img-circle {
-  border-radius: 50%;
-}
-.golden-typography hr {
-  margin-top: 22px;
-  margin-bottom: 22px;
-  border: 0;
-  border-top: 1px solid #eeeeee;
-}
-.golden-typography .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-.golden-typography p {
-  margin: 0 0 11px;
-}
-.golden-typography .lead {
-  margin-bottom: 11px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 1.618033988749895;
-}
-@media (min-width: 768px) {
-  .golden-typography .lead {
-    font-size: 22.65247584249853px;
-  }
-}
-.golden-typography .indented {
-  text-indent: 11px;
-}
-.golden-typography small,
-.golden-typography .small {
-  font-size: 61.803398874989476%;
-}
-.golden-typography cite {
-  font-style: normal;
-}
-.golden-typography .text-muted {
-  color: #999999;
-}
-.golden-typography .text-primary {
-  color: #428bca;
-}
-.golden-typography .text-primary:hover {
-  color: #3071a9;
-}
-.golden-typography .text-warning {
-  color: #c09853;
-}
-.golden-typography .text-warning:hover {
-  color: #a47e3c;
-}
-.golden-typography .text-danger {
-  color: #b94a48;
-}
-.golden-typography .text-danger:hover {
-  color: #953b39;
-}
-.golden-typography .text-success {
-  color: #468847;
-}
-.golden-typography .text-success:hover {
-  color: #356635;
-}
-.golden-typography .text-info {
-  color: #3a87ad;
-}
-.golden-typography .text-info:hover {
-  color: #2d6987;
-}
-.golden-typography .text-left {
-  text-align: left;
-}
-.golden-typography .text-right {
-  text-align: right;
-}
-.golden-typography .text-center {
-  text-align: center;
-}
-.golden-typography h1,
-.golden-typography h2,
-.golden-typography h3,
-.golden-typography h4,
-.golden-typography h5,
-.golden-typography h6,
-.golden-typography .h1,
-.golden-typography .h2,
-.golden-typography .h3,
-.golden-typography .h4,
-.golden-typography .h5,
-.golden-typography .h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  line-height: 1.1618033988749894;
-  color: inherit;
-}
-.golden-typography h1 small,
-.golden-typography h2 small,
-.golden-typography h3 small,
-.golden-typography h4 small,
-.golden-typography h5 small,
-.golden-typography h6 small,
-.golden-typography .h1 small,
-.golden-typography .h2 small,
-.golden-typography .h3 small,
-.golden-typography .h4 small,
-.golden-typography .h5 small,
-.golden-typography .h6 small,
-.golden-typography h1 .small,
-.golden-typography h2 .small,
-.golden-typography h3 .small,
-.golden-typography h4 .small,
-.golden-typography h5 .small,
-.golden-typography h6 .small,
-.golden-typography .h1 .small,
-.golden-typography .h2 .small,
-.golden-typography .h3 .small,
-.golden-typography .h4 .small,
-.golden-typography .h5 .small,
-.golden-typography .h6 .small {
-  font-weight: normal;
-  line-height: 1;
-  color: #999999;
-}
-.golden-typography h1,
-.golden-typography h2,
-.golden-typography h3 {
-  margin-top: 22px;
-  margin-bottom: 11px;
-}
-.golden-typography h1 small,
-.golden-typography h2 small,
-.golden-typography h3 small,
-.golden-typography h1 .small,
-.golden-typography h2 .small,
-.golden-typography h3 .small {
-  font-size: 61.803398874989476%;
-}
-.golden-typography h4,
-.golden-typography h5,
-.golden-typography h6 {
-  margin-top: 11px;
-  margin-bottom: 11px;
-}
-.golden-typography h4 small,
-.golden-typography h5 small,
-.golden-typography h6 small,
-.golden-typography h4 .small,
-.golden-typography h5 .small,
-.golden-typography h6 .small {
-  font-size: 61.803398874989476%;
-}
-.golden-typography h1,
-.golden-typography .h1 {
-  font-size: 68px;
-}
-.golden-typography h2,
-.golden-typography .h2 {
-  font-size: 45px;
-}
-.golden-typography h3,
-.golden-typography .h3 {
-  font-size: 23px;
-}
-.golden-typography h4,
-.golden-typography .h4 {
-  font-size: 18px;
-}
-.golden-typography h5,
-.golden-typography .h5 {
-  font-size: 14px;
-}
-.golden-typography h6,
-.golden-typography .h6 {
-  font-size: 10px;
-}
-.golden-typography .page-header {
-  padding-bottom: 10px;
-  margin: 44px 0 22px;
-  border-bottom: 1px solid #eeeeee;
-}
-.golden-typography ul,
-.golden-typography ol {
-  margin-top: 0;
-  margin-bottom: 11px;
-}
-.golden-typography ul ul,
-.golden-typography ol ul,
-.golden-typography ul ol,
-.golden-typography ol ol {
-  margin-bottom: 0;
-}
-.golden-typography .list-unstyled {
-  padding-left: 0;
-  list-style: none;
-}
-.golden-typography .list-inline {
-  padding-left: 0;
-  list-style: none;
-}
-.golden-typography .list-inline > li {
-  display: inline-block;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-.golden-typography .list-inline > li:first-child {
-  padding-left: 0;
-}
-.golden-typography dl {
-  margin-bottom: 22px;
-}
-.golden-typography dt,
-.golden-typography dd {
-  line-height: 1.618033988749895;
-}
-.golden-typography dt {
-  font-weight: bold;
-}
-.golden-typography dd {
-  margin-left: 0;
-}
-@media (min-width: 768px) {
-  .golden-typography .dl-horizontal dt {
-    float: left;
-    width: 160px;
-    clear: left;
-    text-align: right;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  .golden-typography .dl-horizontal dd {
-    margin-left: 180px;
-  }
-  .golden-typography .dl-horizontal dd:before,
-  .golden-typography .dl-horizontal dd:after {
-    content: " ";
-    /* 1 */
-  
-    display: table;
-    /* 2 */
-  
-  }
-  .golden-typography .dl-horizontal dd:after {
-    clear: both;
-  }
-  .golden-typography .dl-horizontal dd:before,
-  .golden-typography .dl-horizontal dd:after {
-    content: " ";
-    /* 1 */
-  
-    display: table;
-    /* 2 */
-  
-  }
-  .golden-typography .dl-horizontal dd:after {
-    clear: both;
-  }
-}
-.golden-typography abbr[title],
-.golden-typography abbr[data-original-title] {
-  cursor: help;
-  border-bottom: 1px dotted #999999;
-}
-.golden-typography abbr.initialism {
-  font-size: 90%;
-  text-transform: uppercase;
-}
-.golden-typography blockquote {
-  padding: 11px 22px;
-  margin: 0 0 22px;
-  border-left: 5px solid #eeeeee;
-}
-.golden-typography blockquote p {
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 1.618033988749895;
-}
-.golden-typography blockquote p:last-child {
-  margin-bottom: 0;
-}
-.golden-typography blockquote small {
-  display: block;
-  line-height: 1.618033988749895;
-  color: #999999;
-}
-.golden-typography blockquote small:before {
-  content: '\2014 \00A0';
-}
-.golden-typography blockquote.pull-right {
-  padding-right: 15px;
-  padding-left: 0;
-  border-right: 5px solid #eeeeee;
-  border-left: 0;
-}
-.golden-typography blockquote.pull-right p,
-.golden-typography blockquote.pull-right small,
-.golden-typography blockquote.pull-right .small {
-  text-align: right;
-}
-.golden-typography blockquote.pull-right small:before,
-.golden-typography blockquote.pull-right .small:before {
-  content: '';
-}
-.golden-typography blockquote.pull-right small:after,
-.golden-typography blockquote.pull-right .small:after {
-  content: '\00A0 \2014';
-}
-.golden-typography blockquote:before,
-.golden-typography blockquote:after {
-  content: "";
-}
-.golden-typography address {
-  margin-bottom: 22px;
-  font-style: normal;
-  line-height: 1.618033988749895;
 }
 .golden {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -3376,4 +2994,386 @@ fieldset[disabled] .golden .btn-link:focus {
 .golden .media-list {
   padding-left: 0;
   list-style: none;
+}
+.golden-typography {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.618033988749895;
+  color: #333333;
+  background-color: #ffffff;
+}
+.golden-typography *,
+.golden-typography *:before,
+.golden-typography *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.golden-typography input,
+.golden-typography button,
+.golden-typography select,
+.golden-typography textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+.golden-typography a {
+  color: #428bca;
+  text-decoration: none;
+}
+.golden-typography a:hover,
+.golden-typography a:focus {
+  color: #2a6496;
+  text-decoration: underline;
+}
+.golden-typography a:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.golden-typography img {
+  vertical-align: middle;
+}
+.golden-typography .img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.golden-typography .img-rounded {
+  border-radius: 6px;
+}
+.golden-typography .img-thumbnail {
+  padding: 4px;
+  line-height: 1.428571429;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+.golden-typography .img-circle {
+  border-radius: 50%;
+}
+.golden-typography hr {
+  margin-top: 22px;
+  margin-bottom: 22px;
+  border: 0;
+  border-top: 1px solid #eeeeee;
+}
+.golden-typography .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.golden-typography p {
+  margin: 0 0 11px;
+}
+.golden-typography .lead {
+  margin-bottom: 11px;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 1.618033988749895;
+}
+@media (min-width: 768px) {
+  .golden-typography .lead {
+    font-size: 22.65247584249853px;
+  }
+}
+.golden-typography .indented {
+  text-indent: 11px;
+}
+.golden-typography small,
+.golden-typography .small {
+  font-size: 61.803398874989476%;
+}
+.golden-typography cite {
+  font-style: normal;
+}
+.golden-typography .text-muted {
+  color: #999999;
+}
+.golden-typography .text-primary {
+  color: #428bca;
+}
+.golden-typography .text-primary:hover {
+  color: #3071a9;
+}
+.golden-typography .text-warning {
+  color: #c09853;
+}
+.golden-typography .text-warning:hover {
+  color: #a47e3c;
+}
+.golden-typography .text-danger {
+  color: #b94a48;
+}
+.golden-typography .text-danger:hover {
+  color: #953b39;
+}
+.golden-typography .text-success {
+  color: #468847;
+}
+.golden-typography .text-success:hover {
+  color: #356635;
+}
+.golden-typography .text-info {
+  color: #3a87ad;
+}
+.golden-typography .text-info:hover {
+  color: #2d6987;
+}
+.golden-typography .text-left {
+  text-align: left;
+}
+.golden-typography .text-right {
+  text-align: right;
+}
+.golden-typography .text-center {
+  text-align: center;
+}
+.golden-typography h1,
+.golden-typography h2,
+.golden-typography h3,
+.golden-typography h4,
+.golden-typography h5,
+.golden-typography h6,
+.golden-typography .h1,
+.golden-typography .h2,
+.golden-typography .h3,
+.golden-typography .h4,
+.golden-typography .h5,
+.golden-typography .h6 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.1618033988749894;
+  color: inherit;
+}
+.golden-typography h1 small,
+.golden-typography h2 small,
+.golden-typography h3 small,
+.golden-typography h4 small,
+.golden-typography h5 small,
+.golden-typography h6 small,
+.golden-typography .h1 small,
+.golden-typography .h2 small,
+.golden-typography .h3 small,
+.golden-typography .h4 small,
+.golden-typography .h5 small,
+.golden-typography .h6 small,
+.golden-typography h1 .small,
+.golden-typography h2 .small,
+.golden-typography h3 .small,
+.golden-typography h4 .small,
+.golden-typography h5 .small,
+.golden-typography h6 .small,
+.golden-typography .h1 .small,
+.golden-typography .h2 .small,
+.golden-typography .h3 .small,
+.golden-typography .h4 .small,
+.golden-typography .h5 .small,
+.golden-typography .h6 .small {
+  font-weight: normal;
+  line-height: 1;
+  color: #999999;
+}
+.golden-typography h1,
+.golden-typography h2,
+.golden-typography h3 {
+  margin-top: 22px;
+  margin-bottom: 11px;
+}
+.golden-typography h1 small,
+.golden-typography h2 small,
+.golden-typography h3 small,
+.golden-typography h1 .small,
+.golden-typography h2 .small,
+.golden-typography h3 .small {
+  font-size: 61.803398874989476%;
+}
+.golden-typography h4,
+.golden-typography h5,
+.golden-typography h6 {
+  margin-top: 11px;
+  margin-bottom: 11px;
+}
+.golden-typography h4 small,
+.golden-typography h5 small,
+.golden-typography h6 small,
+.golden-typography h4 .small,
+.golden-typography h5 .small,
+.golden-typography h6 .small {
+  font-size: 61.803398874989476%;
+}
+.golden-typography h1,
+.golden-typography .h1 {
+  font-size: 68px;
+}
+.golden-typography h2,
+.golden-typography .h2 {
+  font-size: 45px;
+}
+.golden-typography h3,
+.golden-typography .h3 {
+  font-size: 23px;
+}
+.golden-typography h4,
+.golden-typography .h4 {
+  font-size: 18px;
+}
+.golden-typography h5,
+.golden-typography .h5 {
+  font-size: 14px;
+}
+.golden-typography h6,
+.golden-typography .h6 {
+  font-size: 10px;
+}
+.golden-typography .page-header {
+  padding-bottom: 10px;
+  margin: 44px 0 22px;
+  border-bottom: 1px solid #eeeeee;
+}
+.golden-typography ul,
+.golden-typography ol {
+  margin-top: 0;
+  margin-bottom: 11px;
+}
+.golden-typography ul ul,
+.golden-typography ol ul,
+.golden-typography ul ol,
+.golden-typography ol ol {
+  margin-bottom: 0;
+}
+.golden-typography .list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+.golden-typography .list-inline {
+  padding-left: 0;
+  list-style: none;
+}
+.golden-typography .list-inline > li {
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.golden-typography .list-inline > li:first-child {
+  padding-left: 0;
+}
+.golden-typography dl {
+  margin-bottom: 22px;
+}
+.golden-typography dt,
+.golden-typography dd {
+  line-height: 1.618033988749895;
+}
+.golden-typography dt {
+  font-weight: bold;
+}
+.golden-typography dd {
+  margin-left: 0;
+}
+@media (min-width: 768px) {
+  .golden-typography .dl-horizontal dt {
+    float: left;
+    width: 160px;
+    clear: left;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .golden-typography .dl-horizontal dd {
+    margin-left: 180px;
+  }
+  .golden-typography .dl-horizontal dd:before,
+  .golden-typography .dl-horizontal dd:after {
+    content: " ";
+    /* 1 */
+  
+    display: table;
+    /* 2 */
+  
+  }
+  .golden-typography .dl-horizontal dd:after {
+    clear: both;
+  }
+  .golden-typography .dl-horizontal dd:before,
+  .golden-typography .dl-horizontal dd:after {
+    content: " ";
+    /* 1 */
+  
+    display: table;
+    /* 2 */
+  
+  }
+  .golden-typography .dl-horizontal dd:after {
+    clear: both;
+  }
+}
+.golden-typography abbr[title],
+.golden-typography abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted #999999;
+}
+.golden-typography abbr.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+.golden-typography blockquote {
+  padding: 11px 22px;
+  margin: 0 0 22px;
+  border-left: 5px solid #eeeeee;
+}
+.golden-typography blockquote p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.618033988749895;
+}
+.golden-typography blockquote p:last-child {
+  margin-bottom: 0;
+}
+.golden-typography blockquote small {
+  display: block;
+  line-height: 1.618033988749895;
+  color: #999999;
+}
+.golden-typography blockquote small:before {
+  content: '\2014 \00A0';
+}
+.golden-typography blockquote.pull-right {
+  padding-right: 15px;
+  padding-left: 0;
+  border-right: 5px solid #eeeeee;
+  border-left: 0;
+}
+.golden-typography blockquote.pull-right p,
+.golden-typography blockquote.pull-right small,
+.golden-typography blockquote.pull-right .small {
+  text-align: right;
+}
+.golden-typography blockquote.pull-right small:before,
+.golden-typography blockquote.pull-right .small:before {
+  content: '';
+}
+.golden-typography blockquote.pull-right small:after,
+.golden-typography blockquote.pull-right .small:after {
+  content: '\00A0 \2014';
+}
+.golden-typography blockquote:before,
+.golden-typography blockquote:after {
+  content: "";
+}
+.golden-typography address {
+  margin-bottom: 22px;
+  font-style: normal;
+  line-height: 1.618033988749895;
 }

@@ -22,48 +22,49 @@
 
 // .col-md-12 and .gold-large-col-md arent parallel structure :(
 
-// perhaps folder structure should be 
-//bootstrap
-//golden-bootstrap
-//golden - containers golden variables and golden specific things
-//golden.less - file includes stuff
 
-// bootstrap stuff
 
+// Bootstrap stuff
+// Include helpful Bootstrap modules to make life easier later on.
+
+// Include the Bootstrap variable defaults
+// These can be edited at will, or replaced with a custom copy of Bootstrap variable overrides
 @import "./bootstrap/variables.less";
+
+// Include the groundwork Bootstrap mixins and classes for conveniance
 @import "./bootstrap/mixins.less";
-
-@import "./bootstrap/normalize.less";
-@import "./bootstrap/print.less";
-
-@import "./bootstrap/grid.less";
-
 @import "./bootstrap/utilities.less";
 
+// For cross-browser consistency
+@import "./bootstrap/normalize.less";
+
+// For printing
+@import "./bootstrap/print.less";
+
+// Include the basic Bootstrap 12 column grid for convensiance
+@import "./bootstrap/grid.less";
+
 // Golden stuff
+// Let's make life Golden :)
 
+// Override the Bootstrap variables with values based on the golden-ratio
 @import "./golden/variables.less";
+
+// Golden modules that require the Golden variables
+// These do not affect any pre-existing Bootstrap CSS and are thus not rooted under the .golden class
 @import "./golden/mixins.less";
-
 @import "./golden/grid.less";
-
 @import "./golden/content.less";
 
-// only typography, no colors
-.golden-typography {
-	@import "./golden/scaffolding.less";
-  @import "./golden/typography.less";
-}
-
-.golden-colors {
-
-}
-
-// golden bootstrap
-
+// Root the Golden styles that will affect pre-existing Bootstrap CSS under the .golden class
 .golden {
 	@import "./golden-bootstrap/golden-bootstrap.less";
-	@import "./golden/content.less";
+}
+
+// Add a special class for only including the Golden typography styles
+.golden-typography {
+	@import "./golden-typography/scaffolding.less";
+  @import "./golden-typography/typography.less";
 }
 
 
