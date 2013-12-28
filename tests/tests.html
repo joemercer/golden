@@ -195,6 +195,12 @@
             </div>
           </div>
 
+          <p class="indented">In order to make this possible, Golden roots all of it's Bootstrap override code under the <code>.golden</code> class. This has the added benefit of preventing Golden from conflicting with any pre-existing styles, and giving you complete control over the extent to which Golden is applied.</p>
+
+          <p>By default, Golden scopes all of this Bootstrap override code under the <code>.golden</code> class. This is to prevent Golden from conflicting with any pre-existing styles, and to give you complete control over the extent to which Golden is applied.</p>
+
+          <p class="indented">By default, Golden scopes all of this Bootstrap override code under the <code>.golden</code> class. This is to prevent Golden from conflicting with any pre-existing styles, and to give you complete control over the extent to which Golden is applied.</p>
+
           <p class="lead">5. Hack Golden</p>
 
           <p class="indented">Since Golden is cleanly modularized, and extends pre-existing Bootstrap modules when possible by overriding actual Bootstrap variables, it's easy to customize Golden by adding or removing Bootstrap modules, and it's easy to customize Bootstrap by adding Golden modules.</p>
@@ -237,19 +243,33 @@
             </div>
           </div>
 
+      </div>
 
+      <div class="documentation">
 
+        <h2 class="page-header">Documentation</h2>
 
+          <h2>Grid System <small><code>golden/grid.less</code></small></h2>
 
+            <h3>Containers <small><code>.golden-container</code></small></h3>
 
-          <p class="indented">By default, Golden scopes all of this Bootstrap override code under the <code>.golden</code> class. This is to prevent Golden from conflicting with any pre-existing styles, and to give you complete control over the extent to which Golden is applied.</p>
+              <p>All HTML headings, &lt;h1&gt; through &lt;h6&gt;, are available. .h1 through .h6 classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline.</p>
 
+              <div class="example panel panel-default">
+                <div class="panel-heading">
+                  <h4>Example</h4>
+                </div>
+                <div class="panel-body">
+                  <div class="example-grid">
+                    <div class="golden-container example-grid-block">.golden-container</div>
+                  </div>
+                </div>
+                <div class="panel-footer">
+                  <pre>&lt;h1&gt;Golden h1&lt;/h1&gt;<br>&lt;h2&gt;Golden h2&lt;/h2&gt;<br>&lt;h3&gt;Golden h3&lt;/h3&gt;<br>&lt;h4&gt;Golden h4&lt;/h4&gt;<br>&lt;h5&gt;Golden h5&lt;/h5&gt;<br>&lt;h6&gt;Golden h6&lt;/h6&gt;</pre>
+                </div>
+              </div>
 
-
-
-          <p>All of Golden is rooted under the .golden class. It applies a bunch of awesome styles, but some can be unpredictable. For example, it changes the box model. </p>
-
-          <p>Talk about structure. Talk about inspiration and give links. At end have a section of developing and contributing.</p>
+            <h3>Columns <small><code>.golden-col</code></small></h3>
 
       </div>
 
