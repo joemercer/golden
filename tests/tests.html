@@ -249,9 +249,17 @@
         <div class="grid-system">
         <h2>Grid System <small><code>golden/grid.less</code></small></h2>
 
+          <p>Golden extends the Bootstrap grid system you're already comfortable with by adding containers and columns with proportions based on the Golden ratio. Note that the Golden grid system is fully compatible and non-destructive towards the Bootstrap grid system.</p>
+
+          <p>The Golden grid system follows a predictable and intuitive naming convention for classes, <code>.golden-[element]-[screen-size]-[element-size]</code>. Golden uses the existing Bootstrap screen sizes, <code>xs</code>, <code>sm</code>, <code>md</code>, and <code>lg</code>, to set responsive breakpoints for resizing content. To read more about the Bootstrap grid system go <a>here</a>.</p>
+
+          <p>Golden uses two element sizes, <code>wide</code> and <code>narrow</code>, which are related in width by the Golden ratio. !!! add diagram here?</p>
+
+          <p>To see the Golden grid system in action you should try resizing your browser</p>
+
           <h3>Containers <small><code>.golden-container</code></small></h3>
 
-            <p>The Golden container is a wrapper for the main page content. It is centered, and has a golden relationship between its width and its margins. It also has responsive breakpoints for aligning content nicely on different devices.</p>
+            <p>The Golden container is a centered div with a golden relationship between it's width and left and right margins. It also incorporates media queries to resize for different devices.</p>
 
             <div class="example panel panel-default">
               <div class="panel-heading">
@@ -267,7 +275,9 @@
               </div>
             </div>
 
-            <p>The Golden container's responsive breakpoints can be customized by prepending a Bootstrap screen size and Golden width size to the end.</p>
+            <p>The Golden container can be customized by changing the class to something in the form of <code>.golden-container-[screen-size]-[container-size]</code>. On devices smaller than the given screen-size, the Golden container will extend to 100% of the available width.</p>
+
+            <p>The following example will create a wide Golden container on sm devices and above. On xs devices the container will have a width of 100%.</p>
 
             <div class="example panel panel-default">
               <div class="panel-heading">
@@ -284,6 +294,10 @@
                 <pre>&lt;div class="golden-container-sm-wide"&gt;...&lt;/div&gt;</pre>
               </div>
             </div>
+
+            <p>The Golden container customization classes can be combined for even greater expressiveness.</p>
+
+            <p>The following example will create a wide Golden container on sm and md devices, and a narrow Golden container on lg devices and above. On xs devices the container will have a width of 100%.</p>
 
             <div class="example panel panel-default">
               <div class="panel-heading">
@@ -303,7 +317,9 @@
 
           <h3>Columns <small><code>.golden-col</code></small></h3>
 
-            <p>The Golden columns work similarly to Bootstrap columns. Below the screen size specified the columns collapse. There is a golden relationship between the width of a wide column and the width of a narrow column. The pairing of a wide column and a narrow column will always add up to 100% of the available width. These columns can used within one another. They also play well with Bootstrap. Resize the columns to see them in action.</p>
+            <p>Golden adds two new columns, <code>wide</code> and <code>narrow</code>, whose relative widths are related by the Golden ratio. The two types of columns are meant to be used together, so a <code>wide</code> columns and a <code>narrow</code> column will always add up to 100% of the available width. Similar to Bootstrap columns, the Golden columns will collapse at smaller screen sizes.</p>
+
+            <p>The following example shows two Golden columns that combine to take up 100% of the available width, and collapse on screen sizes smaller than md.</p>
 
             <div class="example panel panel-default">
               <div class="panel-heading">
@@ -311,8 +327,8 @@
               </div>
               <div class="panel-body">
                 <div class="example-grid">
-                  <div class="golden-col-sm-wide example-grid-block">.golden-col-sm-wide</div>
-                  <div class="golden-col-sm-narrow example-grid-block">.golden-col-sm-narrow</div>
+                  <div class="golden-col-md-wide example-grid-block">.golden-col-md-wide</div>
+                  <div class="golden-col-md-narrow example-grid-block">.golden-col-md-narrow</div>
                 </div>
               </div>
               <div class="panel-footer">
@@ -320,22 +336,9 @@
               </div>
             </div>
 
-            <div class="example panel panel-default">
-              <div class="panel-heading">
-                <h4>Example</h4>
-              </div>
-              <div class="panel-body">
-                <div class="example-grid">
-                  <div class="golden-col-md-narrow example-grid-block">.golden-col-md-narrow</div>
-                  <div class="golden-col-md-wide example-grid-block">.golden-col-md-wide</div>
-                </div>
-              </div>
-              <div class="panel-footer">
-                <pre>&lt;div class="golden-col-md-narrow"&gt;...&lt;/div&gt;<br>&lt;div class="golden-col-md-wide"&gt;...&lt;/div&gt;</pre>
-              </div>
-            </div>
+            <p>Golden column classes can be mixed and matches for increased expressiveness.</p>
 
-            <p>Golden columns can be mixed and matched at different screen sizes to customize their effect. 
+            <p>The following example will collapse on xs devices, have a wide column first on sm devices, and have a narrow column first md devices and above.</p>
 
             <div class="example panel panel-default">
               <div class="panel-heading">
@@ -351,6 +354,54 @@
                 <pre>&lt;div class="golden-col-sm-wide golden-col-md-narrow"&gt;...&lt;/div&gt;<br>&lt;div class="golden-col-sm-narrow golden-col-md-wide"&gt;...&lt;/div&gt;</pre>
               </div>
             </div>
+
+            <p>Golden columns can be safely nested within one another.</p>
+
+            <p>The following example shows a second wide and narrow Golden column nested within the first wide Golden column.</p>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h4>Example</h4>
+              </div>
+              <div class="panel-body">
+                <div class="example-grid">
+                  <div class="golden-col-sm-wide example-grid-block">
+                    .golden-col-sm-wide
+                    <div class="golden-col-md-wide example-grid-block">.golden-col-md-wide</div>
+                    <div class="golden-col-md-narrow example-grid-block">.golden-col-md-narrow</div>
+                  </div>
+                  <div class="golden-col-sm-narrow example-grid-block">.golden-col-sm-narrow</div>
+                </div>
+              </div>
+              <div class="panel-footer">
+                <pre>CODE!!!</pre>
+              </div>
+            </div>
+
+            <p>Golden columns also play well with Bootstrap's columns.</p>
+
+            <p>The following example shows a wide and narrow Golden column nested within a Bootstrap column.</p>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h4>Example</h4>
+              </div>
+              <div class="panel-body">
+                <div class="example-grid">
+                  <div class="col-sm-6 example-grid-block">
+                    .col-sm-6
+                    <div class="golden-col-md-wide example-grid-block">.golden-col-md-wide</div>
+                    <div class="golden-col-md-narrow example-grid-block">.golden-col-md-narrow</div>
+                  </div>
+                  <div class="col-sm-6 example-grid-block">.col-sm-6</div>
+                </div>
+              </div>
+              <div class="panel-footer">
+                <pre>CODE!!!</pre>
+              </div>
+            </div>
+
+
         </div>
 
         <div class="colors">
