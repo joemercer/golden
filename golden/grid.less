@@ -16,14 +16,14 @@
 .make-golden-grid() {
 
   .golden-container,
-  .golden-large-container-xs,
-  .golden-large-container-sm,
-  .golden-large-container-md,
-  .golden-large-container-lg,
-  .golden-small-container-xs,
-  .golden-small-container-sm,
-  .golden-small-container-md,
-  .golden-small-container-lg {
+  .golden-container-xs-wide,
+  .golden-container-sm-wide,
+  .golden-container-md-wide,
+  .golden-container-lg-wide,
+  .golden-container-xs-narrow,
+  .golden-container-sm-narrow,
+  .golden-container-md-narrow,
+  .golden-container-lg-narrow {
 
     // Inner gutter via padding
     padding-left:  (@golden-grid-gutter-width / 2);
@@ -37,14 +37,14 @@
     .clearfix();
   }
 
-  .golden-large-col-xs,
-  .golden-large-col-sm,
-  .golden-large-col-md,
-  .golden-large-col-lg,
-  .golden-small-col-xs,
-  .golden-small-col-sm,
-  .golden-small-col-md,
-  .golden-small-col-lg
+  .golden-col-xs-wide,
+  .golden-col-sm-wide,
+  .golden-col-md-wide,
+  .golden-col-lg-wide,
+  .golden-col-xs-narrow,
+  .golden-col-sm-narrow,
+  .golden-col-md-narrow,
+  .golden-col-lg-narrow
   {
     position: relative;
     // Prevent columns from collapsing when empty
@@ -134,12 +134,12 @@
 // Helper mixins for creating the container classes
 
 .make-golden-container(@class) {
-  .calc-golden-container(golden-large, @class);
-  .calc-golden-container(golden-small, @class);
+  .calc-golden-container(golden-large, wide, @class);
+  .calc-golden-container(golden-small, narrow, @class);
 }
 
-.calc-golden-container(@gold, @class) {
-  .@{gold}-container-@{class} {
+.calc-golden-container(@gold, @size, @class) {
+  .golden-container-@{class}-@{size} {
     width: percentage(@@gold);
   }
 }
@@ -147,27 +147,27 @@
 // Helper mixins for creating column classes
 
 .make-golden-col(@class, @type) {
-  .calc-golden-col(golden-large, @class, @type);
-  .calc-golden-col(golden-small, @class, @type);
+  .calc-golden-col(golden-large, wide, @class, @type);
+  .calc-golden-col(golden-small, narrow, @class, @type);
 }
 
-.calc-golden-col(@gold, @class, @type) when (@type = width) {
-  .@{gold}-col-@{class} {
+.calc-golden-col(@gold, @size, @class, @type) when (@type = width) {
+  .golden-col-@{class}-@{size} {
     width: percentage(@@gold);
   }
 }
-.calc-golden-col(@gold, @class, @type) when (@type = push) {
-  .@{gold}-col-@{class}-push {
+.calc-golden-col(@gold, @size, @class, @type) when (@type = push) {
+  .golden-col-@{class}-@{size}-push {
     left: percentage(@@gold);
   }
 }
-.calc-golden-col(@gold, @class, @type) when (@type = pull) {
-  .@{gold}-col-@{class}-pull {
+.calc-golden-col(@gold, @size, @class, @type) when (@type = pull) {
+  .golden-col-@{class}-@{size}-pull {
     right: percentage(@@gold);
   }
 }
-.calc-golden-col(@gold, @class, @type) when (@type = offset) {
-  .@{gold}-col-@{class}-offset {
+.calc-golden-col(@gold, @size, @class, @type) when (@type = offset) {
+  .golden-col-@{class}-@{size}-offset {
     margin-left: percentage(@@gold);
   }
 }
@@ -206,33 +206,33 @@
 }
 
 .make-golden-row(@type) {
-  .calc-golden-row(golden-large, @type);
-  .calc-golden-row(golden-small, @type);
+  .calc-golden-row(golden-large, wide, @type);
+  .calc-golden-row(golden-small, narrow, @type);
 }
 
 
-.calc-golden-row(@gold, @type) when (@type = height) {
-  .@{gold}-row {
+.calc-golden-row(@gold, @size, @type) when (@type = height) {
+  .golden-row-@{size} {
     height: percentage(@@gold);
   }
 }
-.calc-golden-row(@gold, @type) when (@type = push) {
-  .@{gold}-row-push {
+.calc-golden-row(@gold, @size, @type) when (@type = push) {
+  .golden-row-@{size}-push {
     top: percentage(@@gold);
   }
 }
-.calc-golden-row(@gold, @type) when (@type = pull) {
-  .@{gold}-row-pull {
+.calc-golden-row(@gold, @size, @type) when (@type = pull) {
+  .golden-row-@{size}-pull {
     bottom: percentage(@@gold);
   }
 }
-.calc-golden-row(@gold, @type) when (@type = offset) {
-  .@{gold}-row-offset {
+.calc-golden-row(@gold, @size, @type) when (@type = offset) {
+  .golden-row-@{size}-offset {
     margin-top: percentage(@@gold);
   }
 }
-.calc-golden-row(@gold, @type) when (@type = center) {
-  .@{gold}-row-center {
+.calc-golden-row(@gold, @size, @type) when (@type = center) {
+  .golden-row-@{size}-center {
     // ??? should this be margin-top or top?
     margin-top: percentage((1 - @@gold) / 2);
   }
