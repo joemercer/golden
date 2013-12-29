@@ -1389,7 +1389,10 @@ table {
     font-size: 22.65247584249853px;
   }
 }
-.golden .indented {
+.golden .full-indent {
+  text-indent: 22px;
+}
+.golden .half-indent {
   text-indent: 11px;
 }
 .golden small,
@@ -3087,7 +3090,10 @@ fieldset[disabled] .golden .btn-link:focus {
     font-size: 22.65247584249853px;
   }
 }
-.golden-typography .indented {
+.golden-typography .full-indent {
+  text-indent: 22px;
+}
+.golden-typography .half-indent {
   text-indent: 11px;
 }
 .golden-typography small,
