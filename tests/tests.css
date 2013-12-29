@@ -1,3 +1,7 @@
+em {
+  color: #ffd700;
+  font-style: normal;
+}
 .example-grid {
   width: 100%;
   height: 50px;
