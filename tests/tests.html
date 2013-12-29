@@ -537,118 +537,116 @@
               </div>
             </div>
 
-          <h3>Everything else</h3>
+        </div>
 
-            <p>Golden includes all the other typographical elements that Bootstrap includes, but without any additional customizations beyond what's already been discussed. These elements will, for the most part, inherit the base font size, line height, and Golden gray scale. They will also have an added margin-bottom based on the line height, to help keep adjacent elements nicely spaced out. See <a>Bootstrap</a> for more documentation and examples.</p>
+        <div class="typographical-elements">
+        <h2>Typographical Elements</h2>
+
+          <p>Golden includes all the other typographical elements that Bootstrap includes, but without any additional customizations beyond what's already been discussed. These elements will, for the most part, inherit the base font size, line height, and Golden gray scale. They will also have an added margin-bottom based on the line height, to help keep adjacent elements nicely spaced out.</p>
+
+          <p>The following are some examples of the Bootstrap typographical elements that Golden includes. See <a>Twitter Bootstrap</a> for a full list of supported elements, more documentation, and examples.</p>
+
+          <h3>Code <small><code>golden-bootstrap/code.less</code></small></h3>
+
+            <p>Golden includes Bootstrap's classes for styling code.</p>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h4>Example</h4>
+              </div>
+              <div class="panel-body">
+                <p>Wrap inline snippets of code with <code>&lt;code&gt;</code>.</p>
+              </div>
+              <div class="panel-footer">
+                <pre>&lt;code&gt;...&lt;/code&gt;</pre>
+              </div>
+            </div>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h4>Example</h4>
+              </div>
+              <div class="panel-body">
+                <pre>Use <code>&lt;pre&gt;</code> for multiple lines of code. Be sure to escape any angle brackets in the code for proper rendering.</pre>
+              </div>
+              <div class="panel-footer">
+                <pre>&lt;pre&gt;...&lt;/pre&gt;</pre>
+              </div>
+            </div>
+
+          <h3>List Groups <small><code>golden-bootstrap/list-group.less</code></small></h3>
+
+            <p>Golden includes Bootstrap's specially styled <code>.list-group</code> class.</p>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h4>Example</h4>
+              </div>
+              <div class="panel-body">
+                <ul class="list-group">
+                  <li class="list-group-item"><a href="#">Apples</a></li>
+                  <li class="list-group-item"><a href="#">Bananas</a></li>
+                  <li class="list-group-item"><a href="#">Pears</a></li>
+                </ul>
+              </div>
+              <div class="panel-footer">
+                <pre>&lt;ul class="list-group"&gt;<br>  &lt;li class="list-group-item"&gt;Apples&lt;/li&gt;<br>  &lt;li class="list-group-item"&gt;...&lt;/li&gt;<br>&lt;/ul&gt;</pre>
+              </div>
+            </div>
+
+          <h3>Tables <small><code>golden-bootstrap/tables.less</code></small></h3>
+
+            <p>Golden includes Bootstrap's styled tables.</p>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h4>Example</h4>
+              </div>
+              <div class="panel-body">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th>Framework</th>
+                      <th>Framework</th>
+                      <th>Creator</th>
+                      <th>Test</th>
+                      <th>Test Test</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>1</th>
+                      <th>Bootstrap</th>
+                      <th>Twitter</th>
+                      <th>Test</th>
+                      <th>Test Test</th>
+                    </tr>
+                    <tr>
+                      <th>2</th>
+                      <th>Golden</th>
+                      <th>Joe</th>
+                      <th>Test</th>
+                      <th>Test Test</th>
+                    </tr>
+                    <tr>
+                      <th>3</th>
+                      <th>Other</th>
+                      <th>The bro</th>
+                      <th>Test</th>
+                      <th>Test Test</th>
+                    </tr>
+                  </tbody>
+                  <tbody></tbody>
+                </table>
+              </div>
+              <div class="panel-footer">
+                <pre>&lt;table class="table table-hover"&gt;...&lt;/table&gt;</pre>
+              </div>
+            </div>
 
         </div>
 
-        <div class="code">
-        <h2>Code <small><code>golden-bootstrap/code.less</code></small></h2>
 
-          <p>Golden also come with some classes for styling code. These styles are not majorly impacted by the Golden ratio and are included from Bootstrap as a convenience.</p>
-
-          <div class="example panel panel-default">
-            <div class="panel-heading">
-              <h4>Example</h4>
-            </div>
-            <div class="panel-body">
-              <p>Wrap inline snippets of code with <code>&lt;code&gt;</code>.</p>
-            </div>
-            <div class="panel-footer">
-              <pre>&lt;code&gt;...&lt;/code&gt;</pre>
-            </div>
-          </div>
-
-          <div class="example panel panel-default">
-            <div class="panel-heading">
-              <h4>Example</h4>
-            </div>
-            <div class="panel-body">
-              <pre>Use <code>&lt;pre&gt;</code> for multiple lines of code. Be sure to escape any angle brackets in the code for proper rendering.</pre>
-            </div>
-            <div class="panel-footer">
-              <pre>&lt;pre&gt;...&lt;/pre&gt;</pre>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="lists-groups">
-        <h2>List Groups <small><code>golden-bootstrap/list-group.less</code></small></h2>
-
-          <p>Golden includes Bootstrap's specially styled <code>.list-group</code> with a bottom margin based on the Golden ratio. See <a>Bootstrap</a> for more documentation and examples.</p>
-
-          <div class="example panel panel-default">
-            <div class="panel-heading">
-              <h4>Example</h4>
-            </div>
-            <div class="panel-body">
-              <ul class="list-group">
-                <li class="list-group-item"><a href="#">Apples</a></li>
-                <li class="list-group-item"><a href="#">Bananas</a></li>
-                <li class="list-group-item"><a href="#">Pears</a></li>
-              </ul>
-            </div>
-            <div class="panel-footer">
-              <pre>&lt;ul class="list-group"&gt;<br>  &lt;li class="list-group-item"&gt;Apples&lt;/li&gt;<br>  &lt;li class="list-group-item"&gt;...&lt;/li&gt;<br>&lt;/ul&gt;</pre>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="tables">
-        <h2>Tables <small><code>golden-bootstrap/tables.less</code></small></h2>
-
-          <p>Golden includes Bootstrap's styled tables but adds a bottom margin to the component based on the Golden ratio. See <a>Twitter Bootstrap</a> for more documentation and examples.</p>
-
-          <div class="example panel panel-default">
-            <div class="panel-heading">
-              <h4>Example</h4>
-            </div>
-            <div class="panel-body">
-              <table class="table table-hover">
-                <thead>
-                  <tr>
-                    <th>Framework</th>
-                    <th>Framework</th>
-                    <th>Creator</th>
-                    <th>Test</th>
-                    <th>Test Test</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th>1</th>
-                    <th>Bootstrap</th>
-                    <th>Twitter</th>
-                    <th>Test</th>
-                    <th>Test Test</th>
-                  </tr>
-                  <tr>
-                    <th>2</th>
-                    <th>Golden</th>
-                    <th>Joe</th>
-                    <th>Test</th>
-                    <th>Test Test</th>
-                  </tr>
-                  <tr>
-                    <th>3</th>
-                    <th>Other</th>
-                    <th>The bro</th>
-                    <th>Test</th>
-                    <th>Test Test</th>
-                  </tr>
-                </tbody>
-                <tbody></tbody>
-              </table>
-            </div>
-            <div class="panel-footer">
-              <pre>&lt;table class="table table-hover"&gt;...&lt;/table&gt;</pre>
-            </div>
-          </div>
-
-        </div>
 
         <div class="forms">
         <h2>Forms <small><code>golden-bootstrap/forms.less</code></small></h2>
@@ -768,6 +766,8 @@
           </div>
 
         </div>
+
+        
 
         <div class="panels">
         <h2>Panels <small><code>golden-bootstrap/panels.less</code></small></h2>
