@@ -408,34 +408,24 @@
 
           <h3>Greys</h3>
 
+            <p>Golden provides a gray scale with proportions of pure white and pure black based on the Golden ratio. To access the Golden gray variables you must include <code>golden/variables.less</code> in your project.</p>
+
             <div class="example panel panel-default">
               <div class="panel-heading">
                 <h4>Example</h4>
               </div>
               <div class="panel-body">
-                <div class="example-color-swatch golden-black"></div>
-                <div class="example-color-swatch black"></div>
-
-                <div class="example-color-swatch golden-gray-darker"></div>
-                <div class="example-color-swatch gray-darker"></div>
-
-                <div class="example-color-swatch golden-gray-dark"></div>
-                <div class="example-color-swatch gray-dark"></div>
-
-                <div class="example-color-swatch golden-gray"></div>
-                <div class="example-color-swatch gray"></div>
-
-                <div class="example-color-swatch golden-gray-light"></div>
-                <div class="example-color-swatch gray-light"></div>
-
-                <div class="example-color-swatch golden-gray-lighter"></div>
-                <div class="example-color-swatch gray-lighter"></div>
-
-                <div class="example-color-swatch golden-white"></div>
-                <div class="example-color-swatch white"></div>
+                <div class="example-color-swatch golden-black text-light">#000</div>
+                <div class="example-color-swatch golden-gray-darker text-light">@golden-gray-darker</div>
+                <div class="example-color-swatch golden-gray-dark text-light">@golden-gray-dark</div>
+                <div class="example-color-swatch golden-gray text-light">@golden-gray</div>
+                <div class="example-color-swatch golden-gray-light text-dark">@golden-gray-light</div>
+                <div class="example-color-swatch golden-gray-lighter text-dark">@golden-gray-lighter</div>
+                <div class="example-color-swatch golden-gray-lightest text-dark">@golden-gray-lightest</div>
+                <div class="example-color-swatch golden-white text-dark">#FFF</div>
               </div>
               <div class="panel-footer">
-                <pre>include golden/variables. @golden-gray, @golden-light-gray...</pre>
+                <pre>@import "./golden/variables.less";<br><br>.golden-gray-background {<br>  background-color: @golden-gray;<br>}<br>...</pre>
               </div>
             </div>
 

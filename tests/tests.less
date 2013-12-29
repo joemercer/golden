@@ -2,6 +2,10 @@
 @import "./../golden/variables.less";
 @import "./../golden/mixins.less";
 
+
+
+// Golden Grid
+
 @test-grid-height: 50px;
 
 .example-grid {
@@ -27,41 +31,13 @@
 	}
 }
 
-@red: red;
-
-.red {
-	height: 50px;
-	@golden-red: blue;
-	@red: @golden-red;
-
-	background-color: @red;
-
-	test1: lightness(#f5f5f5);
-	test2: lightness(@golden-gray-lighter);
-	test3: lightness(@golden-gray-lightest);
-}
-.lightestgray {
-	height: 50px;
-
-	background-color: @golden-gray-lightest;
-}
 
 
+// Golden Colors
 
-
-
-
-
-
-.example-color {
-	.example-content {
-		background-color: white;
-	}
-}
 .example-color-swatch {
 	height: 50px;
-	width: 49%;
-	display: inline-block;
+	padding: @golden-line-height-computed / 2;
 }
 .golden-black {
 	background-color: #000;
@@ -81,33 +57,44 @@
 .golden-gray-lighter {
 	background-color: @golden-gray-lighter;
 }
+.golden-gray-lightest {
+	background-color: @golden-gray-lightest;
+}
 .golden-white {
 	background-color: #FFF;
 }
-
-.black {
-	background-color: #000;
+.text-light {
+	color: @golden-gray-light;
 }
-.gray-darker {
-	background-color: @gray-darker;
-}
-.gray-dark {
-	background-color: @gray-dark;
-}
-.gray {
-	background-color: @gray;
-}
-.gray-light {
-	background-color: @gray-light;
-}
-.gray-lighter {
-	background-color: @gray-lighter;
-}
-.white {
-	background-color: #FFF;
+.text-dark {
+	color: @golden-gray-dark;
 }
 
+// .black {
+// 	background-color: #000;
+// }
+// .gray-darker {
+// 	background-color: @gray-darker;
+// }
+// .gray-dark {
+// 	background-color: @gray-dark;
+// }
+// .gray {
+// 	background-color: @gray;
+// }
+// .gray-light {
+// 	background-color: @gray-light;
+// }
+// .gray-lighter {
+// 	background-color: @gray-lighter;
+// }
+// .white {
+// 	background-color: #FFF;
+// }
 
+
+
+// Golden Mixins
 
 .example1-golden-rectangle {
 	.make-golden-rectangle(200px);
