@@ -630,88 +630,73 @@
 
         </div>
 
+        <div class="buttons">
+        <h2>Buttons <small><code>golden-bootstrap/buttons.less</code></small></h2>
+
+          <p>The height of the default button is related to the line height by the golden ratio: buttonHeight = lineHeight*goldenRatio. The amount of space above and below the text is related to the base font size by the golden ratio: top + bottom = fontSize*goldenRatio. Where top = botttom = ((lineHeight-fontSize)/2) + (paddingVertical/2). Also buttonHeight = fontSize*goldenRatio*goldenRatio</p>
+
+          <p>The height of the large button. The height of the large button is related to the height of the regular size button by: largeButtonHeight = 2*regularButtonHeight/goldenRatio. The height of the large button is alse related to the text size of the font inside the large button by the golden ratio. buttonHeight = fontSize*goldenRatio*goldenRatio.</p>
+
+          <p>The height of the small button. The height of the small button is related to the height of the regular size button by: smallButtonHeight = 2*regularButtonHeight*(1-(1/goldenRatio)). The height of the large button is alse related to the text size of the font inside the large button by the golden ratio. buttonHeight = fontSize*goldenRatio*goldenRatio.</p>
+
+          <p>The height of the xs button. The height of the extra small button is related to the height of the regular sized button by the golden ratio: xsmallButtonHeight = defaultButtonHeight/goldenRatio.</p>
+
+          <p>Fancy larger or smaller buttons? Add .btn-lg, .btn-sm, or .btn-xs for additional sizes.</p>
+
+          <div class="example panel panel-default">
+            <div class="panel-heading">
+              <h4>Example</h4>
+            </div>
+            <div class="panel-body">
+              <p>
+                <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                <button type="button" class="btn btn-default btn-lg">Large button</button>
+              </p>
+              <p>
+                <button type="button" class="btn btn-primary">Default button</button>
+                <button type="button" class="btn btn-default">Default button</button>
+              </p>
+              <p>
+                <button type="button" class="btn btn-primary btn-sm">Small button</button>
+                <button type="button" class="btn btn-default btn-sm">Small button</button>
+              </p>
+              <p>
+                <button type="button" class="btn btn-primary btn-xs">xs button</button>
+                <button type="button" class="btn btn-default btn-xs">xs button</button>
+              </p>
+            </div>
+            <div class="panel-footer">
+              <pre>Here there be code</pre>
+            </div>
+          </div>
+
+          <p>Golden buttons play well with Golden columns also.</p>
+
+          <div class="example panel panel-default">
+            <div class="panel-heading">
+              <h4>Example</h4>
+            </div>
+            <div class="panel-body">
+              <div class="golden-col-xs-wide">
+                <button type="button" class="btn btn-primary btn-lg btn-block">.golden-col-xs-wide</button>
+              </div>
+              <div class="golden-col-xs-narrow">
+                <button type="button" class="btn btn-default btn-lg btn-block">.golden-col-xs-narrow</button>
+              </div>
+            </div>
+            <div class="panel-footer">
+              <pre>Here there be code</pre>
+            </div>
+          </div>
+
+        </div>
+
 
 
 
       </div>
 
-      <div class="typography">
 
-        <h2>Typography</h2>
-
-          <h3>Buttons</h3>
-
-            <p>The height of the default button is related to the line height by the golden ratio: buttonHeight = lineHeight*goldenRatio. The amount of space above and below the text is related to the base font size by the golden ratio: top + bottom = fontSize*goldenRatio. Where top = botttom = ((lineHeight-fontSize)/2) + (paddingVertical/2). Also buttonHeight = fontSize*goldenRatio*goldenRatio</p>
-
-            <p>The height of the large button. The height of the large button is related to the height of the regular size button by: largeButtonHeight = 2*regularButtonHeight/goldenRatio. The height of the large button is alse related to the text size of the font inside the large button by the golden ratio. buttonHeight = fontSize*goldenRatio*goldenRatio.</p>
-
-            <p>The height of the small button. The height of the small button is related to the height of the regular size button by: smallButtonHeight = 2*regularButtonHeight*(1-(1/goldenRatio)). The height of the large button is alse related to the text size of the font inside the large button by the golden ratio. buttonHeight = fontSize*goldenRatio*goldenRatio.</p>
-
-            <p>The height of the xs button. The height of the extra small button is related to the height of the regular sized button by the golden ratio: xsmallButtonHeight = defaultButtonHeight/goldenRatio.</p>
-
-            <p>NOTE:: Buttons should be placed under .golden-typography</p>
-
-            <p>Fancy larger or smaller buttons? Add .btn-lg, .btn-sm, or .btn-xs for additional sizes.</p>
-
-            <div class="example panel panel-default">
-              <div class="panel-heading">
-                <h4>Example</h4>
-              </div>
-              <div class="panel-body">
-                <p>
-                  <button type="button" class="btn btn-primary btn-lg">Large button</button>
-                  <button type="button" class="btn btn-default btn-lg">Large button</button>
-                </p>
-                <p>
-                  <button type="button" class="btn btn-primary">Default button</button>
-                  <button type="button" class="btn btn-default">Default button</button>
-                </p>
-                <p>
-                  <button type="button" class="btn btn-primary btn-sm">Small button</button>
-                  <button type="button" class="btn btn-default btn-sm">Small button</button>
-                </p>
-                <p>
-                  <button type="button" class="btn btn-primary btn-xs">xs button</button>
-                  <button type="button" class="btn btn-default btn-xs">xs button</button>
-                </p>
-              </div>
-              <div class="panel-footer">
-                <pre>Here there be code</pre>
-              </div>
-            </div>
-
-            <p>Create block level buttons—those that span the full width of a parent— by adding .btn-block.</p>
-
-            <div class="example panel panel-default">
-              <div class="panel-heading">
-                <h4>Example</h4>
-              </div>
-              <div class="panel-body">
-                <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-                <button type="button" class="btn btn-default btn-lg btn-block">Block level button</button>
-              </div>
-              <div class="panel-footer">
-                <pre>Here there be code</pre>
-              </div>
-            </div>
-
-            <div class="example panel panel-default">
-              <div class="panel-heading">
-                <h4>Example</h4>
-              </div>
-              <div class="panel-body">
-                <div class="golden-large-col-xs">
-                  <button type="button" class="btn btn-primary btn-lg btn-block">.golden-large-col-xs</button>
-                </div>
-                <div class="golden-small-col-xs">
-                  <button type="button" class="btn btn-default btn-lg btn-block">.golden-small-col-xs</button>
-                </div>
-              </div>
-              <div class="panel-footer">
-                <pre>Here there be code</pre>
-              </div>
-            </div>
-      </div>
 
       <div class="colors">
 
