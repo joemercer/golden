@@ -356,43 +356,15 @@
         <div class="typography">
         <h2>Typography <small><code>golden-bootstrap/type.less</code></small></h2>
 
-        </div>
+          <p>Derives everything from the base font size defined in variables.less. Can be used independent of everything by using the .golden-typography class. Has a color related to pure white and black by the Golden ratio. Inspired from that specific website.</p>
 
+          <h3>Headings and Subheadings</h3>
 
-
-
-      </div>
-
-      <div class="typography">
-
-        <h2>Typography</h2>
-
-          <h3>Headings</h3>
-
-            <p>All HTML headings, &lt;h1&gt; through &lt;h6&gt;, are available. .h1 through .h6 classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline.</p>
+            <p>Golden typography includes all HTML headings, and a <code>small</code> tag for creating subheadings. Each heading is related to the base font size by progressively larger powers of the Golden ratio. Each subheading is related to it's heading by the Golden ratio. The color of the subheading is related to the color of the heading by the ratio.</p>
 
             <div class="example panel panel-default">
               <div class="panel-heading">
-                <h5>Example</h5>
-              </div>
-              <div class="panel-body">
-                <h1>Golden h1</h1>
-                <h2>Golden h2</h2>
-                <h3>Golden h3</h3>
-                <h4>Golden h4</h4>
-                <h5>Golden h5</h5>
-                <h6>Golden h6</h6>
-              </div>
-              <div class="panel-footer">
-                <pre>&lt;h1&gt;Golden h1&lt;/h1&gt;<br>&lt;h2&gt;Golden h2&lt;/h2&gt;<br>&lt;h3&gt;Golden h3&lt;/h3&gt;<br>&lt;h4&gt;Golden h4&lt;/h4&gt;<br>&lt;h5&gt;Golden h5&lt;/h5&gt;<br>&lt;h6&gt;Golden h6&lt;/h6&gt;</pre>
-              </div>
-            </div>
-
-            <p>Create lighter, secondary text in any heading with a generic &lt;small&gt; tag or the .small class.</p>
-
-            <div class="example panel panel-default">
-              <div class="panel-heading">
-                <h5>Example</h5>
+                <h4>Example</h4>
               </div>
               <div class="panel-body">
                 <h1>Golden h1 <small>Subheading</small></h1>
@@ -424,21 +396,19 @@
               </div>
             </div>
 
-            <p>Make a paragraph stand out by adding .lead.</p>
+            <p>Golden also provides some useful alteration classes. Make text stand out by adding <code>.lead</code> class. The new text is related to the original text size by the Golden ratio. Add indentation by adding the <code>.indente</code> class. The size of the indentation is calculated based on the Golden ratio.</p>
 
             <div class="example panel panel-default">
               <div class="panel-heading">
-                <h5>Example</h5>
+                <h4>Example</h4>
               </div>
               <div class="panel-body">
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis auctor vestibulum.</p>
+                <p class="lead">Lorem ipsum dolor sit amet</p>
                 <p class="indented">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis auctor vestibulum.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis auctor vestibulum.</p>
               </div>
               <div class="panel-footer">
                 <pre>&lt;p class="lead"&gt;...&lt;/p&gt;</pre>
                 <pre>&lt;p class="indented"&gt;...&lt;/p&gt;</pre>
-                <pre>&lt;p&gt;...&lt;/p&gt;</pre>
               </div>
             </div>
 
@@ -459,7 +429,7 @@
               </div>
             </div>
 
-            <p>To add columns add a <strong>.columns-n</strong> where <strong>n</strong> is the number of columns you want. Columns collapse when the containing element isn't wide enough to support them.</p>
+            <p>To add columns add a <strong>.columns-n</strong> where <strong>n</strong> is the number of columns you want. Note that these columns collapse when the containing element isn't wide enough to support them. You may have to resize your browser to see them.</p>
 
             <div class="example panel panel-default">
               <div class="panel-heading">
@@ -472,6 +442,17 @@
                 <pre>&lt;p class="golden-content columns-2"&gt;...&lt;/p&gt;</pre>
               </div>
             </div>
+
+        </div>
+
+
+
+
+      </div>
+
+      <div class="typography">
+
+        <h2>Typography</h2>
 
           <h3>Code</h3>
 
