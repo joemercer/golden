@@ -379,7 +379,7 @@
               </div>
             </div>
 
-          <h3>Body Copy</h3>
+          <h3>Paragraphs</h3>
 
             <p>Golden's global default font-size is <strong>14px</strong>, with a line-height of <strong>1.618</strong>. This is applied to the &lt;body&gt; and all paragraphs. In addition, &lt;p&gt; (paragraphs) receive a bottom margin of half their computed line-height (11px by default).</p>
 
@@ -396,7 +396,7 @@
               </div>
             </div>
 
-            <p>Golden also provides some useful alteration classes. Make text stand out by adding <code>.lead</code> class. The new text is related to the original text size by the Golden ratio. Add indentation by adding the <code>.indente</code> class. The size of the indentation is calculated based on the Golden ratio.</p>
+            <p>Golden also provides some useful alteration classes. Make text stand out by adding <code>.lead</code> class. The new text is related to the original text size by the Golden ratio. Add indentation by adding the <code>.indented</code> class. The size of the indentation is calculated based on the Golden ratio.</p>
 
             <div class="example panel panel-default">
               <div class="panel-heading">
@@ -409,6 +409,32 @@
               <div class="panel-footer">
                 <pre>&lt;p class="lead"&gt;...&lt;/p&gt;</pre>
                 <pre>&lt;p class="indented"&gt;...&lt;/p&gt;</pre>
+              </div>
+            </div>
+
+            <p>Golden also come with some classes for styling code. These styles are not majorly impacted by the Golden ratio and are included from Bootstrap as a convenience.</p>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h4>Example</h4>
+              </div>
+              <div class="panel-body">
+                <p>Wrap inline snippets of code with <code>&lt;code&gt;</code>.</p>
+              </div>
+              <div class="panel-footer">
+                <pre>&lt;code&gt;...&lt;/code&gt;</pre>
+              </div>
+            </div>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h4>Example</h4>
+              </div>
+              <div class="panel-body">
+                <pre>Use <code>&lt;pre&gt;</code> for multiple lines of code. Be sure to escape any angle brackets in the code for proper rendering.</pre>
+              </div>
+              <div class="panel-footer">
+                <pre>&lt;pre&gt;...&lt;/pre&gt;</pre>
               </div>
             </div>
 
@@ -443,51 +469,25 @@
               </div>
             </div>
 
-        </div>
-
-
-
-
-      </div>
-
-      <div class="typography">
-
-        <h2>Typography</h2>
-
-          <h3>Code</h3>
-
-            <p>Wrap inline snippets of code with <code>&lt;code&gt;</code>.</p>
-
-            <div class="example panel panel-default">
-              <div class="panel-heading">
-                <h4>Example</h4>
-              </div>
-              <div class="panel-body">
-                <p>Not code</p>
-                <p><code>Sample inline code</code></p>
-              </div>
-              <div class="panel-footer">
-                <pre>&lt;p&gt;Not code&lt;/p&gt;<br>&lt;p&gt;&lt;code&gt;Sample inline code&lt;/code&gt;&lt;/p&gt;</pre>
-              </div>
-            </div>
-
-            <p>Use <code>&lt;pre&gt;</code> for multiple lines of code. Be sure to escape any angle brackets in the code for proper rendering. To do this en masse you can use the <code>&lt;xmp&gt;</code> tag.</p>
-
-            <div class="example panel panel-default">
-              <div class="panel-heading">
-                <h4>Example</h4>
-              </div>
-              <div class="panel-body">
-                <pre>Sample<br>multi-line<br>code</pre>
-              </div>
-              <div class="panel-footer">
-                <pre>&lt;pre&gt;Sample&lt;br&gt;multi-line&lt;br&gt;code&lt;/pre&gt;</pre>
-              </div>
-            </div>
-
           <h3>Lists</h3>
 
-            <p>Of course you've got the expected Golden styled ul's ol's and li's. You also get specially styled List Groups.</p>
+            <p>Golden includes Bootstrap's styled lists and specially styled <code>.list-group</code>. All that Golden adds is a bottom margin based on the Golden ratio. See <a>Bootstrap</a> for more documentation and examples.</p>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h4>Example</h4>
+              </div>
+              <div class="panel-body">
+                <ul>
+                  <li>Apples</a></li>
+                  <li>Bananas</li>
+                  <li>Pears</li>
+                </ul>
+              </div>
+              <div class="panel-footer">
+                <pre>&lt;ul&gt;<br>  &lt;li&gt;Apples&lt;/li&gt;<br>  &lt;li&gt;...&lt;/li&gt;<br>&lt;/ul&gt;</pre>
+              </div>
+            </div>
 
             <div class="example panel panel-default">
               <div class="panel-heading">
@@ -507,87 +507,7 @@
 
           <h3>Tables</h3>
 
-            <p>For basic styling light padding and only horizontal dividers add the base class <code>.table</code> to any <code>&lt;table&gt;</code>.</p>
-
-            <div class="example panel panel-default">
-              <div class="panel-heading">
-                <h4>Example</h4>
-              </div>
-              <div class="panel-body">
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th>#</th>
-                      <th>Framework</th>
-                      <th>Creator</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th>1</th>
-                      <th>Bootstrap</th>
-                      <th>Twitter</th>
-                    </tr>
-                    <tr>
-                      <th>2</th>
-                      <th>Golden</th>
-                      <th>Joe</th>
-                    </tr>
-                    <tr>
-                      <th>3</th>
-                      <th>Other</th>
-                      <th>The bro</th>
-                    </tr>
-                  </tbody>
-                  <tbody></tbody>
-                </table>
-              </div>
-              <div class="panel-footer">
-                <pre>&lt;table class="table"&gt;...&lt;/table&gt;</pre>
-              </div>
-            </div>
-
-            <div class="example panel panel-default">
-              <div class="panel-heading">
-                <h4>Example</h4>
-              </div>
-              <div class="panel-body">
-                <table class="table table-condensed">
-                  <thead>
-                    <tr>
-                      <th>#</th>
-                      <th>Framework</th>
-                      <th>Creator</th>
-                      <th>Test</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th>1</th>
-                      <th>Bootstrap</th>
-                      <th>Twitter</th>
-                      <th>Test</th>
-                    </tr>
-                    <tr>
-                      <th>2</th>
-                      <th>Golden</th>
-                      <th>Joe</th>
-                      <th>Test</th>
-                    </tr>
-                    <tr>
-                      <th>3</th>
-                      <th>Other</th>
-                      <th>The bro</th>
-                      <th>Test</th>
-                    </tr>
-                  </tbody>
-                  <tbody></tbody>
-                </table>
-              </div>
-              <div class="panel-footer">
-                <pre>&lt;table class="table table-condensed"&gt;...&lt;/table&gt;</pre>
-              </div>
-            </div>
+            <p>Golden includes Bootstrap's styled tables but adds a bottom margin to the component based on the Golden ratio. See <a>Twitter Bootstrap</a> for more documentation and examples.</p>
 
             <div class="example panel panel-default">
               <div class="panel-heading">
@@ -635,7 +555,18 @@
               </div>
             </div>
 
-            <p>Check out the documentation for the rest of the options at Bootstrap.</p>
+
+
+        </div>
+
+
+
+
+      </div>
+
+      <div class="typography">
+
+        <h2>Typography</h2>
 
           <h3>Forms</h3>
 
