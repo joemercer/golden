@@ -10,10 +10,21 @@
     <link href="tests.css" rel="stylesheet">
   </head>
   <body class="golden">
-    <div class="golden-col-sm-narrow golden-col-sm-wide-offset">
+    <div class="hide golden-col-sm-narrow golden-col-sm-wide-offset">
       <h1><em>Golden</em></h1>
     </div>
-    <div class="golden-container-md-wide center-block">
+    <div class="nav-container">
+      <div class="nav-buffer nav-buffer-top"></div>
+      <div class="golden-container-md-wide nav">
+        <div class="logo"><em>G</em></div>
+        <ul class="nav-links">
+          <li class="nav-link"><a>Getting Started</a></li>
+          <li class="nav-link"><a>Documentation</a></li>
+        </ul>
+      </div>
+      <div class="nav-buffer nav-buffer-bottom"></div>
+    </div>
+    <div class="golden-container-md-wide main-content">
 
       <div class="introduction">
       <h2 class="page-header">What is Golden?</h2>
@@ -37,7 +48,7 @@
 
         <div class="example panel panel-default">
           <div class="panel-heading">
-            <h5>Example</h5>
+            <h4>Example</h4>
           </div>
           <div class="panel-body">
             <h1>Hello, world!</h1>
