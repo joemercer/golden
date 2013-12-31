@@ -2,6 +2,10 @@ em {
   color: #ffd700;
   font-style: normal;
 }
+.main-header-container {
+  position: fixed;
+  top: 0px;
+}
 .nav-container {
   width: 100%;
   height: 100px;
@@ -64,7 +68,7 @@ em {
   color: gold;
 }
 .main-content {
-  margin-top: 70px;
+  margin-top: 112px;
 }
 .example-grid {
   width: 100%;
