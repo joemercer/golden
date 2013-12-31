@@ -2333,6 +2333,143 @@ textarea.golden .input-lg {
     text-align: right;
   }
 }
+.golden .input-group {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+}
+.golden .input-group.col {
+  float: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+.golden .input-group .form-control {
+  width: 100%;
+  margin-bottom: 0;
+}
+.golden .input-group-lg > .form-control,
+.golden .input-group-lg > .input-group-addon,
+.golden .input-group-lg > .input-group-btn > .btn {
+  height: 47px;
+  padding: 8px 15px;
+  font-size: 18px;
+  line-height: 1.618033988749895;
+  border-radius: 6px;
+}
+select.golden .input-group-lg > .form-control,
+select.golden .input-group-lg > .input-group-addon,
+select.golden .input-group-lg > .input-group-btn > .btn {
+  height: 47px;
+  line-height: 47px;
+}
+textarea.golden .input-group-lg > .form-control,
+textarea.golden .input-group-lg > .input-group-addon,
+textarea.golden .input-group-lg > .input-group-btn > .btn {
+  height: auto;
+}
+.golden .input-group-sm > .form-control,
+.golden .input-group-sm > .input-group-addon,
+.golden .input-group-sm > .input-group-btn > .btn {
+  height: 26px;
+  padding: 4px 8px;
+  font-size: 10px;
+  line-height: 1.618033988749895;
+  border-radius: 3px;
+}
+select.golden .input-group-sm > .form-control,
+select.golden .input-group-sm > .input-group-addon,
+select.golden .input-group-sm > .input-group-btn > .btn {
+  height: 26px;
+  line-height: 26px;
+}
+textarea.golden .input-group-sm > .form-control,
+textarea.golden .input-group-sm > .input-group-addon,
+textarea.golden .input-group-sm > .input-group-btn > .btn {
+  height: auto;
+}
+.golden .input-group-addon,
+.golden .input-group-btn,
+.golden .input-group .form-control {
+  display: table-cell;
+}
+.golden .input-group-addon:not(:first-child):not(:last-child),
+.golden .input-group-btn:not(:first-child):not(:last-child),
+.golden .input-group .form-control:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+.golden .input-group-addon,
+.golden .input-group-btn {
+  width: 1%;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.golden .input-group-addon {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  color: #616161;
+  text-align: center;
+  background-color: #e8e8e8;
+  border: 1px solid #c3c3c3;
+  border-radius: 4px;
+}
+.golden .input-group-addon.input-sm {
+  padding: 4px 8px;
+  font-size: 10px;
+  border-radius: 3px;
+}
+.golden .input-group-addon.input-lg {
+  padding: 8px 15px;
+  font-size: 18px;
+  border-radius: 6px;
+}
+.golden .input-group-addon input[type="radio"],
+.golden .input-group-addon input[type="checkbox"] {
+  margin-top: 0;
+}
+.golden .input-group .form-control:first-child,
+.golden .input-group-addon:first-child,
+.golden .input-group-btn:first-child > .btn,
+.golden .input-group-btn:first-child > .dropdown-toggle,
+.golden .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle) {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+.golden .input-group-addon:first-child {
+  border-right: 0;
+}
+.golden .input-group .form-control:last-child,
+.golden .input-group-addon:last-child,
+.golden .input-group-btn:last-child > .btn,
+.golden .input-group-btn:last-child > .dropdown-toggle,
+.golden .input-group-btn:first-child > .btn:not(:first-child) {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.golden .input-group-addon:last-child {
+  border-left: 0;
+}
+.golden .input-group-btn {
+  position: relative;
+  white-space: nowrap;
+}
+.golden .input-group-btn:first-child > .btn {
+  margin-right: -1px;
+}
+.golden .input-group-btn:last-child > .btn {
+  margin-left: -1px;
+}
+.golden .input-group-btn > .btn {
+  position: relative;
+}
+.golden .input-group-btn > .btn + .btn {
+  margin-left: -4px;
+}
+.golden .input-group-btn > .btn:hover,
+.golden .input-group-btn > .btn:active {
+  z-index: 2;
+}
 .golden .btn {
   display: inline-block;
   margin-bottom: 0;
