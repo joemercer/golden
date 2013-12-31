@@ -103,7 +103,12 @@
 
 // Root the Golden styles that will affect pre-existing Bootstrap CSS under the .golden class
 .golden {
-	@import "./golden-bootstrap/golden-bootstrap.less";
+
+	// Override Bootstrap variables with Golden values
+	@import "./golden/bootstrap-variable-overrides.less";
+
+	// Import Bootstrap modules
+	@import "./golden-bootstrap.less";
 }
 
 // Add a special class for only including the Golden typography styles
