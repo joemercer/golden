@@ -9,107 +9,38 @@
 // http://www.hongkiat.com/blog/golden-ratio-in-moden-designs/
 // http://www.smashingmagazine.com/2010/02/09/applying-mathematics-to-web-design/
 
-// Bootstrap dependencies
-// !!! TODO:: anything not being changed or rooted from bootstrap should be added here
 
 
-
-
-// 6. figure out what diagrams you want and tell nicole
-// 7. rewrite documentation. NOTE don't redo anything that bootstrap does, just link to bootstrap
-// focus on the differences, potentially event show them side by side
-
-// grid system DONE
-
-// typography DONE
-
-// colors DONE
-
-// add in the other images and thunbnails DONE
-
-// add in docs for helpful classes. .img-responsive, etc
-
-// remove mixins (probably)
-
-// revise the getting started section
-
-// possibly steal images from the web?
-
-// add in links
-
-// clean todos
-
-// javascript funness
-
-// header
-
-// golden emphasis
-
-// change default primary color to GOLD DONE
-
-// move jquery to being loaded from google
-
-// set up the download link
-
-// mixins needs some work
-
-// perhaps seperate into different pages??
-
-
-
-
-//.full-indent, vs .half-indent DONE
-
-// still need to looks over media and thumbnails modules and add examples / docs DONE
-
-// list groups need golden styling
-
-// use the phrase modifier classes
-// use the phrase nesting columns
-
-// take .full-indent out of type.less in bootstrap and add it to golden
-
-// add input-groups.less
-
-
-// Bootstrap stuff
-// Include helpful Bootstrap modules to make life easier later on.
-
-// Include the Bootstrap variable defaults
-// These can be edited at will, or replaced with a custom copy of Bootstrap variable overrides
+// Include Bootstrap variables, customize freely
 @import "./bootstrap/variables.less";
 
 // Include the groundwork Bootstrap mixins and classes for conveniance
 @import "./bootstrap/mixins.less";
 @import "./bootstrap/utilities.less";
+@import "./bootstrap/print.less";
 
 // For cross-browser consistency see git.io/normalize
 @import "./bootstrap/normalize.less";
 
-// For printing
-@import "./bootstrap/print.less";
-
 // Include the basic Bootstrap 12 column grid for convensiance
 @import "./bootstrap/grid.less";
 
-// Golden stuff
-// Let's make life Golden :)
+// NOW let's make life Golden :)
 
-// Override the Bootstrap variables with values based on the golden-ratio
+// Include Golden variables, based on Bootstrap variables
 @import "./golden/variables.less";
 
-// Golden modules that require the Golden variables
-// These do not affect any pre-existing Bootstrap CSS and are thus not rooted under the .golden class
+// Include Golden mixins and modules
 @import "./golden/mixins.less";
 @import "./golden/grid.less";
 @import "./golden/content.less";
 
-// Root the Golden styles that will affect pre-existing Bootstrap CSS under the .golden class
+// Wrap overriding styles in .golden
 .golden {
 	@import "./golden-bootstrap.less";
 }
 
-// Add a special class for only including the Golden typography styles
+// Special class for only including the Golden typography styles
 .golden-typography {
 	@import "./golden-typography/scaffolding.less";
   @import "./golden-typography/typography.less";
