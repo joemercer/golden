@@ -3,8 +3,7 @@ em {
   font-style: normal;
 }
 .main-header-container {
-  position: fixed;
-  top: 0px;
+  float: none;
 }
 .nav-container {
   width: 100%;
@@ -66,9 +65,6 @@ em {
 }
 .nav-link a:hover {
   color: gold;
-}
-.main-content {
-  margin-top: 112px;
 }
 .example-grid {
   width: 100%;

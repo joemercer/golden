@@ -10,10 +10,10 @@
     <link href="tests.css" rel="stylesheet">
   </head>
   <body class="golden">
-    <div class="main-header-container golden-col-sm-narrow golden-col-sm-wide-offset">
+    <!-- <div class="main-header-container golden-col-sm-narrow golden-col-sm-wide-offset">
       <h1 class="main-header"><em>Golden</em></h1>
-    </div>
-    <div class="nav-container" style="display: none;">
+    </div> -->
+    <div class="nav-container">
       <div class="nav-buffer nav-buffer-top"></div>
       <div class="golden-container-md-wide nav">
         <a href="#"><div class="logo"><em>G</em></div></a>
@@ -27,7 +27,7 @@
     </div>
     <div class="golden-container-md-wide main-content">
 
-      <div class="introduction">
+      <div id="introduction" class="introduction">
       <h2 class="page-header">What is Golden?</h2>
 
         <p class="lead">Golden is a CSS framework built using the <a href="http://en.wikipedia.org/wiki/Golden_ratio">Golden ratio</a>. It can be used independently, or incorporated into other CSS frameworks like <a href="http://getbootstrap.com/">Twitter Bootstrap</a>.</p>
@@ -36,7 +36,7 @@
 
       </div>
 
-      <div class="getting-started">
+      <div id="getting-started" class="getting-started">
       <h2 class="page-header">Getting Started</h2>
 
         <p class="lead">1. Download Golden</p>
@@ -83,11 +83,11 @@
 
         <p class="lead">3. Be Golden</p>
 
-        <p class="half-indent">Code! Check out the <a !!!>docs</a> to see what's possible.</p>
+        <p class="full-indent">Code! Check out the <a !!! href="#documentation">docs</a> to see what's possible.</p>
 
       </div>
 
-      <div class="customize">
+      <div id="customize" class="customize">
       <h2 class="page-header">Customize</h2>
 
         <p>Before digging into the Golden source, it's important to understand how Golden is put together. Golden's architecture makes it easy to customize Golden for a new project, or include Golden in an existing project.</p> 
@@ -112,7 +112,7 @@
             </div>
           </div>
 
-          <p>Inside the <code>/bootstrap</code> directory is a clean copy of <a>Twitter Bootstrap</a>. All of Golden's revisions to Bootstrap are done by overriding variables, and all of Golden's extensions to Bootstrap are done in external Golden modules. This helps preserve modularity and makes incorporating Golden into a pre-existing Bootstrap project much simpler.</p>
+          <p>Inside the <code>/bootstrap</code> directory is a clean copy of <a href="http://getbootstrap.com/">Twitter Bootstrap</a>. All of Golden's revisions to Bootstrap are done by overriding variables, and all of Golden's extensions to Bootstrap are done in external Golden modules. This helps preserve modularity and makes incorporating Golden into a pre-existing Bootstrap project much simpler.</p>
 
           <p>Golden overrides Bootstrap variables with Golden variables that are themselves based on Bootstrap variables. This is done so that Golden's overriding styles can be rooted under the <code>.golden</code> class and then selectively applied within a pre-existing project. If you want Golden's styles to be applied globally you can eliminate unnecessary code by removing the <code>.golden</code> wrapper.</p>
 
@@ -251,19 +251,15 @@
 
       </div>
 
-      <div class="documentation">
+      <div id="documentation" class="documentation">
       <h2 class="page-header">Documentation</h2>
 
         <div class="grid-system">
         <h2>Grid System <small><code>golden/grid.less</code></small></h2>
 
-          <p>Golden extends the Bootstrap grid system you're already comfortable with by adding containers and columns with proportions based on the Golden ratio. Note that the Golden grid system is fully compatible and non-destructive towards the Bootstrap grid system.</p>
+          <p>Golden extends the <a href="http://getbootstrap.com/css/#grid">Bootstrap grid system</a> you're already comfortable with by adding containers and columns with proportions based on the Golden ratio. Note that the Golden grid system is fully compatible and non-destructive towards the Bootstrap grid system.</p>
 
-          <p>The Golden grid system follows a predictable and intuitive naming convention for classes, <code>.golden-[element]-[screen-size]-[element-size]</code>. Golden uses the existing Bootstrap screen sizes, <code>xs</code>, <code>sm</code>, <code>md</code>, and <code>lg</code>, to set responsive breakpoints for resizing content. To read more about the Bootstrap grid system go <a>here</a>.</p>
-
-          <p>Golden uses two element sizes, <code>wide</code> and <code>narrow</code>, which are related in width by the Golden ratio. !!! add diagram here?</p>
-
-          <p>To see the Golden grid system in action you will need to resize your browser.</p>
+          <p>The Golden grid system follows a predictable and intuitive naming convention for classes, <code>.golden-[element]-[screen-size]-[element-size]</code>. Golden uses the existing Bootstrap screen sizes, <code>xs</code>, <code>sm</code>, <code>md</code>, and <code>lg</code>, to set responsive breakpoints for resizing content. Golden uses two new element sizes, <code>wide</code> and <code>narrow</code>, whose widths are related by the Golden ratio. To see the Golden grid system in action you will need to resize your browser.</p>
 
           <h3>Containers <small><code>.golden-container</code></small></h3>
 
@@ -477,7 +473,7 @@
 
             <div class="example panel panel-default">
               <div class="panel-heading">
-                <h5>Example</h5>
+                <h4>Example</h4>
               </div>
               <div class="panel-body">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis auctor vestibulum. Maecenas suscipit vehicula magna nec rutrum. Proin eleifend tellus nec nunc interdum, nec varius ipsum eleifend. In tincidunt felis a felis porta eleifend id at enim. Aenean eu arcu adipiscing, aliquet turpis facilisis, scelerisque dui. Vestibulum sed nisl eu elit fringilla dictum in eget neque.</p>
@@ -512,7 +508,7 @@
 
             <div class="example panel panel-default">
               <div class="panel-heading">
-                <h5>Example</h5>
+                <h4>Example</h4>
               </div>
               <div class="panel-body">
                 <p class="golden-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis auctor vestibulum. Maecenas suscipit vehicula magna nec rutrum. Proin eleifend tellus nec nunc interdum, nec varius ipsum eleifend. In tincidunt felis a felis porta eleifend id at enim. Aenean eu arcu adipiscing, aliquet turpis facilisis, scelerisque dui. Vestibulum sed nisl eu elit fringilla dictum in eget neque.</p>
@@ -527,7 +523,7 @@
 
             <div class="example panel panel-default">
               <div class="panel-heading">
-                <h5>Example</h5>
+                <h4>Example</h4>
               </div>
               <div class="panel-body">
                 <p class="golden-content columns-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis auctor vestibulum. Maecenas suscipit vehicula magna nec rutrum. Proin eleifend tellus nec nunc interdum, nec varius ipsum eleifend. In tincidunt felis a felis porta eleifend id at enim. Aenean eu arcu adipiscing, aliquet turpis facilisis, scelerisque dui. Vestibulum sed nisl eu elit fringilla dictum in eget neque. Etiam et vestibulum quam. Maecenas ullamcorper mollis neque eget eleifend. Donec pulvinar eros sed lorem dignissim, sit amet luctus sapien gravida. Sed commodo ullamcorper elit, id cursus velit feugiat eget. Praesent a purus at dolor porttitor pellentesque. Sed eros libero, vehicula eget magna vitae, fermentum vehicula nisi. Maecenas tristique nec dolor quis mollis. Integer dictum a elit non placerat. Duis dignissim nulla est, sed ullamcorper tortor feugiat id. Aliquam erat justo, sodales eget ipsum non, consectetur adipiscing risus. Maecenas facilisis porttitor nulla a pharetra. Suspendisse eu turpis odio. Cras pulvinar nisl est, ac suscipit felis congue vel. Donec eget imperdiet arcu, quis sollicitudin erat. Suspendisse a dui nec mauris ullamcorper viverra id ac massa. Integer aliquet aliquam lacus, non laoreet leo congue a. Fusce vitae metus risus. Nulla ullamcorper nisi at venenatis mollis. Aenean at odio vulputate, consequat velit at, dictum dui. Aenean ut tincidunt nunc.</p>
@@ -544,7 +540,7 @@
 
           <p>Golden includes all the other typographical elements that Bootstrap includes, but without any additional customizations beyond what's already been discussed. These elements will, for the most part, inherit the base font size, line height, and Golden gray scale. They will also have an added margin-bottom based on the line height, to help keep adjacent elements nicely spaced out.</p>
 
-          <p>The following are some examples of the Bootstrap typographical elements that Golden includes. See <a>Twitter Bootstrap</a> for a full list of supported elements, more documentation, and examples.</p>
+          <p>The following are some examples of the Bootstrap typographical elements that Golden includes. See <a href="http://getbootstrap.com/css/">Twitter Bootstrap</a> for a full list of supported elements, more documentation, and examples.</p>
 
           <h3>Code <small><code>golden-bootstrap/code.less</code></small></h3>
 
@@ -649,7 +645,7 @@
         <div class="forms">
         <h2>Forms <small><code>golden-bootstrap/forms.less</code></small></h2>
 
-          <p>Golden includes Bootstrap's forms, and incorporates the Golden typography by lightly skinning the sizing, spacing, and coloring. I've included a basic example to give you a general idea of how it looks, but I would suggest reading <a>Twitter Bootstrap</a> for more documentation and examples.</p>
+          <p>Golden includes Bootstrap's forms, and incorporates the Golden typography by lightly skinning the sizing, spacing, and coloring. I've included a basic example to give you a general idea of how it looks, but I would suggest reading <a href="http://getbootstrap.com/css/#forms">Twitter Bootstrap</a> for more documentation and examples.</p>
 
           <div class="example panel panel-default">
             <div class="panel-heading">
@@ -768,7 +764,7 @@
 
             <div class="example panel panel-default">
               <div class="panel-heading">
-                <h5>Example</h5>
+                <h4>Example</h4>
               </div>
               <div class="panel-body">
                 <div class="panel panel-default">
@@ -794,7 +790,7 @@
 
             <div class="example panel panel-default">
               <div class="panel-heading">
-                <h5>Example</h5>
+                <h4>Example</h4>
               </div>
               <div class="panel-body">
                 <div class="well">
@@ -812,7 +808,7 @@
 
             <div class="example panel panel-default">
               <div class="panel-heading">
-                <h5>Example</h5>
+                <h4>Example</h4>
               </div>
               <div class="panel-body">
                 <div class="golden-col-sm-narrow">
@@ -832,7 +828,7 @@
 
             <div class="example panel panel-default">
               <div class="panel-heading">
-                <h5>Example</h5>
+                <h4>Example</h4>
               </div>
               <div class="panel-body">
                 <div class="media">
@@ -870,7 +866,7 @@
 
             <div class="example panel panel-default">
               <div class="panel-heading">
-                <h5>Example</h5>
+                <h4>Example</h4>
               </div>
               <div class="panel-body">
                 <div class="example1-golden-rectangle"></div>
@@ -888,7 +884,7 @@
 
             <div class="example panel panel-default">
               <div class="panel-heading">
-                <h5>Example</h5>
+                <h4>Example</h4>
               </div>
               <div class="panel-body">
                 <div class="example1-golden-image">
