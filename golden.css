@@ -1297,6 +1297,12 @@ table {
   -webkit-column-gap: 22px;
   column-gap: 22px;
 }
+.full-indent {
+  text-indent: 22px;
+}
+.half-indent {
+  text-indent: 11px;
+}
 .golden {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -1388,12 +1394,6 @@ table {
   .golden .lead {
     font-size: 22.65247584249853px;
   }
-}
-.golden .full-indent {
-  text-indent: 22px;
-}
-.golden .half-indent {
-  text-indent: 11px;
 }
 .golden small,
 .golden .small {
@@ -3226,12 +3226,6 @@ fieldset[disabled] .golden .btn-link:focus {
   .golden-typography .lead {
     font-size: 22.65247584249853px;
   }
-}
-.golden-typography .full-indent {
-  text-indent: 22px;
-}
-.golden-typography .half-indent {
-  text-indent: 11px;
 }
 .golden-typography small,
 .golden-typography .small {

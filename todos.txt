@@ -2,7 +2,7 @@
 
 -add links DONE
 -javascript stuff DONE
--keep hover state for activeLink
+-keep hover state for activeLink DONE
 -bug with links showing up underneath section probably float
 - header?
 -load jquery from google
