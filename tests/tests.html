@@ -94,14 +94,7 @@
               <h4>golden/</h4>
             </div>
             <div class="panel-footer">
-              <pre>
-                golden/
-                ├── golden.less
-                ├── bootstrap/
-                │   └── Bootstrap modules
-                └── golden/
-                    └── Golden modules
-              </pre>
+              <pre>golden/<br>├── golden.less<br>├── bootstrap/<br>│   └── Bootstrap modules<br>└── golden/<br>    └── Golden modules</pre>
             </div>
           </div>
 
@@ -114,28 +107,7 @@
               <h4>golden.less</h4>
             </div>
             <div class="panel-footer">
-              <pre>
-                // Include Bootstrap variables
-                @import "./bootstrap/variables.less";
-
-                // Include modules that are unaffected by Golden
-                // ...
-
-                // Include Golden variables
-                @import "./golden/variables.less";
-
-                // Include Golden modules
-                // ...
-
-                // Include Golden Bootstrap overrides under .golden
-                // to prevent clashing with pre-existing styles
-                .golden {
-                  @import "./golden/bootstrap-variable-overrides.less";
-
-                  // Include Bootstrap modules
-                  // ...
-                }
-              </pre>
+              <pre>// Include Bootstrap variables<br>@import "./bootstrap/variables.less";<br><br>// Include modules that are unaffected by Golden<br>// ...<br><br>// Include Golden variables<br>@import "./golden/variables.less";<br><br>// Include Golden modules<br>// ...<br><br>// Include Golden Bootstrap overrides under .golden<br>// to prevent clashing with pre-existing styles<br>.golden {<br>  @import "./golden/bootstrap-variable-overrides.less";<br><br>  // Include Bootstrap modules<br>  // ...<br>}</pre>
             </div>
           </div>
 
@@ -148,12 +120,7 @@
               <h4>bootstrap/variables.less</h4>
             </div>
             <div class="panel-footer">
-              <pre>
-                // ...
-                // @font-size-base:          14px;
-                @font-size-base:          16px;
-                // ...
-              </pre>
+              <pre>// ...<br>// @font-size-base:          14px;<br>@font-size-base:          16px;<br>// ...</pre>
             </div>
           </div>
 
@@ -164,11 +131,7 @@
               <h4>golden-bootstrap.less</h4>
             </div>
             <div class="panel-footer">
-              <pre>
-                // ...
-                @import "./bootstrap/alerts.less";
-                // ...
-              </pre>
+              <pre>// ...<br>@import "./bootstrap/alerts.less";<br>// ...</pre>
             </div>
           </div>
 
@@ -179,12 +142,7 @@
               <h4>Terminal</h4>
             </div>
             <div class="panel-footer">
-              <pre>
-                # Uncompressed
-                $ lessc golden.less golden.css
-                # Compressed
-                $ lessc --yui-compress golden.less golden.min.css
-              </pre>
+              <pre># Uncompressed<br>$ lessc golden.less golden.css<br># Compressed<br>$ lessc --yui-compress golden.less golden.min.css</pre>
             </div>
           </div>
 
@@ -197,23 +155,7 @@
               <h4>your-custom-styles.less</h4>
             </div>
             <div class="panel-footer">
-              <pre>
-                @import "./your-custom-variables.less";
-
-                @import "./golden/variables.less";
-                @import "./golden/mixins.less";
-
-                @import "./golden/grid.less";
-                @import "./golden/content.less";
-
-                // Include your custom modules
-                // ...
-
-                @import "./golden/bootstrap-variable-overrides.less";
-
-                // Include Bootstrap modules
-                // ...
-              </pre>
+              <pre>@import "./your-custom-variables.less";<br><br>@import "./golden/variables.less";<br>@import "./golden/mixins.less";<br><br>@import "./golden/grid.less";<br>@import "./golden/content.less";<br><br>// Include your custom modules<br>// ...<br><br>@import "./golden/bootstrap-variable-overrides.less";<br><br>// Include Bootstrap modules<br>// ...</pre>
             </div>
           </div>
 
@@ -225,20 +167,7 @@
               <h4>your-custom-styles.less</h4>
             </div>
             <div class="panel-footer">
-              <pre>
-                @import "./bootstrap/variables.less";
-
-                @import "./your-custom-variables.less";
-
-                @import "./golden/variables.less";
-                @import "./golden/mixins.less";
-
-                @import "./golden/grid.less";
-                @import "./golden/content.less";
-
-                // Include your custom modules
-                // ...
-              </pre>
+              <pre>@import "./bootstrap/variables.less";<br><br>@import "./your-custom-variables.less";<br><br>@import "./golden/variables.less";<br>@import "./golden/mixins.less";<br><br>@import "./golden/grid.less";<br>@import "./golden/content.less";<br><br>// Include your custom modules<br>// ...</pre>
             </div>
           </div>
 
