@@ -70,9 +70,14 @@ em {
 
 	a {
 		color: #FFF;
+		text-decoration: none;
 
-		&:hover {
-			color: gold;
+		&:hover,
+		&.active {
+			color: @gold;
+			text-decoration: none;
+			padding-bottom: 4px;
+			border-bottom: 3px solid @gold;
 		}
 	}
 }

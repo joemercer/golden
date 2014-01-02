@@ -59,9 +59,14 @@ em {
 }
 .nav-link a {
   color: #FFF;
+  text-decoration: none;
 }
-.nav-link a:hover {
-  color: gold;
+.nav-link a:hover,
+.nav-link a.active {
+  color: #ffd700;
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 3px solid #ffd700;
 }
 .main-content {
   margin-top: 50px;

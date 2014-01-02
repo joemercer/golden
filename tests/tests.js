@@ -17,6 +17,9 @@ $(function(){
 			return;
 		}
 
+		$('.change-section.active').removeClass('active');
+		$target.addClass('active');
+
 		activeSection.fadeOut(function(){
 			$document.scrollTop(0);
 			activeSection = sections[clickedSection];
