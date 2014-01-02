@@ -11,7 +11,6 @@ $(function(){
 
 	$('.change-section').click(function(e){
 		var $target = $(e.currentTarget);
-
 		var clickedSection = $target.data().section;
 
 		if (!clickedSection || sections[clickedSection] === activeSection){
@@ -25,7 +24,6 @@ $(function(){
 		});
 
 		e.preventDefault();
-
 	});
 
 	// var $header = $('.main-header-container');
