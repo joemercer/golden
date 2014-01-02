@@ -43,6 +43,12 @@ em {
   border-radius: 25px;
   padding: 0px 9px;
 }
+.logo:hover {
+  background-color: #ffd700;
+}
+.logo:hover em {
+  color: #3c3c3c;
+}
 .nav-links {
   display: inline-block;
   height: 50px;
