@@ -3075,66 +3075,6 @@ fieldset[disabled] .golden .btn-link:focus {
   padding: 9px;
   border-radius: 3px;
 }
-.golden .thumbnail {
-  padding: 4px;
-  line-height: 1.618033988749895;
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
-  border-radius: 4px;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  display: inline-block;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-bottom: 22px;
-}
-.golden .thumbnail > img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-.golden a.thumbnail:hover,
-.golden a.thumbnail:focus,
-.golden a.thumbnail.active {
-  border-color: #428bca;
-}
-.golden .thumbnail > img {
-  margin-left: auto;
-  margin-right: auto;
-}
-.golden .thumbnail .caption {
-  padding: 9px;
-  color: #3c3c3c;
-}
-.golden .media,
-.golden .media-body {
-  overflow: hidden;
-  zoom: 1;
-}
-.golden .media,
-.golden .media .media {
-  margin-top: 15px;
-}
-.golden .media:first-child {
-  margin-top: 0;
-}
-.golden .media-object {
-  display: block;
-}
-.golden .media-heading {
-  margin: 0 0 5px;
-}
-.golden .media > .pull-left {
-  margin-right: 10px;
-}
-.golden .media > .pull-right {
-  margin-left: 10px;
-}
-.golden .media-list {
-  padding-left: 0;
-  list-style: none;
-}
 .golden-typography {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
