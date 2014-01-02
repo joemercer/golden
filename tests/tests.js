@@ -1,38 +1,67 @@
-// $(function(){
+$(function(){
 
-// 	var $header = $('.main-header-container');
-// 	var $nav = $('.nav-container');
+	var $document = $(document);
 
-// 	var start = $header.scrollTop();
-// 	var end = 70;
+	var sections = {
+		introduction: $('#introduction'),
+		customize: $('#customize'),
+		documentation: $('#documentation')
+	};
+	var activeSection = sections.introduction;
 
-// 	var scrolled;
-// 	var before = true;
-// 	var after = false;
-// 	$(document).scroll(function(e){
-// 		scrolled = $(document).scrollTop();
+	$('.change-section').click(function(e){
+		e.preventDefault();
+		var $target = $(e.target);
 
-// 		// change to header
-// 		if (after && scrolled < end) {
-// 			$nav.fadeOut();
-// 			$header.fadeIn();
+		var clickedSection = $(e.target).data().section;
 
-// 			// $header.toggleClass('hide');
-// 			// $nav.toggleClass('hide');
-// 			before = true;
-// 			after = false;
-// 		}
+		if (sections[clickedSection] === activeSection){
+			return;
+		}
 
-// 		if (before && scrolled > end) {
-// 			$header.fadeOut();
-// 			$nav.fadeIn();
+		activeSection.fadeOut(function(){
+			$document.scrollTop(0);
+		});
+		activeSection = sections[clickedSection];
+		activeSection.fadeIn();
 
-// 			// $header.toggleClass('hide');
-// 			// $nav.toggleClass('hide');
-// 			before = false;
-// 			after = true;
-// 		}
 
-// 	});
 
-// });
+	});
+
+	// var $header = $('.main-header-container');
+	// var $nav = $('.nav-container');
+
+	// var start = $header.scrollTop();
+	// var end = 70;
+
+	// var scrolled;
+	// var before = true;
+	// var after = false;
+	// $(document).scroll(function(e){
+	// 	scrolled = $(document).scrollTop();
+
+	// 	// change to header
+	// 	if (after && scrolled < end) {
+	// 		$nav.fadeOut();
+	// 		$header.fadeIn();
+
+	// 		// $header.toggleClass('hide');
+	// 		// $nav.toggleClass('hide');
+	// 		before = true;
+	// 		after = false;
+	// 	}
+
+	// 	if (before && scrolled > end) {
+	// 		$header.fadeOut();
+	// 		$nav.fadeIn();
+
+	// 		// $header.toggleClass('hide');
+	// 		// $nav.toggleClass('hide');
+	// 		before = false;
+	// 		after = true;
+	// 	}
+
+	// });
+
+});
