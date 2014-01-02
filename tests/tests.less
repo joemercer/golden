@@ -115,18 +115,34 @@ em {
 .example-grid {
 	width: 100%;
 	height: @test-grid-height;
-	background-color: white;
+	background-color: #FFF;
 }
 
 .example-grid-block {
 	height: @test-grid-height;
-	background-color: lightgrey;
-	border: 1px solid darkgrey;
+	background-color: @golden-gray-lighter;
+	border: 1px solid @golden-gray-light;
 }
+
+.example-grid-block-nested-parent {
+	height: @test-grid-height + (@test-grid-height / 2);
+	background-color: @golden-gray-lightest;
+	border: 1px solid @golden-gray-light;
+	overflow: hidden;
+}
+
+.example-grid-block-nested {
+	height: @test-grid-height / 2;
+	background-color: @golden-gray-lightest;
+	border: 1px solid @golden-gray-light;
+	overflow: hidden;
+}
+
+// Example panels
 
 .example.panel {
 	.panel-heading {
-		background-color: #fff;
+		background-color: #FFF;
 	}
 	.panel-body {
 		.panel-heading {

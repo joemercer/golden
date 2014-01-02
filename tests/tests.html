@@ -289,16 +289,16 @@
               </div>
               <div class="panel-body">
                 <div class="example-grid">
-                  <div class="golden-col-sm-wide example-grid-block">
-                    .golden-col-sm-wide
-                    <div class="golden-col-md-wide example-grid-block">.golden-col-md-wide</div>
-                    <div class="golden-col-md-narrow example-grid-block">.golden-col-md-narrow</div>
+                  <div class="golden-col-sm-wide example-grid-block-nested-parent">
+                    <div>.golden-col-sm-wide</div>
+                    <div class="golden-col-md-wide example-grid-block-nested">.golden-col-md-wide</div>
+                    <div class="golden-col-md-narrow example-grid-block-nested">.golden-col-md-narrow</div>
                   </div>
-                  <div class="golden-col-sm-narrow example-grid-block">.golden-col-sm-narrow</div>
+                  <div class="golden-col-sm-narrow example-grid-block-nested-parent">.golden-col-sm-narrow</div>
                 </div>
               </div>
               <div class="panel-footer">
-                <pre>CODE!!!</pre>
+                <pre>&lt;div class="golden-col-sm-wide"&gt;<br>  &lt;div class="golden-col-md-wide"&gt;...&lt;/div&gt;<br>  &lt;div class="golden-col-md-narrow"&gt;...&lt;/div&gt;<br>&lt;/div&gt;<br>&lt;div class="golden-col-sm-narrow"&gt;...&lt;/div&gt;</pre>
               </div>
             </div>
 
@@ -312,16 +312,16 @@
               </div>
               <div class="panel-body">
                 <div class="example-grid">
-                  <div class="col-sm-6 example-grid-block">
-                    .col-sm-6
-                    <div class="golden-col-md-wide example-grid-block">.golden-col-md-wide</div>
-                    <div class="golden-col-md-narrow example-grid-block">.golden-col-md-narrow</div>
+                  <div class="col-sm-6 example-grid-block-nested-parent">
+                    <div>.col-sm-6</div>
+                    <div class="golden-col-md-wide example-grid-block-nested">.golden-col-md-wide</div>
+                    <div class="golden-col-md-narrow example-grid-block-nested">.golden-col-md-narrow</div>
                   </div>
-                  <div class="col-sm-6 example-grid-block">.col-sm-6</div>
+                  <div class="col-sm-6 example-grid-block-nested-parent">.col-sm-6</div>
                 </div>
               </div>
               <div class="panel-footer">
-                <pre>CODE!!!</pre>
+                <pre>&lt;div class="col-sm-6"&gt;<br>  &lt;div class="golden-col-md-wide"&gt;...&lt;/div&gt;<br>  &lt;div class="golden-col-md-narrow"&gt;...&lt;/div&gt;<br>&lt;/div&gt;<br>&lt;div class="col-sm-6"&gt;...&lt;/div&gt;</pre>
               </div>
             </div>
 
