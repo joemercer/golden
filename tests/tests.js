@@ -10,22 +10,21 @@ $(function(){
 	var activeSection = sections.introduction;
 
 	$('.change-section').click(function(e){
-		e.preventDefault();
-		var $target = $(e.target);
+		var $target = $(e.currentTarget);
 
-		var clickedSection = $(e.target).data().section;
+		var clickedSection = $target.data().section;
 
-		if (sections[clickedSection] === activeSection){
+		if (!clickedSection || sections[clickedSection] === activeSection){
 			return;
 		}
 
 		activeSection.fadeOut(function(){
 			$document.scrollTop(0);
+			activeSection = sections[clickedSection];
+			activeSection.fadeIn();
 		});
-		activeSection = sections[clickedSection];
-		activeSection.fadeIn();
 
-
+		e.preventDefault();
 
 	});
 
