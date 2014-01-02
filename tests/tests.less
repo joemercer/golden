@@ -23,6 +23,8 @@ em {
 
 // Navbar
 
+@nav-height: 50px;
+
 .nav-container {
 	width: 100%;
 	height: 100px;
@@ -32,7 +34,7 @@ em {
 }
 
 .nav {
-	height: 50px;
+	height: @nav-height;
 	background-color: @golden-gray-dark;
 	border-radius: 5px;
 
@@ -83,7 +85,7 @@ em {
 }
 
 .main-content {
-	// margin-top: 112px;
+	margin-top: @nav-height;
 }
 
 
