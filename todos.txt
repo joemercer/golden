@@ -6,7 +6,7 @@
 -bug with links showing up underneath section probably float
 - header?
 -load jquery from google
--download link
+-download link DONE
 -take .full-indent and other indent to golden core DONE
 -change default color to be golden for tests
 -HOST
