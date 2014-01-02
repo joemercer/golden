@@ -8,7 +8,7 @@
 -load jquery from google
 -choose color scheme DONE
 -alter colors DONE
--fix code
+-fix code DONE
 -clean up tests.less
 -recompile everything
 -download link DONE
