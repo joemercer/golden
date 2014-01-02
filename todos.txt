@@ -7,7 +7,8 @@
 - header?
 -load jquery from google
 -download link
--take .full-indent and other indent to golden core
+-take .full-indent and other indent to golden core DONE
+-change default color to be golden for tests
 -HOST
 -add helpful utility classes to docs
 --.img-responsive, etc
