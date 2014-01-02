@@ -10,6 +10,7 @@
 -alter colors DONE
 -fix code DONE
 -clean up tests.less
+-clean up mixins
 -recompile everything
 -download link DONE
 -take .full-indent and other indent to golden core DONE
