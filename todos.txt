@@ -1,27 +1,32 @@
 ### todos
 
+-clean up mixins
+
+-final styling
+-clean up tests.less
+
+-load jquery from google
+-recompile everything
+-HOST
+
 -add links DONE
 -javascript stuff DONE
 -keep hover state for activeLink DONE
--bug with links showing up underneath section probably float
+-bug with links showing up underneath section probably float DONE
 - header? DONE
--load jquery from google
 -choose color scheme DONE
 -alter colors DONE
 -fix code DONE
--clean up tests.less
--clean up mixins
--recompile everything
 -download link DONE
 -take .full-indent and other indent to golden core DONE
 -change default color to be golden for tests DONE
--HOST
+
+### ideas
+
 -add helpful utility classes to docs
 --.img-responsive, etc
 -mixins needs some work
 -list groups need some work
-
-### ideas
 
 -header?
 
