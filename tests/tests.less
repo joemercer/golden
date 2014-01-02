@@ -6,12 +6,33 @@
 
 // Golden
 
-@gold: gold;
+// @gold: gold;
 
 // not used currently
 em {
 	color: @gold;
 	font-style: normal;
+}
+
+// Buttons
+
+.golden .btn-golden {
+  .button-variant(@gold; @golden-gray-dark; @golden-gray-darker);
+  color: @gold;
+
+  &:hover {
+  	color: lighten(@gold, 5%);
+  }
+}
+
+// Links
+
+.golden p a {
+	color: @complimentary;
+
+	&:hover {
+		color: darken(@complimentary, 15%);
+	}
 }
 
 // Navbar

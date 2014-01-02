@@ -4,11 +4,16 @@
 -javascript stuff DONE
 -keep hover state for activeLink DONE
 -bug with links showing up underneath section probably float
-- header?
+- header? DONE
 -load jquery from google
+-choose color scheme DONE
+-alter colors DONE
+-fix code
+-clean up tests.less
+-recompile everything
 -download link DONE
 -take .full-indent and other indent to golden core DONE
--change default color to be golden for tests
+-change default color to be golden for tests DONE
 -HOST
 -add helpful utility classes to docs
 --.img-responsive, etc
@@ -16,6 +21,8 @@
 -list groups need some work
 
 ### ideas
+
+-header?
 
 -diagrams - talk to nicole
 --possibly steal images from the web
