@@ -1,7 +1,10 @@
 ### todos
 
--add links
--javascript stuff
+-add links DONE
+-javascript stuff DONE
+-keep hover state for activeLink
+-bug with links showing up underneath section probably float
+- header?
 -load jquery from google
 -download link
 -take .full-indent and other indent to golden core
