@@ -1,62 +1,33 @@
-### todos
+# TODO
+_____
 
--load links using _target DONE
+- buy a domain and point to github pages
 
--edit README
+_____
 
--HOST DONE
--move tests.html to index.html in root DONE
--buy a domain and point to github pages
+# BACKLOG
+_____
 
--clean todos
+- add example pages
+- show actual golden ratio dimensions in examples
+- add color mixins to docs
+- add utility classes to docs
+- spend some time on list-groups
+- spend time on line heights for headers
+- add a header to main website
+- add diagrams
+- responsive typography resizing
+- spend time on golden rows
+- document golden rows
+- add sizing to .golden-content for multiples of ideal line width
+- integrate CPL into ideal line width http://www.pearsonified.com/2012/01/characters-per-line.php
 
--clean up mixins DONE
--final styling DONE
--responsiveness DONE
--clean up tests.less DONE
--load jquery from google DONE
--recompile everything DONE
--add links DONE
--javascript stuff DONE
--keep hover state for activeLink DONE
--bug with links showing up underneath section probably float DONE
-- header? DONE
--choose color scheme DONE
--alter colors DONE
--fix code DONE
--download link DONE
--take .full-indent and other indent to golden core DONE
--change default color to be golden for tests DONE
+_____
 
-### ideas
+# DONE
+_____
 
--add helpful utility classes to docs
---.img-responsive, etc
--mixins needs some work
--list groups need some work
-
--header?
-
--diagrams - talk to nicole
---possibly steal images from the web
-
--have multiple pages for different sections?
-
--phrase "modifier classes"
-
-// - resize typography baselines for different sized devices
-// - centering using bonnie's trick? - for golden rectangle see smashingmagazine
-// - .pull-center class for rows (?)
-// - golden typography header line height is not a golden ratio
-// - - investigate and perhaps do a golden ratio / 10 to size it nicely
-// - .golden-content-1,2,3 with divs sized for multiples of ideal line width
-
-// - integrate CPL into ideal content width
-// - - see http://www.pearsonified.com/2012/01/characters-per-line.php
-// - perhaps do something with three column approach created by the math below
-// .make-golden-container-margin-large() {
-//   width: percentage(1 / (1 + (2 * @golden-ratio)));
-// }
-// .make-golden-container-margin-small() {
-//   width: percentage(1 / (1 + (2 / @golden-ratio)));
-// }
+- Push it live :)
+- clean up todos
+- edit README
+_____
