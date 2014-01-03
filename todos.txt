@@ -1,5 +1,7 @@
 ### todos
 
+-load links using _target
+
 -clean up mixins DONE
 
 -final styling DONE
