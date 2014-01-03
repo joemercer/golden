@@ -8,6 +8,8 @@
 -move tests.html to index.html in root
 -buy a domain and point to github pages
 
+-clean todos
+
 -clean up mixins DONE
 -final styling DONE
 -responsiveness DONE
