@@ -1,8 +1,6 @@
 # TODO
 _____
 
-- clean todos
-- edit README
 - buy a domain and point to github pages
 
 _____
@@ -10,6 +8,8 @@ _____
 # BACKLOG
 _____
 
+- add example pages
+- show actual golden ratio dimensions in examples
 - add color mixins to docs
 - add utility classes to docs
 - spend some time on list-groups
@@ -28,4 +28,6 @@ _____
 _____
 
 - Push it live :)
+- clean up todos
+- edit README
 _____
