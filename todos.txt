@@ -1,14 +1,21 @@
 ### todos
 
--clean up mixins
+-load links using _target DONE
 
--final styling
--clean up tests.less
+-edit README
 
--load jquery from google
--recompile everything
--HOST
+-HOST DONE
+-move tests.html to index.html in root DONE
+-buy a domain and point to github pages
 
+-clean todos
+
+-clean up mixins DONE
+-final styling DONE
+-responsiveness DONE
+-clean up tests.less DONE
+-load jquery from google DONE
+-recompile everything DONE
 -add links DONE
 -javascript stuff DONE
 -keep hover state for activeLink DONE
