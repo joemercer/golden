@@ -1,0 +1,225 @@
+@import "./bootstrap/variables.less";
+@import "./bootstrap/mixins.less";
+@import "./golden/variables.less";
+@import "./golden/mixins.less";
+
+
+// Golden tests
+
+em {
+	color: @gold;
+	font-style: normal;
+}
+
+
+
+// Navbar
+
+@nav-height: 50px;
+
+.nav-container {
+	width: 100%;
+	height: 100px;
+	position: fixed;
+	top: 0px;
+	z-index: 1000;
+}
+
+.nav {
+	height: @nav-height;
+	background-color: @golden-gray-dark;
+	border-radius: 5px;
+
+	.box-shadow(inset 0 0 10px #171717);
+}
+
+.nav-buffer-top {
+	height: 10px;
+	#gradient > .vertical(rgba(255, 255, 255, 0.0); rgba(255, 255, 255, 1.0));
+}
+.nav-buffer-bottom {
+	height: 40px;
+	#gradient > .vertical(rgba(255, 255, 255, 1.0); rgba(255, 255, 255, 0.0));
+}
+
+.logo {
+	display: inline-block;
+	line-height: 50px;
+	font-size: 44px;
+	font-weight: bold;
+	background-color: #FFF;
+	border-radius: 25px;
+	padding: 0px 9px;
+}
+
+.nav-links {
+	display: inline-block;
+	height: 50px;
+	margin: 0px;
+	padding: 0px 30px;
+}
+
+.nav-link {
+	display: inline-block;
+	line-height: 50px;
+	padding: 0px 10px;
+	font-size: 18px;
+	color: #FFF;
+
+	a {
+		color: #FFF;
+		text-decoration: none;
+
+		&:hover,
+		&.active {
+			color: @gold;
+			text-decoration: none;
+			padding-bottom: 4px;
+			border-bottom: 3px solid @gold;
+		}
+	}
+}
+
+.main-content {
+	margin-top: @nav-height;
+}
+
+
+
+// Links
+
+.golden p a {
+	color: @complimentary;
+
+	&:hover {
+		color: darken(@complimentary, 15%);
+	}
+}
+
+
+
+// Buttons
+
+.golden .btn-golden {
+  .button-variant(@gold; @golden-gray-dark; @golden-gray-darker);
+  color: @gold;
+
+  &:hover {
+  	color: lighten(@gold, 5%);
+  }
+}
+
+
+
+// Example panels
+
+.example.panel {
+	.panel-heading {
+		background-color: #FFF;
+	}
+	.panel-body {
+		.panel-heading {
+			background-color: @panel-default-heading-bg;
+		}
+	}
+}
+
+
+
+// Golden Grid
+
+@test-grid-height: 50px;
+
+.example-grid {
+	width: 100%;
+	height: @test-grid-height;
+	background-color: #FFF;
+}
+
+.example-grid-block {
+	height: @test-grid-height;
+	background-color: @golden-gray-lighter;
+	border: 1px solid @golden-gray-light;
+}
+
+.example-grid-block-nested-parent {
+	height: @test-grid-height + (@test-grid-height / 2);
+	background-color: @golden-gray-lightest;
+	border: 1px solid @golden-gray-light;
+	overflow: hidden;
+}
+
+.example-grid-block-nested {
+	height: @test-grid-height / 2;
+	background-color: @golden-gray-lightest;
+	border: 1px solid @golden-gray-light;
+	overflow: hidden;
+}
+
+
+
+// Golden Colors
+
+.example-color-swatch {
+	height: 50px;
+	padding: @golden-line-height-computed / 2;
+}
+.golden-black {
+	background-color: #000;
+}
+.golden-gray-darker {
+	background-color: @golden-gray-darker;
+}
+.golden-gray-dark {
+	background-color: @golden-gray-dark;
+}
+.golden-gray {
+	background-color: @golden-gray;
+}
+.golden-gray-light {
+	background-color: @golden-gray-light;
+}
+.golden-gray-lighter {
+	background-color: @golden-gray-lighter;
+}
+.golden-gray-lightest {
+	background-color: @golden-gray-lightest;
+}
+.golden-white {
+	background-color: #FFF;
+}
+.text-light {
+	color: @golden-gray-light;
+}
+.text-dark {
+	color: @golden-gray-dark;
+}
+
+
+
+// Golden Mixins
+
+// Golden rectangle
+
+.golden-rectangle-example1 {
+	.make-golden-rectangle(200px);
+	background-color: lightblue;
+	display: inline-block;
+}
+.golden-rectangle-example2 {
+	.make-golden-rectangle(height; 200px);
+	background-color: lightgreen;
+	display: inline-block;
+}
+
+// Golden image
+
+.golden-image-example1 {
+  .make-golden-image(width; 200px; -50px; -87px);
+}
+.golden-image-example2 {
+  .make-golden-image(width; 100px; -82px; -119px);
+}
+.golden-image-example3 {
+  .make-golden-image(width; 50px; -82px; -134px);
+}
