@@ -27,9 +27,10 @@
       <div id="introduction" class="introduction">
       <h2 class="page-header">What is Golden?</h2>
 
-        <p class="lead">Golden is a CSS framework built using the <a href="http://en.wikipedia.org/wiki/Golden_ratio">Golden ratio</a>. It can be used independently, or incorporated into other CSS frameworks like <a href="http://getbootstrap.com/">Twitter Bootstrap</a>.</p>
+        <p class="lead">Golden is a CSS framework built using the <a href="http://en.wikipedia.org/wiki/Golden_ratio" target="_blank">Golden ratio</a>. It can be used independently, or incorporated into other CSS frameworks like <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>.</p>
 
-        <p class="full-indent">The Golden ratio has been found uncoincidentally frequently in nature and math. As a result of its apparent significance and pleasing aesthetic qualities, it has been used by humans in art and design for thousands of years. Learn more about the Golden ratio <a href="http://en.wikipedia.org/wiki/Golden_ratio">here</a> and about how it relates to modern website design <a href="http://www.hongkiat.com/blog/golden-ratio-in-moden-designs/">here</a>.
+        <p class="full-indent">The <a href="http://en.wikipedia.org/wiki/Golden_ratio" target="_blank">Golden ratio</a> has been found uncoincidentally frequently in nature and math. As a result of its apparent significance and pleasing aesthetic qualities, it has been used by humans in <a href="http://www.hongkiat.com/blog/golden-ratio-in-moden-designs/" target="_blank">art and design</a> for thousands of years.</p>
+
       <h2 class="page-header">Getting Started</h2>
 
         <p class="lead">1. <a href="../golden.css" role="button" class="btn btn-golden btn-lg" target="_blank">Download Golden</a> <a href="../golden.min.css" role="button" class="btn btn-golden btn-lg" target="_blank">Download minified Golden</a></p>
@@ -98,7 +99,7 @@
             </div>
           </div>
 
-          <p class="full-indent">Inside the <code>/bootstrap</code> directory is a clean copy of <a href="http://getbootstrap.com/">Twitter Bootstrap</a>. All of Golden's revisions to Bootstrap are done by overriding variables, and all of Golden's extensions to Bootstrap are done in external Golden modules. This helps preserve modularity and makes incorporating Golden into a pre-existing Bootstrap project much simpler.</p>
+          <p class="full-indent">Inside the <code>/bootstrap</code> directory is a clean copy of <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. All of Golden's revisions to Bootstrap are done by overriding variables, and all of Golden's extensions to Bootstrap are done in external Golden modules. This helps preserve modularity and makes incorporating Golden into a pre-existing Bootstrap project much simpler.</p>
 
           <p class="full-indent">Golden overrides Bootstrap variables with Golden variables that are themselves based on Bootstrap variables. This is done so that Golden's overriding styles can be rooted under the <code>.golden</code> class and then selectively applied within a pre-existing project. If you want Golden's styles to be applied globally you can eliminate unnecessary code by removing the <code>.golden</code> wrapper.</p>
 
@@ -124,7 +125,7 @@
             </div>
           </div>
 
-          <p class="full-indent">The second step is to add the Bootstrap modules you want as is to the <code>bootstrap/</code> directory and include them in <code>golden-bootstrap.less</code>. The default version of Golden only includes a subset of the Bootstrap modules, but more can be added from the <a href="https://github.com/twbs/bootstrap">Bootstrap source</a>. The following example adds the Bootstrap <code>alerts.less</code> module to Golden.</p>
+          <p class="full-indent">The second step is to add the Bootstrap modules you want as is to the <code>bootstrap/</code> directory and include them in <code>golden-bootstrap.less</code>. The default version of Golden only includes a subset of the Bootstrap modules, but more can be added from the <a href="https://github.com/twbs/bootstrap" target="_blank">Bootstrap source</a>. The following example adds the Bootstrap <code>alerts.less</code> module to Golden.</p>
 
           <div class="example panel panel-default">
             <div class="panel-heading">
@@ -177,7 +178,7 @@
         <div class="grid-system">
         <h2 class="page-header">Grid System <small><code>golden/grid.less</code></small></h2>
 
-          <p class="full-indent">Golden extends the <a href="http://getbootstrap.com/css/#grid">Bootstrap grid system</a> you're already comfortable with by adding containers and columns with proportions based on the Golden ratio. Note that the Golden grid system is fully compatible and non-destructive towards the Bootstrap grid system.</p>
+          <p class="full-indent">Golden extends the <a href="http://getbootstrap.com/css/#grid" target="_blank">Bootstrap grid system</a> you're already comfortable with by adding containers and columns with proportions based on the Golden ratio. Note that the Golden grid system is fully compatible and non-destructive towards the Bootstrap grid system.</p>
 
           <p class="full-indent">The Golden grid system follows a predictable and intuitive naming convention for classes, <code>.golden-[element]-[screen-size]-[element-size]</code>. Golden uses the existing Bootstrap screen sizes, <code>xs</code>, <code>sm</code>, <code>md</code>, and <code>lg</code>, to set responsive breakpoints for resizing content. Golden uses two new element sizes, <code>wide</code> and <code>narrow</code>, whose widths are related by the Golden ratio. To see the Golden grid system in action you will need to resize your browser.</p>
 
@@ -362,7 +363,7 @@
 
           <p class="full-indent">Due to the importance of typography, it can be accessed independently from the rest of the Golden framework through the <code>.golden-typography</code> class.</p>
 
-          <p class="full-indent">Much of the Golden typography was inspired from a <a href="http://www.pearsonified.com/2011/12/golden-ratio-typography.php">brilliant blog post</a> which I suggest reading if you want to understand the math in greater detail.</p> 
+          <p class="full-indent">Much of the Golden typography was inspired from a <a href="http://www.pearsonified.com/2011/12/golden-ratio-typography.php" target="_blank">brilliant blog post</a> which I suggest reading if you want to understand the math in greater detail.</p> 
 
           <p class="full-indent">Additionally, the Golden typography utilizes the Golden colored gray scale. The default text color is a dark shade of gray related to both pure white and pure black by the Golden ratio.</p>
 
@@ -460,7 +461,7 @@
 
           <p class="full-indent">Golden includes all the other typographical elements that Bootstrap includes, but without any additional customizations beyond what's already been discussed. These elements will, for the most part, inherit the base font size, line height, and Golden gray scale. They will also have an added margin-bottom based on the line height, to help keep adjacent elements nicely spaced out.</p>
 
-          <p class="full-indent">The following are some examples of the Bootstrap typographical elements that Golden includes. See <a href="http://getbootstrap.com/css/">Twitter Bootstrap</a> for a full list of supported elements, more documentation, and examples.</p>
+          <p class="full-indent">The following are some examples of the Bootstrap typographical elements that Golden includes. See <a href="http://getbootstrap.com/css/" target="_blank">Twitter Bootstrap</a> for a full list of supported elements, more documentation, and examples.</p>
 
           <h3>Code <small><code>bootstrap/code.less</code></small></h3>
 
@@ -565,7 +566,7 @@
         <div class="forms">
         <h2 class="page-header">Forms <small><code>bootstrap/forms.less</code></small></h2>
 
-          <p class="full-indent">Golden includes Bootstrap's forms, and incorporates the Golden typography by lightly skinning the sizing, spacing, and coloring. I've included a basic example to give you a general idea of how it looks, but I would suggest reading <a href="http://getbootstrap.com/css/#forms">Twitter Bootstrap</a> for more documentation and examples.</p>
+          <p class="full-indent">Golden includes Bootstrap's forms, and incorporates the Golden typography by lightly skinning the sizing, spacing, and coloring. I've included a basic example to give you a general idea of how it looks, but I would suggest reading <a href="http://getbootstrap.com/css/#forms" target="_blank">Twitter Bootstrap</a> for more documentation and examples.</p>
 
           <div class="example panel panel-default">
             <div class="panel-heading">

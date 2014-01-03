@@ -1,6 +1,6 @@
 ### todos
 
--load links using _target
+-load links using _target DONE
 
 -edit README
 
