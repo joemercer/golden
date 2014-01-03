@@ -2,52 +2,6 @@ em {
   color: #ffdd00;
   font-style: normal;
 }
-.golden .btn-golden {
-  background-color: #3c3c3c;
-  border-color: #171717;
-  color: #ffdd00;
-}
-.golden .btn-golden:hover,
-.golden .btn-golden:focus,
-.golden .btn-golden:active,
-.golden .btn-golden.active,
-.open .dropdown-toggle.golden .btn-golden {
-  color: #ffdd00;
-  background-color: #282828;
-  border-color: #000000;
-}
-.golden .btn-golden:active,
-.golden .btn-golden.active,
-.open .dropdown-toggle.golden .btn-golden {
-  background-image: none;
-}
-.golden .btn-golden.disabled,
-.golden .btn-golden[disabled],
-fieldset[disabled] .golden .btn-golden,
-.golden .btn-golden.disabled:hover,
-.golden .btn-golden[disabled]:hover,
-fieldset[disabled] .golden .btn-golden:hover,
-.golden .btn-golden.disabled:focus,
-.golden .btn-golden[disabled]:focus,
-fieldset[disabled] .golden .btn-golden:focus,
-.golden .btn-golden.disabled:active,
-.golden .btn-golden[disabled]:active,
-fieldset[disabled] .golden .btn-golden:active,
-.golden .btn-golden.disabled.active,
-.golden .btn-golden[disabled].active,
-fieldset[disabled] .golden .btn-golden.active {
-  background-color: #3c3c3c;
-  border-color: #171717;
-}
-.golden .btn-golden:hover {
-  color: #ffe01a;
-}
-.golden p a {
-  color: #2100ff;
-}
-.golden p a:hover {
-  color: #1700b3;
-}
 .nav-container {
   width: 100%;
   height: 100px;
@@ -116,6 +70,58 @@ fieldset[disabled] .golden .btn-golden.active {
 .main-content {
   margin-top: 50px;
 }
+.golden p a {
+  color: #2100ff;
+}
+.golden p a:hover {
+  color: #1700b3;
+}
+.golden .btn-golden {
+  background-color: #3c3c3c;
+  border-color: #171717;
+  color: #ffdd00;
+}
+.golden .btn-golden:hover,
+.golden .btn-golden:focus,
+.golden .btn-golden:active,
+.golden .btn-golden.active,
+.open .dropdown-toggle.golden .btn-golden {
+  color: #ffdd00;
+  background-color: #282828;
+  border-color: #000000;
+}
+.golden .btn-golden:active,
+.golden .btn-golden.active,
+.open .dropdown-toggle.golden .btn-golden {
+  background-image: none;
+}
+.golden .btn-golden.disabled,
+.golden .btn-golden[disabled],
+fieldset[disabled] .golden .btn-golden,
+.golden .btn-golden.disabled:hover,
+.golden .btn-golden[disabled]:hover,
+fieldset[disabled] .golden .btn-golden:hover,
+.golden .btn-golden.disabled:focus,
+.golden .btn-golden[disabled]:focus,
+fieldset[disabled] .golden .btn-golden:focus,
+.golden .btn-golden.disabled:active,
+.golden .btn-golden[disabled]:active,
+fieldset[disabled] .golden .btn-golden:active,
+.golden .btn-golden.disabled.active,
+.golden .btn-golden[disabled].active,
+fieldset[disabled] .golden .btn-golden.active {
+  background-color: #3c3c3c;
+  border-color: #171717;
+}
+.golden .btn-golden:hover {
+  color: #ffe01a;
+}
+.example.panel .panel-heading {
+  background-color: #FFF;
+}
+.example.panel .panel-body .panel-heading {
+  background-color: #f5f5f5;
+}
 .example-grid {
   width: 100%;
   height: 50px;
@@ -137,12 +143,6 @@ fieldset[disabled] .golden .btn-golden.active {
   background-color: #f5f5f5;
   border: 1px solid #c3c3c3;
   overflow: hidden;
-}
-.example.panel .panel-heading {
-  background-color: #FFF;
-}
-.example.panel .panel-body .panel-heading {
-  background-color: #f5f5f5;
 }
 .example-color-swatch {
   height: 50px;
