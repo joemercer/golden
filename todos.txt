@@ -3,11 +3,11 @@
 -clean up mixins DONE
 
 -final styling DONE
--responsiveness
+-responsiveness DONE
 -clean up tests.less DONE
 
--load jquery from google
--recompile everything
+-load jquery from google DONE
+-recompile everything DONE
 -HOST
 
 -add links DONE
