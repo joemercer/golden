@@ -2,16 +2,16 @@
 
 -load links using _target
 
--clean up mixins DONE
+-edit README
 
+-HOST
+
+-clean up mixins DONE
 -final styling DONE
 -responsiveness DONE
 -clean up tests.less DONE
-
 -load jquery from google DONE
 -recompile everything DONE
--HOST
-
 -add links DONE
 -javascript stuff DONE
 -keep hover state for activeLink DONE
