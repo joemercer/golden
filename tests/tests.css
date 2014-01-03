@@ -178,60 +178,47 @@ fieldset[disabled] .golden .btn-golden.active {
 .text-dark {
   color: #3c3c3c;
 }
-.example1-golden-rectangle {
+.golden-rectangle-example1 {
   width: 200px;
   height: 123.60679774997895px;
-  background-color: lightgreen;
-  display: inline-block;
-}
-.example2-golden-rectangle {
-  width: 123.60679774997895px;
-  height: 200px;
-  background-color: lightpink;
-  display: inline-block;
-}
-.example3-golden-rectangle {
-  width: 300px;
-  height: 185.41019662496845px;
   background-color: lightblue;
   display: inline-block;
 }
-.example4-golden-rectangle {
-  width: 46.35254915624211%;
-  height: 75%;
-  background-color: lightyellow;
+.golden-rectangle-example2 {
+  width: 123.60679774997895px;
+  height: 200px;
+  background-color: lightgreen;
   display: inline-block;
-  margin: 24px;
 }
-.example1-golden-image {
+.golden-image-example1 {
   width: 200px;
   height: 123.60679774997895px;
   overflow: hidden;
   display: inline-block;
 }
-.example1-golden-image img {
+.golden-image-example1 img {
   position: relative;
   top: -87px;
   left: -50px;
 }
-.example2-golden-image {
+.golden-image-example2 {
   width: 100px;
   height: 61.803398874989476px;
   overflow: hidden;
   display: inline-block;
 }
-.example2-golden-image img {
+.golden-image-example2 img {
   position: relative;
   top: -119px;
   left: -82px;
 }
-.example3-golden-image {
+.golden-image-example3 {
   width: 50px;
   height: 30.901699437494738px;
   overflow: hidden;
   display: inline-block;
 }
-.example3-golden-image img {
+.golden-image-example3 img {
   position: relative;
   top: -134px;
   left: -82px;

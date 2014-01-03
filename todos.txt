@@ -1,8 +1,9 @@
 ### todos
 
--clean up mixins
+-clean up mixins DONE
 
--final styling
+-final styling DONE
+-responsiveness
 -clean up tests.less
 
 -load jquery from google

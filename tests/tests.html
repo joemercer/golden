@@ -724,59 +724,58 @@
 
         </div>
 
-      </div>
+        <div class="mixins">
+        <h2 class="page-header">Mixins <small><code>golden/mixins.less</code></small></h2>
 
-
-
-
-
-
-
-      <div class="mixins" style="display: none;">
-
-        <h2>Mixins</h2>
-
-          <p>Digging into the Golden source code is worth it. Golden comes packaged with some useful mixins for incorporating the divine ratio into your own designs.</p>
+          <p class="full-indent">Golden comes packaged with some useful mixins for incorporating the Golden ratio into your own designs.</p>
 
           <h3>Golden Rectangle</h3>
+
+            <p class="full-indent">The Golden rectangle is a rectangle whose width and height are related by the Golden ratio. Make Golden rectangles with the <code>.make-golden-rectangle</code> mixin. The first argument specifies the long side of the Golden rectangle and the second argument specifies the length of the long side.</p>
+
+            <p class="full-indent">The following example shows two Golden rectangles, the first based on a starting width and the second based on a starting height.</p>
 
             <div class="example panel panel-default">
               <div class="panel-heading">
                 <h4>Example</h4>
               </div>
               <div class="panel-body">
-                <div class="example1-golden-rectangle"></div>
-                <div class="example2-golden-rectangle"></div>
-                <div class="example3-golden-rectangle">
-                  <div class="example4-golden-rectangle"></div>
-                </div>
+                <div class="golden-rectangle-example1"></div>
+                <div class="golden-rectangle-example2"></div>
               </div>
               <div class="panel-footer">
-                <pre>Code yo</pre>
+                <pre>// in your-custom-styles.less<br><br>.golden-rectangle-example1 {<br>  .make-golden-rectangle(width; 200px);<br>}<br>.golden-rectangle-example2 {<br>  .make-golden-rectangle(height; 200px);<br>}</pre>
               </div>
             </div>
 
           <h3>Golden Images</h3>
 
+            <p class="full-indent">Golden images is a wrapper that crops images into having Golden proportions. Make Golden images with the <code>.make-golden-image</code> mixin. The first two arguments are the same as the Golden rectangle. The third and fourth argument specify the top and left offsets used for positioning the image.</p>
+
+            <p class="full-indent">The following example shows three 300x300 px images cropped to be different sized Golden images.</p>
+
             <div class="example panel panel-default">
               <div class="panel-heading">
                 <h4>Example</h4>
               </div>
               <div class="panel-body">
-                <div class="example1-golden-image">
+                <div class="golden-image-example1">
                   <img src="http://placehold.it/300x300">
                 </div>
-                <div class="example2-golden-image">
+                <div class="golden-image-example2">
                   <img src="http://placehold.it/300x300">
                 </div>
-                <div class="example3-golden-image">
+                <div class="golden-image-example3">
                   <img src="http://placehold.it/300x300">
                 </div>
               </div>
               <div class="panel-footer">
-                <pre>Code yo</pre>
+                <pre>// in your-custom-styles.less<br><br>.golden-image-example1 {<br>  .make-golden-image(width; 200px; -50px; -87px);<br>}<br>.golden-image-example2 {<br>  .make-golden-image(width; 100px; -82px; -119px);<br>}<br>.golden-image-example3 {<br>  .make-golden-image(width; 50px; -82px; -134px);<br>}</pre>
               </div>
             </div>
+
+        </div>
+
       </div>
 
     </div>
