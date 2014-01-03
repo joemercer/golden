@@ -4,7 +4,7 @@
 
 -final styling DONE
 -responsiveness
--clean up tests.less
+-clean up tests.less DONE
 
 -load jquery from google
 -recompile everything

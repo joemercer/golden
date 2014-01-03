@@ -4,36 +4,14 @@
 @import "./../golden/mixins.less";
 
 
-// Golden
+// Golden tests
 
-// @gold: gold;
-
-// not used currently
 em {
 	color: @gold;
 	font-style: normal;
 }
 
-// Buttons
 
-.golden .btn-golden {
-  .button-variant(@gold; @golden-gray-dark; @golden-gray-darker);
-  color: @gold;
-
-  &:hover {
-  	color: lighten(@gold, 5%);
-  }
-}
-
-// Links
-
-.golden p a {
-	color: @complimentary;
-
-	&:hover {
-		color: darken(@complimentary, 15%);
-	}
-}
 
 // Navbar
 
@@ -107,6 +85,47 @@ em {
 }
 
 
+
+// Links
+
+.golden p a {
+	color: @complimentary;
+
+	&:hover {
+		color: darken(@complimentary, 15%);
+	}
+}
+
+
+
+// Buttons
+
+.golden .btn-golden {
+  .button-variant(@gold; @golden-gray-dark; @golden-gray-darker);
+  color: @gold;
+
+  &:hover {
+  	color: lighten(@gold, 5%);
+  }
+}
+
+
+
+// Example panels
+
+.example.panel {
+	.panel-heading {
+		background-color: #FFF;
+	}
+	.panel-body {
+		.panel-heading {
+			background-color: @panel-default-heading-bg;
+		}
+	}
+}
+
+
+
 // Golden Grid
 
 @test-grid-height: 50px;
@@ -135,19 +154,6 @@ em {
 	background-color: @golden-gray-lightest;
 	border: 1px solid @golden-gray-light;
 	overflow: hidden;
-}
-
-// Example panels
-
-.example.panel {
-	.panel-heading {
-		background-color: #FFF;
-	}
-	.panel-body {
-		.panel-heading {
-			background-color: @panel-default-heading-bg;
-		}
-	}
 }
 
 
@@ -188,28 +194,6 @@ em {
 .text-dark {
 	color: @golden-gray-dark;
 }
-
-// .black {
-// 	background-color: #000;
-// }
-// .gray-darker {
-// 	background-color: @gray-darker;
-// }
-// .gray-dark {
-// 	background-color: @gray-dark;
-// }
-// .gray {
-// 	background-color: @gray;
-// }
-// .gray-light {
-// 	background-color: @gray-light;
-// }
-// .gray-lighter {
-// 	background-color: @gray-lighter;
-// }
-// .white {
-// 	background-color: #FFF;
-// }
 
 
 
