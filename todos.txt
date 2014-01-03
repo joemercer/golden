@@ -5,7 +5,7 @@
 -edit README
 
 -HOST DONE
--move tests.html to index.html in root
+-move tests.html to index.html in root DONE
 -buy a domain and point to github pages
 
 -clean todos

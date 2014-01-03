@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Golden Tests</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <!-- Golden -->
+    <link href="golden.css" rel="stylesheet">
+    <!-- Your custom styles -->
+    <link href="index.css" rel="stylesheet">
+  </head>
+  <body class="golden">
+    <div class="nav-container">
+      <div class="nav-buffer nav-buffer-top"></div>
+      <div class="golden-container-md-wide nav">
+        <a href="#introduction" class="change-section" data-section="introduction"><div class="logo pull-left"><em>G</em></div></a>
+        <ul class="nav-links pull-right">
+          <li class="nav-link"><a href="#introduction" class="change-section active" data-section="introduction">Getting Started</a></li>
+          <li class="nav-link"><a href="#customize" class="change-section" data-section="customize">Customize</a></li>
+          <li class="nav-link"><a href="#documentation" class="change-section" data-section="documentation">Documentation</a></li>
+        </ul>
+      </div>
+      <div class="nav-buffer nav-buffer-bottom"></div>
+    </div>
+    <div class="golden-container-md-wide main-content">
+
+      <div id="introduction" class="introduction">
+      <h2 class="page-header">What is Golden?</h2>
+
+        <p class="lead">Golden is a CSS framework built using the <a href="http://en.wikipedia.org/wiki/Golden_ratio" target="_blank">Golden ratio</a>. It can be used independently, or incorporated into other CSS frameworks like <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>.</p>
+
+        <p class="full-indent">The <a href="http://en.wikipedia.org/wiki/Golden_ratio" target="_blank">Golden ratio</a> has been found uncoincidentally frequently in nature and math. As a result of its apparent significance and pleasing aesthetic qualities, it has been used by humans in <a href="http://www.hongkiat.com/blog/golden-ratio-in-moden-designs/" target="_blank">art and design</a> for thousands of years.</p>
+
+      <h2 class="page-header">Getting Started</h2>
+
+        <p class="lead">1. <a href="../golden.css" role="button" class="btn btn-golden btn-lg" target="_blank">Download Golden</a> <a href="../golden.min.css" role="button" class="btn btn-golden btn-lg" target="_blank">Download minified Golden</a></p>
+
+        <p class="full-indent">You can also <a href="https://github.com/joemercer/golden" target="_blank">clone the source</a> via Github.</p>
+
+        <p class="lead">2. Include Golden</p>
+
+        <p class="full-indent">Include Golden in your project. You can copy the basic template below to get started fast.</p>
+
+        <div class="example panel panel-default">
+          <div class="panel-heading">
+            <h4>Example</h4>
+          </div>
+          <div class="panel-body">
+            <h1>Hello, world!</h1>
+          </div>
+          <div class="panel-footer">
+            <pre>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>  &lt;head&gt;<br>    &lt;title&gt;Golden Template&lt;/title&gt;<br>    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>    &lt;!-- Golden --&gt;<br>    &lt;link href="css/golden.min.css" rel="stylesheet"&gt;<br>  &lt;/head&gt;<br>  &lt;body class="golden"&gt;<br>    &lt;h1&gt;Hello, world!&lt;/h1&gt;<br>  &lt;/body&gt;<br>&lt;/html&gt;<br></pre>
+          </div>
+        </div>
+
+        <p class="full-indent">The <code>.golden</code> class can be moved to apply the Golden styles selectively.</p>
+
+        <div class="example panel panel-default">
+          <div class="panel-heading">
+            <h4>Example</h4>
+          </div>
+          <div class="panel-footer">
+            <pre>&lt;div&gt;Stuff inside here is not Golden&lt;/div&gt;<br>&lt;div class="golden"&gt;Stuff inside here is Golden!&lt;/div&gt;</pre>
+          </div>
+        </div>
+
+        <p class="full-indent">The <code>.golden-typography</code> class can be used seperately of the <code>.golden</code> class to only apply Golden typography.</p>
+
+        <div class="example panel panel-default">
+          <div class="panel-heading">
+            <h4>Example</h4>
+          </div>
+          <div class="panel-footer">
+            <pre>&lt;div class="golden-typography"&gt;<br>  Stuff inside here will have Golden typography and that's it!<br>&lt;/div&gt;</pre>
+          </div>
+        </div>
+
+        <p class="lead">3. Be Golden</p>
+
+        <p class="full-indent">Code! Check out the <a href="#documentation" class="change-section" data-section="documentation">docs</a> to see what's possible.</p>
+
+      </div>
+
+      <div id="customize" class="customize" style="display: none;">
+      <h2 class="page-header">Customize Golden</h2>
+
+        <p class="full-indent">Before digging into the Golden source, it's important to understand how Golden is put together. Golden's architecture makes it easy to customize Golden for a new project, or include Golden in an existing project.</p> 
+
+        <h3>Understanding Golden</h3>
+
+          <p class="full-indent">Golden is comprised of two parts, a Bootstrap core and a custom set of Golden modules. This is reflected in the Golden file structure.</p>
+
+          <div class="example panel panel-default">
+            <div class="panel-heading">
+              <h4>golden/</h4>
+            </div>
+            <div class="panel-footer">
+              <pre>golden/<br>├── golden.less<br>├── bootstrap/<br>│   └── Bootstrap modules<br>└── golden/<br>    └── Golden modules</pre>
+            </div>
+          </div>
+
+          <p class="full-indent">Inside the <code>/bootstrap</code> directory is a clean copy of <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. All of Golden's revisions to Bootstrap are done by overriding variables, and all of Golden's extensions to Bootstrap are done in external Golden modules. This helps preserve modularity and makes incorporating Golden into a pre-existing Bootstrap project much simpler.</p>
+
+          <p class="full-indent">Golden overrides Bootstrap variables with Golden variables that are themselves based on Bootstrap variables. This is done so that Golden's overriding styles can be rooted under the <code>.golden</code> class and then selectively applied within a pre-existing project. If you want Golden's styles to be applied globally you can eliminate unnecessary code by removing the <code>.golden</code> wrapper.</p>
+
+          <div class="example panel panel-default">
+            <div class="panel-heading">
+              <h4>golden.less</h4>
+            </div>
+            <div class="panel-footer">
+              <pre>// Include Bootstrap variables<br>@import "./bootstrap/variables.less";<br><br>// Include modules that are unaffected by Golden<br>// ...<br><br>// Include Golden variables<br>@import "./golden/variables.less";<br><br>// Include Golden modules<br>// ...<br><br>// Include Golden Bootstrap overrides under .golden<br>// to prevent clashing with pre-existing styles<br>.golden {<br>  @import "./golden/bootstrap-variable-overrides.less";<br><br>  // Include Bootstrap modules<br>  // ...<br>}</pre>
+            </div>
+          </div>
+
+        <h3>Customizing Golden</h3>
+
+          <p class="full-indent">Customizing Golden is as simple as customizing Bootstrap. The first step is to edit the variables defined in <code>bootstrap/variables.less</code>. The following example changes the base font size from the default 14px to a slightly larger 16px.</p>
+
+          <div class="example panel panel-default">
+            <div class="panel-heading">
+              <h4>bootstrap/variables.less</h4>
+            </div>
+            <div class="panel-footer">
+              <pre>// ...<br>// @font-size-base:          14px;<br>@font-size-base:          16px;<br>// ...</pre>
+            </div>
+          </div>
+
+          <p class="full-indent">The second step is to add the Bootstrap modules you want as is to the <code>bootstrap/</code> directory and include them in <code>golden-bootstrap.less</code>. The default version of Golden only includes a subset of the Bootstrap modules, but more can be added from the <a href="https://github.com/twbs/bootstrap" target="_blank">Bootstrap source</a>. The following example adds the Bootstrap <code>alerts.less</code> module to Golden.</p>
+
+          <div class="example panel panel-default">
+            <div class="panel-heading">
+              <h4>golden-bootstrap.less</h4>
+            </div>
+            <div class="panel-footer">
+              <pre>// ...<br>@import "./bootstrap/alerts.less";<br>// ...</pre>
+            </div>
+          </div>
+
+          <p class="full-indent">The final step is to recompile Golden.</p>
+
+          <div class="example panel panel-default">
+            <div class="panel-heading">
+              <h4>Terminal</h4>
+            </div>
+            <div class="panel-footer">
+              <pre># Uncompressed<br>$ lessc golden.less golden.css<br># Compressed<br>$ lessc --yui-compress golden.less golden.min.css</pre>
+            </div>
+          </div>
+
+        <h3>Including Golden</h3>
+
+          <p class="full-indent">If you're trying to include Golden in a project that already includes Bootstrap then include the Golden variables and Golden modules after your <code>variables.less</code> file. If you also want the Golden Bootstrap overrides then additionally include <code>golden/bootstrap-variable-overrides.less</code> before you include any Bootstrap modules.</p>
+
+          <div class="example panel panel-default">
+            <div class="panel-heading">
+              <h4>your-custom-styles.less</h4>
+            </div>
+            <div class="panel-footer">
+              <pre>@import "./your-custom-variables.less";<br><br>@import "./golden/variables.less";<br>@import "./golden/mixins.less";<br><br>@import "./golden/grid.less";<br>@import "./golden/content.less";<br><br>// Include your custom modules<br>// ...<br><br>@import "./golden/bootstrap-variable-overrides.less";<br><br>// Include Bootstrap modules<br>// ...</pre>
+            </div>
+          </div>
+
+
+          <p class="full-indent">If you're trying to include Golden in a project that does not already include Bootstrap then everything is the same except you have in include <code>bootstrap/variables.less</code> first and you don't need the Golden Bootstrap overrides. </p>
+
+          <div class="example panel panel-default">
+            <div class="panel-heading">
+              <h4>your-custom-styles.less</h4>
+            </div>
+            <div class="panel-footer">
+              <pre>@import "./bootstrap/variables.less";<br><br>@import "./your-custom-variables.less";<br><br>@import "./golden/variables.less";<br>@import "./golden/mixins.less";<br><br>@import "./golden/grid.less";<br>@import "./golden/content.less";<br><br>// Include your custom modules<br>// ...</pre>
+            </div>
+          </div>
+
+      </div>
+
+      <div id="documentation" class="documentation" style="display: none;">
+        <div class="grid-system">
+        <h2 class="page-header">Grid System <small><code>golden/grid.less</code></small></h2>
+
+          <p class="full-indent">Golden extends the <a href="http://getbootstrap.com/css/#grid" target="_blank">Bootstrap grid system</a> you're already comfortable with by adding containers and columns with proportions based on the Golden ratio. Note that the Golden grid system is fully compatible and non-destructive towards the Bootstrap grid system.</p>
+
+          <p class="full-indent">The Golden grid system follows a predictable and intuitive naming convention for classes, <code>.golden-[element]-[screen-size]-[element-size]</code>. Golden uses the existing Bootstrap screen sizes, <code>xs</code>, <code>sm</code>, <code>md</code>, and <code>lg</code>, to set responsive breakpoints for resizing content. Golden uses two new element sizes, <code>wide</code> and <code>narrow</code>, whose widths are related by the Golden ratio. To see the Golden grid system in action you will need to resize your browser.</p>
+
+          <h3>Containers <small><code>.golden-container</code></small></h3>
+
+            <p class="full-indent">The Golden container is a centered div with a golden relationship between it's width and left and right margins. It also incorporates media queries to resize for different devices.</p>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h4>Example</h4>
+              </div>
+              <div class="panel-body">
+                <div class="example-grid">
+                  <div class="golden-container example-grid-block">.golden-container</div>
+                </div>
+              </div>
+              <div class="panel-footer">
+                <pre>&lt;div class="golden-container"&gt;...&lt;/div&gt;</pre>
+              </div>
+            </div>
+
+            <p class="full-indent">The Golden container can be customized by changing the class to something in the form of <code>.golden-container-[screen-size]-[container-size]</code>. On devices smaller than the given screen-size, the Golden container will extend to 100% of the available width.</p>
+
+            <p class="full-indent">The following example will create a wide Golden container on sm devices and above. On xs devices the container will have a width of 100%.</p>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h4>Example</h4>
+              </div>
+              <div class="panel-body">
+                <div class="example-grid">
+                  <div class="example-grid">
+                    <div class="golden-container-sm-wide example-grid-block">.golden-container-sm-wide</div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel-footer">
+                <pre>&lt;div class="golden-container-sm-wide"&gt;...&lt;/div&gt;</pre>
+              </div>
+            </div>
+
+            <p class="full-indent">The Golden container customization classes can be combined for even greater expressiveness.</p>
+
+            <p class="full-indent">The following example will create a wide Golden container on sm and md devices, and a narrow Golden container on lg devices and above. On xs devices the container will have a width of 100%.</p>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h4>Example</h4>
+              </div>
+              <div class="panel-body">
+                <div class="example-grid">
+                  <div class="example-grid">
+                    <div class="golden-container-sm-wide golden-container-lg-narrow example-grid-block">.golden-container-sm-wide .golden-container-lg-narrow</div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel-footer">
+                <pre>&lt;div class="golden-container-sm-wide golden-container-lg-narrow"&gt;...&lt;/div&gt;</pre>
+              </div>
+            </div>
+
+          <h3>Columns <small><code>.golden-col</code></small></h3>
+
+            <p class="full-indent">Golden adds two new columns, <code>wide</code> and <code>narrow</code>, whose relative widths are related by the Golden ratio. The two types of columns are meant to be used together, so a <code>wide</code> columns and a <code>narrow</code> column will always add up to 100% of the available width. Similar to Bootstrap columns, the Golden columns will collapse at smaller screen sizes.</p>
+
+            <p class="full-indent">The following example shows two Golden columns that combine to take up 100% of the available width, and collapse on screen sizes smaller than md.</p>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h4>Example</h4>
+              </div>
+              <div class="panel-body">
+                <div class="example-grid">
+                  <div class="golden-col-md-wide example-grid-block">.golden-col-md-wide</div>
+                  <div class="golden-col-md-narrow example-grid-block">.golden-col-md-narrow</div>
+                </div>
+              </div>
+              <div class="panel-footer">
+                <pre>&lt;div class="golden-col-sm-wide"&gt;...&lt;/div&gt;<br>&lt;div class="golden-col-sm-narrow"&gt;...&lt;/div&gt;</pre>
+              </div>
+            </div>
+
+            <p class="full-indent">Golden column classes can be mixed and matches for increased expressiveness.</p>
+
+            <p class="full-indent">The following example will collapse on xs devices, have a wide column first on sm devices, and have a narrow column first md devices and above.</p>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h4>Example</h4>
+              </div>
+              <div class="panel-body">
+                <div class="example-grid">
+                  <div class="golden-col-sm-wide golden-col-md-narrow example-grid-block">.golden-col-sm-wide .golden-col-md-narrow</div>
+                  <div class="golden-col-sm-narrow golden-col-md-wide example-grid-block">.golden-col-sm-narrow .golden-col-md-wide</div>
+                </div>
+              </div>
+              <div class="panel-footer">
+                <pre>&lt;div class="golden-col-sm-wide golden-col-md-narrow"&gt;...&lt;/div&gt;<br>&lt;div class="golden-col-sm-narrow golden-col-md-wide"&gt;...&lt;/div&gt;</pre>
+              </div>
+            </div>
+
+            <p class="full-indent">Golden columns can be safely nested within one another.</p>
+
+            <p class="full-indent">The following example shows a second wide and narrow Golden column nested within the first wide Golden column.</p>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h4>Example</h4>
+              </div>
+              <div class="panel-body">
+                <div class="example-grid">
+                  <div class="golden-col-sm-wide example-grid-block-nested-parent">
+                    <div>.golden-col-sm-wide</div>
+                    <div class="golden-col-md-wide example-grid-block-nested">.golden-col-md-wide</div>
+                    <div class="golden-col-md-narrow example-grid-block-nested">.golden-col-md-narrow</div>
+                  </div>
+                  <div class="golden-col-sm-narrow example-grid-block-nested-parent">.golden-col-sm-narrow</div>
+                </div>
+              </div>
+              <div class="panel-footer">
+                <pre>&lt;div class="golden-col-sm-wide"&gt;<br>  &lt;div class="golden-col-md-wide"&gt;...&lt;/div&gt;<br>  &lt;div class="golden-col-md-narrow"&gt;...&lt;/div&gt;<br>&lt;/div&gt;<br>&lt;div class="golden-col-sm-narrow"&gt;...&lt;/div&gt;</pre>
+              </div>
+            </div>
+
+            <p class="full-indent">Golden columns also play well with Bootstrap's columns.</p>
+
+            <p class="full-indent">The following example shows a wide and narrow Golden column nested within a Bootstrap column.</p>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h4>Example</h4>
+              </div>
+              <div class="panel-body">
+                <div class="example-grid">
+                  <div class="col-sm-6 example-grid-block-nested-parent">
+                    <div>.col-sm-6</div>
+                    <div class="golden-col-md-wide example-grid-block-nested">.golden-col-md-wide</div>
+                    <div class="golden-col-md-narrow example-grid-block-nested">.golden-col-md-narrow</div>
+                  </div>
+                  <div class="col-sm-6 example-grid-block-nested-parent">.col-sm-6</div>
+                </div>
+              </div>
+              <div class="panel-footer">
+                <pre>&lt;div class="col-sm-6"&gt;<br>  &lt;div class="golden-col-md-wide"&gt;...&lt;/div&gt;<br>  &lt;div class="golden-col-md-narrow"&gt;...&lt;/div&gt;<br>&lt;/div&gt;<br>&lt;div class="col-sm-6"&gt;...&lt;/div&gt;</pre>
+              </div>
+            </div>
+
+        </div>
+
+        <div class="colors">
+        <h2 class="page-header">Colors</h2>
+
+          <h3>Greys</h3>
+
+            <p class="full-indent">Golden provides a gray scale with proportions of pure white and pure black based on the Golden ratio. To access the Golden gray variables you must include <code>golden/variables.less</code> in your project.</p>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h4>Example</h4>
+              </div>
+              <div class="panel-body">
+                <div class="example-color-swatch golden-black text-light">#000</div>
+                <div class="example-color-swatch golden-gray-darker text-light">@golden-gray-darker</div>
+                <div class="example-color-swatch golden-gray-dark text-light">@golden-gray-dark</div>
+                <div class="example-color-swatch golden-gray text-light">@golden-gray</div>
+                <div class="example-color-swatch golden-gray-light text-dark">@golden-gray-light</div>
+                <div class="example-color-swatch golden-gray-lighter text-dark">@golden-gray-lighter</div>
+                <div class="example-color-swatch golden-gray-lightest text-dark">@golden-gray-lightest</div>
+                <div class="example-color-swatch golden-white text-dark">#FFF</div>
+              </div>
+              <div class="panel-footer">
+                <pre>@import "./golden/variables.less";<br><br>.golden-gray-background {<br>  background-color: @golden-gray;<br>}<br>...</pre>
+              </div>
+            </div>
+
+        </div>
+
+        <div class="typography">
+        <h2 class="page-header">Typography <small><code>bootstrap/type.less</code></small></h2>
+
+          <p class="full-indent">The Golden typography is derived from the <code>@font-size-base</code> variable in <code>bootstrap/variables.less</code>. By default this font size is 14px. Golden uses this value to create custom line heights and widths that are re-used in other components for margin and padding.</p>
+
+          <p class="full-indent">Due to the importance of typography, it can be accessed independently from the rest of the Golden framework through the <code>.golden-typography</code> class.</p>
+
+          <p class="full-indent">Much of the Golden typography was inspired from a <a href="http://www.pearsonified.com/2011/12/golden-ratio-typography.php" target="_blank">brilliant blog post</a> which I suggest reading if you want to understand the math in greater detail.</p> 
+
+          <p class="full-indent">Additionally, the Golden typography utilizes the Golden colored gray scale. The default text color is a dark shade of gray related to both pure white and pure black by the Golden ratio.</p>
+
+          <h3>Headings and Subheadings</h3>
+
+            <p class="full-indent">Golden typography includes all HTML headings, and a <code>small</code> tag for creating subheadings. Each heading is related to the base font size by progressively larger powers of the Golden ratio. Each subheading is related to it's heading by the Golden ratio. Additionally, the color of each subheading is related to the color of its heading by the Golden ratio.</p>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h4>Example</h4>
+              </div>
+              <div class="panel-body">
+                <h1>Golden h1 <small>Subheading</small></h1>
+                <h2>Golden h2 <small>Subheading</small></h2>
+                <h3>Golden h3 <small>Subheading</small></h3>
+                <h4>Golden h4 <small>Subheading</small></h4>
+                <h5>Golden h5 <small>Subheading</small></h5>
+                <h6>Golden h6 <small>Subheading</small></h6>
+              </div>
+              <div class="panel-footer">
+                <pre>&lt;h1&gt;Golden h1 &lt;small&gt;Subheading&lt;/small&gt;&lt;/h1&gt;<br>&lt;h2&gt;Golden h2 &lt;small&gt;Subheading&lt;/small&gt;&lt;/h2&gt;<br>&lt;h3&gt;Golden h3 &lt;small&gt;Subheading&lt;/small&gt;&lt;/h3&gt;<br>&lt;h4&gt;Golden h4 &lt;small&gt;Subheading&lt;/small&gt;&lt;/h4&gt;<br>&lt;h5&gt;Golden h5 &lt;small&gt;Subheading&lt;/small&gt;&lt;/h5&gt;<br>&lt;h6&gt;Golden h6 &lt;small&gt;Subheading&lt;/small&gt;&lt;/h6&gt;</pre>
+              </div>
+            </div>
+
+          <h3>Paragraphs</h3>
+
+            <p class="full-indent">Golden's default font-size is 14px and default line-height is 1.618. This is applied to each element with the <code>.golden</code> class, and all paragraphs. Additionally, all paragraphs receive a bottom margin of half their computed line-height, which is 11px by default.</p>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h4>Example</h4>
+              </div>
+              <div class="panel-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis auctor vestibulum. Maecenas suscipit vehicula magna nec rutrum. Proin eleifend tellus nec nunc interdum, nec varius ipsum eleifend. In tincidunt felis a felis porta eleifend id at enim. Aenean eu arcu adipiscing, aliquet turpis facilisis, scelerisque dui. Vestibulum sed nisl eu elit fringilla dictum in eget neque.</p>
+                <p>Etiam et vestibulum quam. Maecenas ullamcorper mollis neque eget eleifend. Donec pulvinar eros sed lorem dignissim, sit amet luctus sapien gravida. Sed commodo ullamcorper elit, id cursus velit feugiat eget. Praesent a purus at dolor porttitor pellentesque. Sed eros libero, vehicula eget magna vitae, fermentum vehicula nisi.</p>
+              </div>
+              <div class="panel-footer">
+                <pre>&lt;p&gt;...&lt;/p&gt;</pre>
+              </div>
+            </div>
+
+            <p class="full-indent">Golden also provides some useful modifier classes. Make text stand out by adding the <code>.lead</code> class to increase the font-size by a multiple of the Golden ratio. Add indentation by adding the <code>.full-indent</code> or <code>.half-indent</code> class. The size of the indentation is based on the Golden ratio.</p>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h4>Example</h4>
+              </div>
+              <div class="panel-body">
+                <p class="lead">Lorem ipsum dolor sit amet</p>
+                <p class="full-indent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis auctor vestibulum.</p>
+                <p class="half-indent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis auctor vestibulum.</p>
+              </div>
+              <div class="panel-footer">
+                <pre>&lt;p class="lead"&gt;...&lt;/p&gt;</pre>
+                <pre>&lt;p class="full-indent"&gt;...&lt;/p&gt;</pre>
+                <pre>&lt;p class="half-indent"&gt;...&lt;/p&gt;</pre>
+              </div>
+            </div>
+
+          <h3>Content <small><code>golden/content.less</code></small></h3>
+
+            <p class="full-indent">Golden also provides a <code>.golden-content</code> class which sets an ideal line width based on the base font size and line height.</p>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h4>Example</h4>
+              </div>
+              <div class="panel-body">
+                <p class="golden-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis auctor vestibulum. Maecenas suscipit vehicula magna nec rutrum. Proin eleifend tellus nec nunc interdum, nec varius ipsum eleifend. In tincidunt felis a felis porta eleifend id at enim. Aenean eu arcu adipiscing, aliquet turpis facilisis, scelerisque dui. Vestibulum sed nisl eu elit fringilla dictum in eget neque.</p>
+                <p class="golden-content">Etiam et vestibulum quam. Maecenas ullamcorper mollis neque eget eleifend. Donec pulvinar eros sed lorem dignissim, sit amet luctus sapien gravida. Sed commodo ullamcorper elit, id cursus velit feugiat eget. Praesent a purus at dolor porttitor pellentesque. Sed eros libero, vehicula eget magna vitae, fermentum vehicula nisi.</p>
+              </div>
+              <div class="panel-footer">
+                <pre>&lt;p class="golden-content"&gt;...&lt;/p&gt;</pre>
+              </div>
+            </div>
+
+            <p class="full-indent">This ideal line width can be applied using columns by adding the <code>.columns-*</code> class. Note that these columns collapse when the containing element isn't wide enough to support them. You may have to resize your browser to see them.</p>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h4>Example</h4>
+              </div>
+              <div class="panel-body">
+                <p class="golden-content columns-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis auctor vestibulum. Maecenas suscipit vehicula magna nec rutrum. Proin eleifend tellus nec nunc interdum, nec varius ipsum eleifend. In tincidunt felis a felis porta eleifend id at enim. Aenean eu arcu adipiscing, aliquet turpis facilisis, scelerisque dui. Vestibulum sed nisl eu elit fringilla dictum in eget neque. Etiam et vestibulum quam. Maecenas ullamcorper mollis neque eget eleifend. Donec pulvinar eros sed lorem dignissim, sit amet luctus sapien gravida. Sed commodo ullamcorper elit, id cursus velit feugiat eget. Praesent a purus at dolor porttitor pellentesque. Sed eros libero, vehicula eget magna vitae, fermentum vehicula nisi. Maecenas tristique nec dolor quis mollis. Integer dictum a elit non placerat. Duis dignissim nulla est, sed ullamcorper tortor feugiat id. Aliquam erat justo, sodales eget ipsum non, consectetur adipiscing risus. Maecenas facilisis porttitor nulla a pharetra. Suspendisse eu turpis odio. Cras pulvinar nisl est, ac suscipit felis congue vel. Donec eget imperdiet arcu, quis sollicitudin erat. Suspendisse a dui nec mauris ullamcorper viverra id ac massa. Integer aliquet aliquam lacus, non laoreet leo congue a. Fusce vitae metus risus. Nulla ullamcorper nisi at venenatis mollis. Aenean at odio vulputate, consequat velit at, dictum dui. Aenean ut tincidunt nunc.</p>
+              </div>
+              <div class="panel-footer">
+                <pre>&lt;p class="golden-content columns-2"&gt;...&lt;/p&gt;</pre>
+              </div>
+            </div>
+
+        </div>
+
+        <div class="typographical-elements">
+        <h2 class="page-header">Typographical Elements</h2>
+
+          <p class="full-indent">Golden includes all the other typographical elements that Bootstrap includes, but without any additional customizations beyond what's already been discussed. These elements will, for the most part, inherit the base font size, line height, and Golden gray scale. They will also have an added margin-bottom based on the line height, to help keep adjacent elements nicely spaced out.</p>
+
+          <p class="full-indent">The following are some examples of the Bootstrap typographical elements that Golden includes. See <a href="http://getbootstrap.com/css/" target="_blank">Twitter Bootstrap</a> for a full list of supported elements, more documentation, and examples.</p>
+
+          <h3>Code <small><code>bootstrap/code.less</code></small></h3>
+
+            <p class="full-indent">Golden includes Bootstrap's classes for styling code.</p>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h4>Example</h4>
+              </div>
+              <div class="panel-body">
+                <p>Wrap inline snippets of code with <code>&lt;code&gt;</code>.</p>
+              </div>
+              <div class="panel-footer">
+                <pre>&lt;code&gt;...&lt;/code&gt;</pre>
+              </div>
+            </div>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h4>Example</h4>
+              </div>
+              <div class="panel-body">
+                <pre>Use <code>&lt;pre&gt;</code> for multiple lines of code. Be sure to escape any angle brackets in the code for proper rendering.</pre>
+              </div>
+              <div class="panel-footer">
+                <pre>&lt;pre&gt;...&lt;/pre&gt;</pre>
+              </div>
+            </div>
+
+          <h3>List Groups <small><code>bootstrap/list-group.less</code></small></h3>
+
+            <p class="full-indent">Golden includes Bootstrap's specially styled <code>.list-group</code> class.</p>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h4>Example</h4>
+              </div>
+              <div class="panel-body">
+                <ul class="list-group">
+                  <li class="list-group-item"><a href="#">Apples</a></li>
+                  <li class="list-group-item"><a href="#">Bananas</a></li>
+                  <li class="list-group-item"><a href="#">Pears</a></li>
+                </ul>
+              </div>
+              <div class="panel-footer">
+                <pre>&lt;ul class="list-group"&gt;<br>  &lt;li class="list-group-item"&gt;Apples&lt;/li&gt;<br>  &lt;li class="list-group-item"&gt;...&lt;/li&gt;<br>&lt;/ul&gt;</pre>
+              </div>
+            </div>
+
+          <h3>Tables <small><code>bootstrap/tables.less</code></small></h3>
+
+            <p class="full-indent">Golden includes Bootstrap's styled tables.</p>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h4>Example</h4>
+              </div>
+              <div class="panel-body">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th>Framework</th>
+                      <th>Framework</th>
+                      <th>Creator</th>
+                      <th>Test</th>
+                      <th>Test Test</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>1</th>
+                      <th>Bootstrap</th>
+                      <th>Twitter</th>
+                      <th>Test</th>
+                      <th>Test Test</th>
+                    </tr>
+                    <tr>
+                      <th>2</th>
+                      <th>Golden</th>
+                      <th>Joe</th>
+                      <th>Test</th>
+                      <th>Test Test</th>
+                    </tr>
+                    <tr>
+                      <th>3</th>
+                      <th>Other</th>
+                      <th>The bro</th>
+                      <th>Test</th>
+                      <th>Test Test</th>
+                    </tr>
+                  </tbody>
+                  <tbody></tbody>
+                </table>
+              </div>
+              <div class="panel-footer">
+                <pre>&lt;table class="table table-hover"&gt;...&lt;/table&gt;</pre>
+              </div>
+            </div>
+
+        </div>
+
+        <div class="forms">
+        <h2 class="page-header">Forms <small><code>bootstrap/forms.less</code></small></h2>
+
+          <p class="full-indent">Golden includes Bootstrap's forms, and incorporates the Golden typography by lightly skinning the sizing, spacing, and coloring. I've included a basic example to give you a general idea of how it looks, but I would suggest reading <a href="http://getbootstrap.com/css/#forms" target="_blank">Twitter Bootstrap</a> for more documentation and examples.</p>
+
+          <div class="example panel panel-default">
+            <div class="panel-heading">
+              <h4>Example</h4>
+            </div>
+            <div class="panel-body">
+              <form role="form">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputFile">File input</label>
+                  <input type="file" id="exampleInputFile">
+                  <p class="help-block">Example block-level help text here.</p>
+                </div>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox"> Check me out
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+              </form>
+            </div>
+            <div class="panel-footer">
+              <pre>&lt;form role="form"&gt;<br>  &lt;div class="form-group"&gt;<br>    &lt;label for="exampleInputEmail1"&gt;Email address&lt;/label&gt;<br>    &lt;input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email"&gt;<br>  &lt;/div&gt;<br>  &lt;div class="form-group"&gt;<br>    &lt;label for="exampleInputPassword1"&gt;Password&lt;/label&gt;<br>    &lt;input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"&gt;<br>  &lt;/div&gt;<br>  &lt;div class="form-group"&gt;<br>    &lt;label for="exampleInputFile"&gt;File input&lt;/label&gt;<br>    &lt;input type="file" id="exampleInputFile"&gt;<br>    &lt;p class="help-block"&gt;...&lt;/p&gt;<br>  &lt;/div&gt;<br>  &lt;div class="checkbox"&gt;<br>    &lt;label&gt;<br>      &lt;input type="checkbox"&gt; Check me out<br>    &lt;/label&gt;<br>  &lt;/div&gt;<br>  &lt;button type="submit" class="btn btn-default"&gt;Submit&lt;/button&gt;<br>&lt;/form&gt;</pre>
+            </div>
+          </div>
+
+          <p class="full-indent">Golden forms play well with Golden columns.</p>
+
+          <div class="example panel panel-default">
+            <div class="panel-heading">
+              <h4>Example</h4>
+            </div>
+            <div class="panel-body">
+              <div class="golden-col-xs-wide">
+                <input type="text" class="form-control" placeholder=".golden-col-xs-wide">
+              </div>
+              <div class="golden-col-xs-narrow">
+                <input type="text" class="form-control" placeholder=".golden-col-xs-narrow">
+              </div>
+            </div>
+            <div class="panel-footer">
+              <pre>&lt;div class="golden-col-xs-wide"&gt;<br>  &lt;input type="text" class="form-control" placeholder="..."&gt;<br>&lt;/div&gt;<br>&lt;div class="golden-col-xs-narrow"&gt;<br>  &lt;input type="text" class="form-control" placeholder="..."&gt;<br>&lt;/div&gt;</pre>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="buttons">
+        <h2 class="page-header">Buttons <small><code>bootstrap/buttons.less</code></small></h2>
+
+          <p class="full-indent">Golden includes button styles that incorporate the Golden ratio. The text within each button is related to the base font size by multiples of the Golden ratio. The text within each button is also related to the overall height of the button by the Golden ratio. Finally, the relative heights of each size of button are related by the Golden ratio.</p>
+
+          <div class="example panel panel-default">
+            <div class="panel-heading">
+              <h4>Example</h4>
+            </div>
+            <div class="panel-body">
+              <p>
+                <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                <button type="button" class="btn btn-default btn-lg">Large button</button>
+              </p>
+              <p>
+                <button type="button" class="btn btn-primary">Default button</button>
+                <button type="button" class="btn btn-default">Default button</button>
+              </p>
+              <p>
+                <button type="button" class="btn btn-primary btn-sm">Small button</button>
+                <button type="button" class="btn btn-default btn-sm">Small button</button>
+              </p>
+              <p>
+                <button type="button" class="btn btn-primary btn-xs">xs button</button>
+                <button type="button" class="btn btn-default btn-xs">xs button</button>
+              </p>
+            </div>
+            <div class="panel-footer">
+              <pre>&lt;button type="button" class="btn btn-primary btn-lg"&gt;...&lt;/button&gt;<br>&lt;button type="button" class="btn btn-default btn-lg"&gt;...&lt;/button&gt;<br>&lt;button type="button" class="btn btn-primary"&gt;...&lt;/button&gt;<br>&lt;button type="button" class="btn btn-default"&gt;...&lt;/button&gt;<br>&lt;button type="button" class="btn btn-primary btn-sm"&gt;...&lt;/button&gt;<br>&lt;button type="button" class="btn btn-default btn-sm"&gt;...&lt;/button&gt;<br>&lt;button type="button" class="btn btn-primary btn-xs"&gt;...&lt;/button&gt;<br>&lt;button type="button" class="btn btn-default btn-xs"&gt;...&lt;/button&gt;</pre>
+            </div>
+          </div>
+
+          <p class="full-indent">Golden buttons also play well with Golden columns.</p>
+
+          <div class="example panel panel-default">
+            <div class="panel-heading">
+              <h4>Example</h4>
+            </div>
+            <div class="panel-body">
+              <div class="golden-col-xs-wide">
+                <button type="button" class="btn btn-primary btn-lg btn-block">.golden-col-xs-wide</button>
+              </div>
+              <div class="golden-col-xs-narrow">
+                <button type="button" class="btn btn-default btn-lg btn-block">.golden-col-xs-narrow</button>
+              </div>
+            </div>
+            <div class="panel-footer">
+              <pre>&lt;div class="golden-col-xs-wide"&gt;<br>  &lt;button type="button" class="btn btn-primary btn-lg btn-block"&gt;...&lt;/button&gt;<br>&lt;/div&gt;<br>&lt;div class="golden-col-xs-narrow"&gt;<br>  &lt;button type="button" class="btn btn-default btn-lg btn-block"&gt;...&lt;/button&gt;<br>&lt;/div&gt;</pre>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="components">
+        <h2 class="page-header">Components</h2>
+
+          <p class="full-indent">For convenience, Golden includes some Bootstrap components.</p>
+
+          <h3>Panels <small><code>bootstrap/panels.less</code></small></h3>
+
+            <p class="full-indent">Golden's <code>.panel</code> applies a basic border and padding.</p>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h4>Example</h4>
+              </div>
+              <div class="panel-body">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    Panel Heading
+                  </div>
+                  <div class="panel-body">
+                    Panel Body
+                  </div>
+                  <div class="panel-footer">
+                    Panel Footer
+                  </div>
+                </div>
+              </div>
+              <div class="panel-footer">
+                <pre>&lt;div class="panel panel-default"&gt;<br>  &lt;div class="panel-heading"&gt;<br>    Panel Heading<br>  &lt;/div&gt;<br>  &lt;div class="panel-body"&gt;<br>    Panel Body<br>  &lt;/div&gt;<br>  &lt;div class="panel-footer"&gt;<br>    Panel Footer<br>  &lt;/div&gt;<br>&lt;/div&gt;</pre>
+              </div>
+            </div>
+
+          <h3>Wells <small><code>bootstrap/wells.less</code></small></h3>
+
+            <p class="full-indent">Golden's <code>.well</code> applies an inset effect.</p>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h4>Example</h4>
+              </div>
+              <div class="panel-body">
+                <div class="well">
+                  Well
+                </div>
+              </div>
+              <div class="panel-footer">
+                <pre>&lt;div class="well"&gt;<br>  Well<br>&lt;/div&gt;</pre>
+              </div>
+            </div>
+
+        </div>
+
+        <div class="mixins">
+        <h2 class="page-header">Mixins <small><code>golden/mixins.less</code></small></h2>
+
+          <p class="full-indent">Golden comes packaged with some useful mixins for incorporating the Golden ratio into your own designs.</p>
+
+          <h3>Golden Rectangle</h3>
+
+            <p class="full-indent">The Golden rectangle is a rectangle whose width and height are related by the Golden ratio. Make Golden rectangles with the <code>.make-golden-rectangle</code> mixin. The first argument specifies the long side of the Golden rectangle and the second argument specifies the length of the long side.</p>
+
+            <p class="full-indent">The following example shows two Golden rectangles, the first based on a starting width and the second based on a starting height.</p>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h4>Example</h4>
+              </div>
+              <div class="panel-body">
+                <div class="golden-rectangle-example1"></div>
+                <div class="golden-rectangle-example2"></div>
+              </div>
+              <div class="panel-footer">
+                <pre>// in your-custom-styles.less<br><br>.golden-rectangle-example1 {<br>  .make-golden-rectangle(width; 200px);<br>}<br>.golden-rectangle-example2 {<br>  .make-golden-rectangle(height; 200px);<br>}</pre>
+              </div>
+            </div>
+
+          <h3>Golden Images</h3>
+
+            <p class="full-indent">Golden images is a wrapper that crops images into having Golden proportions. Make Golden images with the <code>.make-golden-image</code> mixin. The first two arguments are the same as the Golden rectangle. The third and fourth argument specify the top and left offsets used for positioning the image.</p>
+
+            <p class="full-indent">The following example shows three 300x300 px images cropped to be different sized Golden images.</p>
+
+            <div class="example panel panel-default">
+              <div class="panel-heading">
+                <h4>Example</h4>
+              </div>
+              <div class="panel-body">
+                <div class="golden-image-example1">
+                  <img src="http://placehold.it/300x300">
+                </div>
+                <div class="golden-image-example2">
+                  <img src="http://placehold.it/300x300">
+                </div>
+                <div class="golden-image-example3">
+                  <img src="http://placehold.it/300x300">
+                </div>
+              </div>
+              <div class="panel-footer">
+                <pre>// in your-custom-styles.less<br><br>.golden-image-example1 {<br>  .make-golden-image(width; 200px; -50px; -87px);<br>}<br>.golden-image-example2 {<br>  .make-golden-image(width; 100px; -82px; -119px);<br>}<br>.golden-image-example3 {<br>  .make-golden-image(width; 50px; -82px; -134px);<br>}</pre>
+              </div>
+            </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="index.js"></script>
+
+  </body>
+</html>
