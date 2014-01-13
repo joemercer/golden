@@ -46,7 +46,8 @@
 
   // not using pow because some LESS compilers don't support the use of pow with non-matching units
   @golden-width: ((@font-size * @golden-ratio) * (@font-size * @golden-ratio)) * (1 + (2 * @golden-ratio * ((@line-height / @font-size) - @golden-ratio)));
-  width: @golden-width;
+  max-width: @golden-width;
+  padding: 0px @golden-line-height-computed;
 
   &.center-block {
     .center-block();
